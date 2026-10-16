@@ -172,3 +172,19 @@ figure{margin:0}.editorial-image{min-width:0}.image-placeholder{aspect-ratio:16/
 @keyframes quiz-dialog-out{from{opacity:1;transform:translate(-50%,-50%) scale(1)}to{opacity:0;transform:translate(-50%,-47%) scale(.98)}}
 @media(prefers-reduced-motion:reduce){.quiz-backdrop,.quiz-dialog{animation:none!important}}
 @media(max-width:700px){.trace-cards{grid-template-columns:1fr}.trace-card summary{min-height:66px}.permission-list{grid-template-columns:1fr}.permission-row{min-height:0;flex-direction:row;align-items:center}.permission-result{grid-template-columns:max-content max-content;gap:8px 14px}.permission-result>p{grid-column:1/-1}.quiz-feature{align-items:flex-start;flex-direction:column}.quiz-launch{width:100%}.trace-explorer-heading{align-items:flex-start;flex-direction:column;gap:9px}}
+
+.editorial-opening{background:#171a17;color:var(--paper)}
+.editorial-opening .section-label{border-color:#74796a}
+.editorial-opening-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:9%;padding-top:48px}
+.editorial-heading>.mono{font-size:8px;color:var(--acid);letter-spacing:.08em}
+.editorial-heading h2{font-size:clamp(58px,7vw,100px);font-weight:600;line-height:.92;letter-spacing:-.025em;margin:22px 0 34px}
+.editorial-heading h2 em{font-family:Georgia,serif;font-size:.73em;font-weight:400;font-style:italic;color:var(--acid)}
+.editorial-byline{display:flex;justify-content:space-between;gap:20px;border-top:1px solid #74796a;padding-top:14px;color:#c2c8ba;font-size:8px}
+.editorial-copy{max-width:700px;padding-top:3px}
+.editorial-copy p{margin-top:20px;color:#c7cbbf;font:14px/1.85 Georgia,serif}
+.editorial-copy .editorial-lead{margin-top:0;color:var(--paper);font:clamp(21px,2.4vw,29px)/1.45 'DM Sans',sans-serif;letter-spacing:-.015em}
+.editorial-copy blockquote{margin:32px 0;border-left:3px solid var(--acid);padding-left:22px;color:var(--acid);font:clamp(30px,3.7vw,46px)/1.08 'Barlow Condensed',sans-serif}
+.editorial-next{display:inline-flex;margin-top:26px;padding:10px 0;border-bottom:1px solid var(--acid);color:var(--acid);font-size:9px;transition:gap .2s}
+.editorial-next:hover{gap:8px}
+.index-editorial-link{border-bottom:1px solid #a8ae9a!important}
+@media(max-width:700px){.editorial-opening-grid{grid-template-columns:1fr;gap:35px;padding-top:32px}.editorial-heading h2{font-size:clamp(56px,13vw,78px);margin:18px 0 22px}.editorial-copy .editorial-lead{font-size:23px}.editorial-copy p{font-size:13px}.editorial-copy blockquote{font-size:36px;margin:25px 0}}
