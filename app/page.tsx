@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.';
 const chapters = [
@@ -78,6 +78,108 @@ function AuthorsSection() {
  </section>;
 }
 
+const traceInsights = [
+ { title: 'Histórico de navegação', detail: 'Sites visitados podem revelar interesses, rotina e até assuntos de saúde. Apagar o histórico reduz o que fica salvo no aparelho, mas não apaga registros que um serviço já coletou.' },
+ { title: 'Localização', detail: 'Um único ponto mostra onde você está. Uma sequência de pontos pode revelar casa, escola, trabalho e horários recorrentes.' },
+ { title: 'Preferências', detail: 'Curtidas, buscas e tempo de tela ajudam a criar um perfil. Revise as opções de personalização e limite o que não for necessário.' },
+];
+
+function TraceExplorer() {
+ return <section className="trace-explorer" aria-labelledby="trace-explorer-title">
+  <div className="trace-explorer-heading"><div><span className="mono">INTERAÇÃO / 01</span><h3 id="trace-explorer-title">Toque para revelar.</h3></div><p>Pequenos rastros podem contar histórias grandes.</p></div>
+  <div className="trace-cards">{traceInsights.map((item, index)=><details className="trace-card" key={item.title}><summary><span className="trace-card-number mono">0{index+1}</span><span>{item.title}</span><b aria-hidden="true">+</b></summary><p>{item.detail}</p></details>)}</div>
+ </section>;
+}
+
+const permissionItems = [
+ { id: 'location', label: 'Localização', note: 'Pode indicar lugares e horários frequentes.' },
+ { id: 'camera', label: 'Câmera', note: 'Pode capturar imagens quando o acesso estiver ativo.' },
+ { id: 'microphone', label: 'Microfone', note: 'Pode captar áudio enquanto o app usa essa permissão.' },
+] as const;
+
+function PermissionLab() {
+ const [enabled, setEnabled] = useState<Record<(typeof permissionItems)[number]['id'], boolean>>({ location: false, camera: false, microphone: false });
+ const enabledCount = Object.values(enabled).filter(Boolean).length;
+
+ return <section className="permission-lab" aria-labelledby="permission-lab-title">
+  <div className="permission-lab-heading"><span className="mono">LABORATÓRIO / PERMISSÕES</span><h3 id="permission-lab-title">Você decide o acesso.</h3><p>Experimente os controles e veja como uma escolha muda a exposição. Esta simulação não altera as permissões do seu aparelho.</p></div>
+  <div className="permission-list">{permissionItems.map(item=><div className={`permission-row${enabled[item.id]?' is-enabled':''}`} key={item.id}><div><strong>{item.label}</strong><p>{item.note}</p></div><button type="button" role="switch" aria-checked={enabled[item.id]} aria-label={`${item.label}: ${enabled[item.id]?'permitido':'bloqueado'}`} onClick={()=>setEnabled(current=>({...current,[item.id]:!current[item.id]}))}><span/></button></div>)}</div>
+  <div className="permission-result" role="status" aria-live="polite"><span className="mono">ACESSOS ATIVOS</span><strong>{enabledCount} / {permissionItems.length}</strong><p>{enabledCount===0?'Nenhum acesso está ativo. Ative só o que fizer sentido para a tarefa.':enabledCount===permissionItems.length?'Todas as permissões estão ativas. Revise se cada uma é necessária.':`${enabledCount} permissão${enabledCount>1?'ões':''} ativa${enabledCount>1?'s':''}. Você pode limitar o acesso ao necessário.`}</p></div>
+  <button className="permission-reset mono" type="button" onClick={()=>setEnabled({location:false,camera:false,microphone:false})} disabled={enabledCount===0}>REDEFINIR SIMULAÇÃO ↺</button>
+ </section>;
+}
+
+const quizQuestions = [
+ { question: 'Um app de lanterna pede sua localização. Qual é o melhor próximo passo?', options: ['Permitir sempre, sem revisar', 'Negar ou limitar se não houver um motivo claro', 'Ativar todas as permissões'], correct: 1, explanation: 'A localização não é necessária para a função de lanterna. Permita apenas acessos que façam sentido para o serviço.' },
+ { question: 'Você recebe um link inesperado pedindo seus dados. O que fazer primeiro?', options: ['Abrir para ver do que se trata', 'Verificar o remetente e confirmar por outro canal', 'Encaminhar para outras pessoas'], correct: 1, explanation: 'Uma checagem independente ajuda a identificar links falsos antes de você informar qualquer dado.' },
+ { question: 'Qual hábito ajuda a reduzir sua exposição?', options: ['Revisar permissões e limitar o acesso ao necessário', 'Usar a mesma senha em todos os serviços', 'Deixar a conta pública por padrão'], correct: 0, explanation: 'Revisar acessos de tempos em tempos reduz permissões que já não são necessárias.' },
+];
+
+function PrivacyQuiz() {
+ const [open, setOpen] = useState(false);
+ const [closing, setClosing] = useState(false);
+ const [step, setStep] = useState(0);
+ const [selected, setSelected] = useState<number|null>(null);
+ const [score, setScore] = useState(0);
+ const [done, setDone] = useState(false);
+ const openerRef = useRef<HTMLButtonElement>(null);
+ const dialogRef = useRef<HTMLDivElement>(null);
+ const titleRef = useRef<HTMLHeadingElement>(null);
+ const closeTimer = useRef<number|null>(null);
+
+ const closeDialog = useCallback(() => {
+  if (closing) return;
+  setClosing(true);
+  openerRef.current?.focus();
+  closeTimer.current = window.setTimeout(() => {
+   setOpen(false);
+   setClosing(false);
+  }, 280);
+ }, [closing]);
+
+ useEffect(() => () => { if (closeTimer.current!==null) window.clearTimeout(closeTimer.current); }, []);
+ useEffect(() => {
+  if (!open || closing) return;
+  titleRef.current?.focus();
+  const onKeyDown = (event: KeyboardEvent) => {
+   if (event.key==='Escape') { event.preventDefault(); closeDialog(); }
+   if (event.key==='Tab') {
+    const controls = dialogRef.current?.querySelectorAll<HTMLElement>('button:not(:disabled)');
+    if (!controls?.length) return;
+    const first = controls[0];
+    const last = controls[controls.length-1];
+    if (event.shiftKey && (document.activeElement===first || document.activeElement===titleRef.current)) { event.preventDefault(); last.focus(); }
+    else if (!event.shiftKey && document.activeElement===last) { event.preventDefault(); first.focus(); }
+   }
+  };
+  window.addEventListener('keydown', onKeyDown);
+  return () => window.removeEventListener('keydown', onKeyDown);
+ }, [open, closing, closeDialog]);
+
+ const startQuiz = () => {
+  if (closeTimer.current!==null) window.clearTimeout(closeTimer.current);
+  setStep(0); setSelected(null); setScore(0); setDone(false); setClosing(false); setOpen(true);
+ };
+ const continueQuiz = () => {
+  if (selected===null) return;
+  const nextScore = score + (selected===quizQuestions[step].correct?1:0);
+  setScore(nextScore);
+  if (step<quizQuestions.length-1) { setStep(step+1); setSelected(null); }
+  else setDone(true);
+ };
+
+ return <div className="quiz-feature">
+  <div><span className="mono">DESAFIO / 01 · SEM NOTA, SEM DADOS SALVOS</span><h3>Seu radar digital está ligado?</h3><p>Responda três situações rápidas sobre privacidade e segurança.</p></div>
+  <button ref={openerRef} className="quiz-launch mono" type="button" aria-haspopup="dialog" aria-expanded={open} onClick={startQuiz}>COMEÇAR DESAFIO ↗</button>
+  {open&&<><button type="button" className={`quiz-backdrop${closing?' is-closing':''}`} aria-label="Fechar desafio" onClick={closeDialog} tabIndex={closing?-1:0}/><div ref={dialogRef} className={`quiz-dialog${closing?' is-closing':''}`} role="dialog" aria-modal="true" aria-labelledby="quiz-title" aria-hidden={closing}>
+   <button className="quiz-close mono" type="button" onClick={closeDialog} tabIndex={closing?-1:0}>FECHAR ×</button>
+   <span className="mono">DESAFIO DE PRIVACIDADE · {done?'RESULTADO':`${String(step+1).padStart(2,'0')} / 03`}</span>
+   <h2 id="quiz-title" ref={titleRef} tabIndex={-1}>{done?'Seu radar digital.':quizQuestions[step].question}</h2>
+   {done?<><p className="quiz-result-score">{score} de {quizQuestions.length} respostas seguras.</p><p>Privacidade também se constrói com escolhas pequenas e revisões frequentes.</p><button className="quiz-next mono" type="button" onClick={startQuiz}>TENTAR DE NOVO ↻</button></>:<><div className="quiz-options">{quizQuestions[step].options.map((option,index)=><button type="button" key={option} aria-pressed={selected===index} onClick={()=>setSelected(index)}>{option}<span aria-hidden="true">{selected===index?'●':'○'}</span></button>)}</div>{selected!==null&&<><p className="quiz-feedback" role="status">{selected===quizQuestions[step].correct?'Boa escolha.':'Vale rever essa opção.'} {quizQuestions[step].explanation}</p><button className="quiz-next mono" type="button" onClick={continueQuiz}>{step===quizQuestions.length-1?'VER RESULTADO ↗':'PRÓXIMA SITUAÇÃO ↗'}</button></>}</>}
+  </div></>}
+ </div>;
+}
+
 export default function Home() {
  const headerRef = useRef<HTMLElement>(null);
  const mastheadRef = useRef<HTMLDivElement>(null);
@@ -118,13 +220,13 @@ export default function Home() {
  <div className={`eye-art ${!signal?'offline':''}`}><div className="art-top mono"><span>CAM_01 / ONLINE</span><span>REC <i/></span></div><div className="code-wall" aria-hidden="true">{Array.from({length:26},(_,i)=><div key={i}>{`${(i+1).toString().padStart(3,'0')}  ${['const identity = await collect(data);','if (consent === undefined) { observe(); }','01001001 00100000 01010011 01000101','user.history.map(trace => store(trace));','// quem está do outro lado da tela?','access.log({ location, clicks, identity });'][i%6]}`}</div>)}</div><div className="eye-box"><Eye offset={signal?offset:{x:0,y:0}}/><div className="target-line horizontal"/><div className="target-line vertical"/><span className="corner tl"/><span className="corner tr"/><span className="corner bl"/><span className="corner br"/></div><span className="eye-label mono">FIG. 01 — O OLHAR QUE NUNCA DESLIGA</span><div className="art-bottom mono"><span>{signal?'SUJEITO: VOCÊ_':'SINAL INTERROMPIDO_'}</span><button onClick={()=>setSignal(!signal)}>{signal?'INTERROMPER SINAL ⏻':'RESTABELECER SINAL ⏻'}</button></div></div></div>
  <div className="ticker" aria-hidden="true"><span>SEUS DADOS.</span> SEUS RASTROS. <span>QUEM CONTROLA?</span> SEUS DADOS. <span>SEUS RASTROS.</span> QUEM CONTROLA? ↗</div></section>
  <section id="sumario" className="contents section"><div className="section-label"><span>01 / NESTA EDIÇÃO</span><span>SEIS PERSPECTIVAS. UM ALERTA.</span></div><div className="contents-heading"><h2>O invisível<br/>também deixa <em>rastros.</em></h2><p>Uma edição sobre o que você compartilha.<br/>E sobre o que compartilham de você.</p></div><div className="chapter-list">{chapters.map(c=><a key={c.id} className="chapter" href={`#${c.id}`}><span className="chapter-number">{c.n}</span><div><span className="mono">{c.tag}</span><h3>{c.title}</h3><p>{c.desc}</p></div><span className="chapter-page mono">P. {c.page}<b>↗</b></span></a>)}</div></section>
- <section id="rastros" className="article section"><div className="section-label"><span>02 / PRIVACIDADE & DADOS</span><span>LEITURA 01 — P. 06</span></div><div className="article-grid"><aside><span className="mono acid-text">DOSSIÊ / 001</span><h2>O que fica<br/>depois<br/>do <em>clique?</em></h2><div className="byline">POR EQUIPE TÁTICA<br/><span>TEXTO PROVISÓRIO · LOREM IPSUM</span></div><button className="reading-button" onClick={()=>setReading(!reading)} aria-pressed={reading}>{reading?'− REDUZIR TEXTO':'+ AMPLIAR TEXTO'}</button></aside><div className="article-body"><p className="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cada clique, uma pista. Cada tela, uma nova camada.</p><div className="columns"><p className="dropcap">{lorem} {lorem}</p><p>{lorem} {lorem}</p></div><blockquote>“Quando tudo é dado,<br/>quem tem o <em>controle?</em>”</blockquote><p>{lorem}</p></div></div><div className="visual-spread"><EditorialImage number="01" title="Anatomia de um rastro."/><div className="continuation"><span className="mono">CONTINUA / PRIVACIDADE</span><h3>Além da superfície.</h3><p>{lorem}</p><p>{lorem}</p></div></div></section>
+ <section id="rastros" className="article section"><div className="section-label"><span>02 / PRIVACIDADE & DADOS</span><span>LEITURA 01 — P. 06</span></div><div className="article-grid"><aside><span className="mono acid-text">DOSSIÊ / 001</span><h2>O que fica<br/>depois<br/>do <em>clique?</em></h2><div className="byline">POR EQUIPE TÁTICA<br/><span>TEXTO PROVISÓRIO · LOREM IPSUM</span></div><button className="reading-button" onClick={()=>setReading(!reading)} aria-pressed={reading}>{reading?'− REDUZIR TEXTO':'+ AMPLIAR TEXTO'}</button></aside><div className="article-body"><p className="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cada clique, uma pista. Cada tela, uma nova camada.</p><div className="columns"><p className="dropcap">{lorem} {lorem}</p><p>{lorem} {lorem}</p></div><blockquote>“Quando tudo é dado,<br/>quem tem o <em>controle?</em>”</blockquote><p>{lorem}</p></div></div><TraceExplorer/><div className="visual-spread"><EditorialImage number="01" title="Anatomia de um rastro."/><div className="continuation"><span className="mono">CONTINUA / PRIVACIDADE</span><h3>Além da superfície.</h3><p>{lorem}</p><p>{lorem}</p></div></div></section>
  <section id="mercado" className="market section"><div className="section-label"><span>03 / GOLPES & VAZAMENTOS</span><span>LEITURA 02 — P. 12</span></div><div className="market-grid"><div className="receipt"><div className="mono">MERCADO INVISÍVEL / ILUSTRAÇÃO</div><h3>IDENTIDADE<br/>EM EXPOSIÇÃO.</h3><div className="receipt-row"><span>HISTÓRICO</span><span>••••••••</span></div><div className="receipt-row"><span>LOCALIZAÇÃO</span><span>••••••••</span></div><div className="receipt-row"><span>CONTATOS</span><span>••••••••</span></div><div className="receipt-row"><span>PREFERÊNCIAS</span><span>••••••••</span></div><div className="barcode"/><span className="mono">VOCÊ É MAIS DO QUE UM REGISTRO.</span><span className="receipt-stamp">EXPOSTO</span></div><div><span className="mono">SEUS DADOS TÊM VALOR.</span><h2>Você não está<br/>à venda.<br/><em>Seus dados, sim.</em></h2><p>{lorem}</p><p>{lorem}</p></div></div><DataGraphic/><div className="text-continuation"><h3>Por trás de cada registro.</h3><div className="columns"><p>{lorem} {lorem}</p><p>{lorem} {lorem}</p></div></div></section>
  <section id="inteligencia" className="ai section"><div className="section-label"><span>04 / INTELIGÊNCIA ARTIFICIAL</span><span>LEITURA 03 — P. 18</span></div><div className="ai-grid"><div><span className="mono">INPUT: VOCÊ / OUTPUT: ?</span><h2>Quem vê<br/>o que a<br/><em>IA vê?</em></h2><p>{lorem}</p><p>{lorem}</p></div><div className="ai-visual"><div className="ai-frame"><Eye small offset={offset}/><span className="mono">&lt; transparency / &gt;</span></div><p className="mono">CAIXA-PRETA / ABRA ESPAÇO PARA PERGUNTAS.</p></div></div><div className="visual-spread ai-spread"><EditorialImage number="02" title="Dentro da caixa-preta."/><div className="continuation"><span className="mono">CONTINUA / INTELIGÊNCIA ARTIFICIAL</span><h3>Uma pergunta de cada vez.</h3><p>{lorem}</p><p>{lorem}</p></div></div><DataGraphic variant="line"/></section>
 
  <section id="algoritmos" className="extended-feature section"><div className="section-label"><span>05 / RASTREAMENTO & ALGORITMOS</span><span>LEITURA 04 — P. 26</span></div><div className="feature-heading"><span className="mono">PERFIS, PADRÕES E POSSIBILIDADES</span><h2>O feed também<br/><em>olha de volta.</em></h2><p>{lorem}</p></div><EditorialImage number="03" title="Retrato de uma identidade digital."/><div className="feature-body"><div className="margin-note mono">EM FOCO / 04<br/><br/>Espaço para notas,<br/>conceitos e referências<br/>da reportagem.</div><div><h3>O que existe entre um clique e outro.</h3><div className="columns"><p className="dropcap">{lorem} {lorem}</p><p>{lorem} {lorem}</p></div><blockquote>“Quem escolhe o que<br/>você vai ver a seguir?”</blockquote><p>{lorem}</p></div></div><DataGraphic variant="line"/></section>
- <section id="consentimento" className="consent-feature section"><div className="section-label"><span>06 / CONSENTIMENTO & TRANSPARÊNCIA</span><span>LEITURA 05 — P. 34</span></div><div className="consent-grid"><div><span className="mono">NAS ENTRELINHAS / 005</span><h2>Li e aceito.<br/><em>Mas entendi?</em></h2><p>{lorem}</p><p>{lorem}</p><div className="editorial-callout"><span className="mono">PAUSA PARA PENSAR</span><h3>O que você gostaria de saber antes de aceitar?</h3><p>{lorem}</p></div></div><EditorialImage number="04" title="As letras pequenas." portrait/></div><div className="text-continuation"><h3>Escolhas que precisam ser claras.</h3><div className="columns"><p>{lorem} {lorem}</p><p>{lorem} {lorem}</p></div></div></section>
- <section id="protecao" className="protection-feature section"><div className="section-label"><span>07 / SEGURANÇA & CIDADANIA</span><span>LEITURA 06 — P. 42</span></div><div className="feature-heading"><span className="mono">PARA CONTINUAR A CONVERSA</span><h2>O próximo clique<br/><em>é seu.</em></h2><p>{lorem}</p></div><div className="closing-grid"><EditorialImage number="05" title="Um olhar para o futuro."/><div className="continuation"><span className="mono">PROTEÇÃO É UM TEMA COLETIVO</span><h3>Da informação à ação.</h3><p>{lorem}</p><p>{lorem}</p></div></div><div className="references"><span className="mono">FONTES & REFERÊNCIAS</span><p>Espaço reservado para fontes consultadas, links da pesquisa, créditos de imagens e metodologia dos gráficos.</p><a href="#sumario" className="mono">REVISITAR O SUMÁRIO ↗</a></div></section>
+ <section id="consentimento" className="consent-feature section"><div className="section-label"><span>06 / CONSENTIMENTO & TRANSPARÊNCIA</span><span>LEITURA 05 — P. 34</span></div><div className="consent-grid"><div><span className="mono">NAS ENTRELINHAS / 005</span><h2>Li e aceito.<br/><em>Mas entendi?</em></h2><p>{lorem}</p><p>{lorem}</p><div className="editorial-callout"><span className="mono">PAUSA PARA PENSAR</span><h3>O que você gostaria de saber antes de aceitar?</h3><p>{lorem}</p></div></div><EditorialImage number="04" title="As letras pequenas." portrait/></div><PermissionLab/><div className="text-continuation"><h3>Escolhas que precisam ser claras.</h3><div className="columns"><p>{lorem} {lorem}</p><p>{lorem} {lorem}</p></div></div></section>
+ <section id="protecao" className="protection-feature section"><div className="section-label"><span>07 / SEGURANÇA & CIDADANIA</span><span>LEITURA 06 — P. 42</span></div><div className="feature-heading"><span className="mono">PARA CONTINUAR A CONVERSA</span><h2>O próximo clique<br/><em>é seu.</em></h2><p>{lorem}</p></div><div className="closing-grid"><EditorialImage number="05" title="Um olhar para o futuro."/><div className="continuation"><span className="mono">PROTEÇÃO É UM TEMA COLETIVO</span><h3>Da informação à ação.</h3><p>{lorem}</p><p>{lorem}</p></div></div><PrivacyQuiz/><div className="references"><span className="mono">FONTES & REFERÊNCIAS</span><p>Espaço reservado para fontes consultadas, links da pesquisa, créditos de imagens e metodologia dos gráficos.</p><a href="#sumario" className="mono">REVISITAR O SUMÁRIO ↗</a></div></section>
  <AuthorsSection/>
  <footer><div className="footer-top"><a href="#inicio" className="footer-brand">TÁTICA↗</a><p>Olhar com atenção.<br/>Questionar com intenção.</p><a href="#inicio" className="mono">VOLTAR AO TOPO ↑</a></div><div className="footer-bottom mono"><span>MULTI / REVISTA TÁTICA — 2026</span><span>EDIÇÃO 001 · QUEM ESTÁ OLHANDO?</span><span>OLHOS ANIMADOS. NENHUM RASTREAMENTO.</span></div></footer>
  </main>
