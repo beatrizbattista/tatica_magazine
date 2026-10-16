@@ -18,9 +18,38 @@ function Eye({ offset, small=false }: { offset: {x:number;y:number}; small?: boo
 function EditorialImage({ number, title, portrait=false }: {number:string;title:string;portrait?:boolean}) {
  return <figure className={`editorial-image ${portrait?'portrait':''}`}><div className="image-placeholder"><span className="mono image-id">ARQUIVO VISUAL / {number}</span><div className="image-cross">+</div><div className="image-placeholder-copy"><span className="mono">IMAGEM DA REPORTAGEM</span><h3>{title}</h3><p>Espaço reservado para fotografia ou ilustração</p></div><span className="image-dimensions mono">{portrait?'FORMATO VERTICAL / 4:5':'FORMATO HORIZONTAL / 16:9'}</span></div><figcaption><span>FIG. {number} — LEGENDA DA IMAGEM</span><span>Crédito da imagem / a inserir</span></figcaption></figure>
 }
+function LineChart() {
+ const svgRef = useRef<SVGSVGElement>(null);
+ const [size, setSize] = useState({ width: 400, height: 200 });
+
+ useEffect(() => {
+  const plot = svgRef.current?.parentElement;
+  if (!plot) return;
+
+  const resize = () => {
+   const width = Math.max(1, plot.clientWidth);
+   const height = Math.max(1, plot.clientHeight);
+   setSize(current => current.width === width && current.height === height ? current : { width, height });
+  };
+
+  resize();
+  const observer = new ResizeObserver(resize);
+  observer.observe(plot);
+  return () => observer.disconnect();
+ }, []);
+
+ const points = [24, 58, 42, 76].map((value, index) => ({
+  x: size.width * (0.125 + index * 0.25),
+  y: size.height * (1 - value / 100),
+  value,
+ }));
+
+ return <svg ref={svgRef} viewBox={`0 0 ${size.width} ${size.height}`} preserveAspectRatio="none" role="img" aria-label="Gráfico de linha ilustrativo: 24, 58, 42 e 76"><path d={`M ${points.map(({ x, y }) => `${x} ${y}`).join(' L ')}`} fill="none" stroke="currentColor" strokeWidth="3" vectorEffect="non-scaling-stroke"/>{points.map(({ x, y, value }, index)=><g key={index}><circle cx={x} cy={y} r="4" fill="currentColor"/><text x={x} y={y-14} textAnchor="middle" fontSize="11" fill="currentColor">{value}</text></g>)}</svg>;
+}
+
 function DataGraphic({variant='bars'}:{variant?:'bars'|'line'}) {
  const [view,setView]=useState(variant);
- return <figure className="data-graphic"><div className="graphic-header"><div><span className="mono">CADERNO DE DADOS / VISUALIZAÇÃO</span><h3>O que os números revelam.</h3></div><div className="chart-switch" role="group" aria-label="Tipo de gráfico"><button aria-pressed={view==='bars'} onClick={()=>setView('bars')}>Barras</button><button aria-pressed={view==='line'} onClick={()=>setView('line')}>Linha</button></div></div><p className="chart-disclaimer mono">PRÉVIA DE DIAGRAMAÇÃO · VALORES FICTÍCIOS, SEM BASE ESTATÍSTICA</p><div className="chart-layout"><div className="chart-y mono"><span>100</span><span>75</span><span>50</span><span>25</span><span>0</span></div><div className="chart-plot">{view==='bars'?<div className="chart-bars">{[24,58,42,76].map((v,i)=><div className="bar-column" key={i}><span className="bar-value mono" style={{bottom:`${v}%`}}>{v}</span><div className="bar" style={{height:`${v}%`}}/></div>)}</div>:<svg viewBox="0 0 400 200" preserveAspectRatio="none" role="img" aria-label="Gráfico de linha ilustrativo: 24, 58, 42 e 76"><path d="M50 152 L150 84 L250 116 L350 48" fill="none" stroke="currentColor" strokeWidth="3" vectorEffect="non-scaling-stroke"/>{[[50,152],[150,84],[250,116],[350,48]].map(([x,y],i)=><g key={i}><circle cx={x} cy={y} r="4" fill="currentColor"/><text x={x} y={y-14} textAnchor="middle" fontSize="11" fill="currentColor">{[24,58,42,76][i]}</text></g>)}</svg>}<div className="chart-x mono">{['Grupo A','Grupo B','Grupo C','Grupo D'].map(x=><span key={x}>{x}</span>)}</div></div></div><figcaption><span>GRÁFICO DEMONSTRATIVO / SUBSTITUIR PELA BASE DA REPORTAGEM</span><span>Fonte e período / a inserir</span></figcaption></figure>
+ return <figure className="data-graphic"><div className="graphic-header"><div><span className="mono">CADERNO DE DADOS / VISUALIZAÇÃO</span><h3>O que os números revelam.</h3></div><div className="chart-switch" role="group" aria-label="Tipo de gráfico"><button aria-pressed={view==='bars'} onClick={()=>setView('bars')}>Barras</button><button aria-pressed={view==='line'} onClick={()=>setView('line')}>Linha</button></div></div><p className="chart-disclaimer mono">PRÉVIA DE DIAGRAMAÇÃO · VALORES FICTÍCIOS, SEM BASE ESTATÍSTICA</p><div className="chart-layout"><div className="chart-y mono"><span>100</span><span>75</span><span>50</span><span>25</span><span>0</span></div><div className="chart-plot">{view==='bars'?<div className="chart-bars">{[24,58,42,76].map((v,i)=><div className="bar-column" key={i}><span className="bar-value mono" style={{bottom:`${v}%`}}>{v}</span><div className="bar" style={{height:`${v}%`}}/></div>)}</div>:<LineChart/>}<div className="chart-x mono">{['Grupo A','Grupo B','Grupo C','Grupo D'].map(x=><span key={x}>{x}</span>)}</div></div></div><figcaption><span>GRÁFICO DEMONSTRATIVO / SUBSTITUIR PELA BASE DA REPORTAGEM</span><span>Fonte e período / a inserir</span></figcaption></figure>
 }
 
 const authors = [
