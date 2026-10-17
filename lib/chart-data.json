@@ -1,0 +1,30 @@
+[
+  {
+    "grafico": "1",
+    "categoria": "Dados de saúde",
+    "valor": 52.0,
+    "unidade": "% dos usuários de IA generativa",
+    "fonte": "Cetic.br 2025"
+  },
+  {
+    "grafico": "1",
+    "categoria": "Nome, endereço, nascimento ou CPF",
+    "valor": 37.0,
+    "unidade": "% dos usuários de IA generativa",
+    "fonte": "Cetic.br 2025"
+  },
+  {
+    "grafico": "2",
+    "categoria": "2024",
+    "valor": 285578.0,
+    "unidade": "boletins (23 UFs)",
+    "fonte": "Anuário FBSP 2026 tab. 17 p. 120 (286.226 − 648 de PE)"
+  },
+  {
+    "grafico": "2",
+    "categoria": "2025",
+    "valor": 317627.0,
+    "unidade": "boletins (23 UFs)",
+    "fonte": "Anuário FBSP 2026 tab. 17 p. 120 (346.753 − 29.126 de PE)"
+  }
+]

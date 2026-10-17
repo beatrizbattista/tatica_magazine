@@ -1,0 +1,222 @@
+/* A continuous reading scale for the magazine, retaining Tática's visual language. */
+main { max-width: 1360px; margin-inline: auto; }
+.section { padding: 42px 6% 48px; }
+.cases-section { padding-bottom: 0; }
+.index-panel h2 { font-size: 48px; }
+.index-panel > a { font-size: 17px; padding-block: 14px; }
+.narrative-bridge {
+  max-width: 84ch;
+  margin: 24px 0 28px;
+  padding-left: 18px;
+  border-left: 2px solid #879b55;
+  font-size: 15px;
+  line-height: 1.8;
+  text-wrap: pretty;
+}
+.investigation .narrative-bridge { border-color: var(--acid); color: #dbe0d2; }
+.story-body p, .market .story-body p, .ai .story-body p {
+  font-size: 15.5px;
+  line-height: 1.78;
+  margin-bottom: 1.15em;
+}
+.reading .story-body p { font-size: 18px; }
+
+.safety-path {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+  list-style: none;
+  padding: 22px 0;
+  margin: 28px 0;
+  border-block: 1px solid var(--line);
+}
+.safety-path li + li { border-left: 1px solid var(--line); padding-left: 24px; }
+.safety-path .mono { font-size: 8px; }
+.safety-path h3 { font-size: 24px; line-height: 1.15; margin: 12px 0; font-weight: 500; }
+.safety-path p { font-size: 13px; line-height: 1.75; }
+.ai-data-context { border-block: 1px solid var(--line); padding: 22px 0; margin-top: 30px; }
+.ai-data-context > summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; cursor: pointer; list-style: none; }
+.ai-data-context > summary .mono { font-size: 8px; display: block; margin-bottom: 10px; line-height: 1.7; }
+.ai-data-context > summary strong { font: 500 27px/1.2 'Barlow Condensed', sans-serif; display: block; }
+.ai-data-context > summary b { font-size: 25px; font-weight: 400; }
+.ai-data-context[open] > summary { margin-bottom: 25px; }
+.ai-data-context[open] > summary b { transform: rotate(45deg); }
+
+/* The cover keeps its character; the inner pages use a calmer type hierarchy. */
+.contents h2, .editorial-heading h2, .authors-heading h2, .sources-heading h2 {
+  font-size: clamp(38px, 4.2vw, 58px);
+  line-height: 1.06;
+}
+.editorial-opening-grid { gap: 6%; }
+.editorial-heading h2 { margin: 16px 0 22px; }
+.editorial-copy p { font-size: 15px; line-height: 1.8; }
+.editorial-copy .editorial-lead { font-size: 19px; }
+.editorial-copy blockquote { font-size: 25px; margin: 22px 0; }
+.contents-heading { margin: 28px 0; }
+.chapter { gap: 26px; padding: 18px 0; }
+.chapter h3 { font-size: 26px; line-height: 1.15; }
+.chapter-number { font-size: 36px; }
+.chapter p { max-width: 76ch; }
+.report-title { padding: 32px 0 36px; }
+.report-title h2 {
+  max-width: 900px;
+  font-size: clamp(42px, 4.7vw, 66px);
+  line-height: 1.07;
+  margin: 18px 0 24px;
+}
+.report-title h2 em { display: inline; }
+.report-deck { padding-top: 20px; gap: 25px; }
+.report-deck > p { max-width: 76ch; font-size: 17px; line-height: 1.7; }
+.case-heading { margin-bottom: 24px; }
+.case-heading h3 { font-size: clamp(34px, 3.5vw, 48px); margin-top: 13px; line-height: 1.08; }
+.case-heading h3 em { line-height: 1.2; }
+.lourdes-case, .diogo-case { padding: 34px 0 38px; }
+.lourdes-grid { grid-template-columns: .85fr 1.15fr; gap: 6%; }
+.lourdes-grid > div:first-child { max-width: 380px; }
+.case-number { margin-bottom: 20px; }
+.case-number strong { font-size: clamp(34px, 3.4vw, 46px); }
+.case-fact { margin-top: 20px; padding-top: 12px; }
+.public-dimension { margin: 0 -6.82%; padding: 30px 6.82% 36px; }
+.public-dimension > h3 { font-size: 30px; padding-bottom: 18px; margin-bottom: 24px; }
+.dimension-grid { grid-template-columns: .6fr 1.4fr; gap: 6%; }
+.stat-signal strong { font-size: clamp(82px, 8vw, 112px); }
+.stat-signal p { font-size: 14px; margin: 16px 0; }
+
+/* Chapter headings continue the same argument instead of restarting the page. */
+.market { background: var(--paper); }
+.market-grid { grid-template-columns: .7fr 1.3fr; gap: 7%; padding-top: 0; }
+.market .market-grid { padding-top: 0; }
+.market h2, .ai-intro h2, .infrastructure .feature-heading > h2,
+.investigation .feature-heading h2, .protection-feature .feature-heading h2 {
+  font-size: clamp(38px, 4.1vw, 58px);
+  line-height: 1.08;
+  margin: 16px 0 24px;
+}
+.market .receipt { max-width: 280px; margin-top: 12px; padding: 26px; background: #e4edc9; }
+.receipt h3 { font-size: 32px; margin: 22px 0; }
+.receipt-stamp { font-size: 28px; }
+.market-grid .story-body { margin-top: 18px; }
+.thinker-spread { grid-template-columns: .7fr 1.3fr; padding: 32px 0; margin-top: 34px; gap: 7%; }
+.thinker-spread > .report-photo { max-width: 310px; }
+.thinker-spread h3, .transparency-spread > div > h3 { font-size: 35px; line-height: 1.13; margin: 15px 0 22px; }
+.story-continuation { max-width: 820px; margin-top: 34px; }
+.story-continuation > h3, .proposal-text > h3 { font-size: 30px; line-height: 1.2; margin-bottom: 20px; }
+.glossary { margin-top: 34px; padding-top: 28px; }
+.glossary h3 { font-size: 29px; line-height: 1.15; }
+.glossary summary { padding: 18px 0; font-size: 14px; }
+.ai-intro { grid-template-columns: .8fr 1.2fr; margin: 8px 0 28px; gap: 7%; }
+.ai-intro > div:first-child { align-self: start; }
+.data-uses { padding: 26px; margin: 32px 0; }
+.data-uses > h3 { font-size: 32px; margin: 12px 0 22px; }
+.uses-tabs button { padding: 13px 10px; }
+.uses-panel { min-height: 130px; padding: 24px 0; margin-bottom: 20px; gap: 24px; }
+.uses-panel > span { font-size: 50px; min-width: 60px; }
+.uses-panel h4 { font-size: 27px; margin-bottom: 12px; }
+.uses-panel p { font-size: 14px !important; }
+.narrow-story { max-width: 820px; margin: 30px auto; }
+.transparency-spread { margin-top: 34px; padding-top: 30px; gap: 7%; }
+.transparency-number { padding: 25px; }
+.transparency-number strong { font-size: clamp(58px, 5.5vw, 78px); margin: 24px 0 14px; }
+.real-chart { margin-top: 32px; padding: 28px; }
+.real-chart h3 { font-size: 32px; line-height: 1.15; }
+.real-chart-plot { height: 235px; margin: 54px 0 62px; }
+.real-bar > strong { font-size: 30px; }
+.chart-reading { font-size: 13px !important; min-height: 42px; margin-top: 20px !important; }
+.feature-heading { padding: 0 0 14px; }
+.infrastructure { background: #e8eadf; }
+.infrastructure-intro, .investigation-grid { margin: 8px 0 30px; gap: 7%; }
+.institution-map, .investigation-visual { padding: 24px; }
+.institution-map > div { padding: 14px 0; }
+.institution-map strong { font-size: 28px; }
+.boleto-lab { padding: 30px; gap: 24px 7%; margin-top: 30px; }
+.boleto-lab h3 { font-size: 44px; margin: 18px 0; }
+.demo-boleto { padding: 20px; max-width: 360px; }
+.demo-boleto > button { padding-block: 12px; }
+.boleto-result { font-size: 14px; min-height: 60px; padding-top: 16px; }
+.photo-essay { grid-template-columns: 1.2fr .8fr; padding-top: 28px; margin-top: 34px; gap: 32px; }
+.photo-essay .report-photo { max-width: 570px; }
+.photo-essay > p { font-size: 22px; line-height: 1.5; }
+.beccaria-quote { padding: 28px 0; margin: 30px 0; }
+.beccaria-quote blockquote { font-size: clamp(24px, 2.4vw, 34px); line-height: 1.5; }
+.investigation .story-continuation { margin-top: 30px; }
+.journey { padding: 26px; margin: 12px 0 34px; }
+.interaction-heading h3 { font-size: 30px; }
+.journey-steps button { font-size: 22px; padding: 16px 12px; }
+.journey-panel { min-height: 190px; padding: 24px 0; }
+.journey-panel > p { font-size: 19px; }
+.journey-panel > div > p { font-size: 14px; }
+.ods-note { padding: 24px; margin: 32px 0; gap: 25px; }
+.ods-note > strong { font-size: 58px; }
+.closing-story { margin: 36px auto; }
+.closing-story .story-body p:last-child { font-size: 23px; line-height: 1.6; }
+.quiz-feature { margin: 32px 0 20px; padding: 22px; }
+.quiz-feature h3 { font-size: 31px; }
+.sources-heading { margin: 28px 0 22px; }
+.authors-heading { margin: 28px 0 24px; }
+.author-card { min-height: 225px; flex-basis: clamp(255px, 26vw, 320px); }
+.author-card-copy h3 { font-size: 26px; }
+
+@media (max-width: 700px) {
+  .section { padding: 30px 6% 34px; }
+  .cases-section { padding-bottom: 0; }
+  .narrative-bridge { font-size: 14px; line-height: 1.75; margin: 20px 0 24px; padding-left: 13px; }
+  .story-body p, .market .story-body p, .ai .story-body p { font-size: 15px; line-height: 1.78; }
+  .reading .story-body p { font-size: 18px; }
+  .safety-path { grid-template-columns: 1fr; gap: 18px; margin: 24px 0; padding: 20px 0; }
+  .safety-path li + li { border-left: 0; border-top: 1px solid var(--line); padding: 18px 0 0; }
+  .safety-path h3 { font-size: 23px; margin-block: 9px; }
+  .ai-data-context > summary strong { font-size: 24px; }
+  .contents h2, .editorial-heading h2, .authors-heading h2, .sources-heading h2 { font-size: 38px; }
+  .editorial-copy .editorial-lead { font-size: 18px; }
+  .editorial-copy blockquote { font-size: 22px; }
+  .chapter { gap: 16px; padding: 17px 0; }
+  .chapter h3 { font-size: 23px; }
+  .chapter-number { font-size: 30px; }
+  .chapter-page { font-size: 7px; }
+  .report-title { padding: 26px 0 28px; }
+  .report-title h2 { font-size: 40px; line-height: 1.08; margin: 16px 0 20px; }
+  .report-deck > p { font-size: 16px; }
+  .case-heading h3 { font-size: 34px; line-height: 1.08; }
+  .case-number strong { font-size: 36px; }
+  .lourdes-case, .diogo-case { padding: 28px 0 30px; }
+  .lourdes-grid, .dimension-grid, .market-grid, .thinker-spread, .ai-intro,
+  .transparency-spread, .photo-essay { grid-template-columns: 1fr; gap: 25px; }
+  .lourdes-grid > div:first-child { max-width: none; }
+  .public-dimension { padding-block: 26px; }
+  .public-dimension > h3 { font-size: 27px; }
+  .stat-signal strong { font-size: 85px; }
+  .stat-signal p { font-size: 13px; margin: 0; }
+  .market h2, .ai-intro h2, .infrastructure .feature-heading > h2,
+  .investigation .feature-heading h2, .protection-feature .feature-heading h2 { font-size: 36px; line-height: 1.1; }
+  .market .market-grid { display: flex; flex-direction: column; gap: 22px; }
+  .market-grid > div:last-child { order: -1; }
+  .market .receipt { max-width: 235px; padding: 22px; margin: 12px auto 10px; }
+  .receipt h3 { font-size: 29px; }
+  .thinker-spread > .report-photo { max-width: 250px; }
+  .thinker-spread h3, .transparency-spread > div > h3 { font-size: 30px; }
+  .story-continuation > h3, .proposal-text > h3 { font-size: 28px; }
+  .data-uses { padding: 22px 17px; }
+  .data-uses > h3 { font-size: 28px; }
+  .uses-panel { gap: 15px; min-height: 160px; }
+  .transparency-number strong { font-size: 68px; }
+  .real-chart { padding: 22px 15px; }
+  .real-chart h3 { font-size: 28px; }
+  .real-chart-plot { height: 205px; margin: 50px 0 66px; }
+  .real-bar > strong { font-size: 26px; }
+  .chart-reading { font-size: 12px !important; min-height: 60px; }
+  .boleto-lab { padding: 24px; gap: 22px; }
+  .boleto-lab h3 { font-size: 38px; }
+  .boleto-result { min-height: 85px; font-size: 13px; }
+  .photo-essay > p { font-size: 21px; }
+  .beccaria-quote blockquote { font-size: 23px; }
+  .journey { padding: 22px 17px; }
+  .journey .interaction-heading h3 { font-size: 28px; }
+  .journey-steps button { font-size: 20px; }
+  .journey-panel { min-height: 280px; padding: 22px 0; }
+  .journey-panel > p { font-size: 18px; }
+  .closing-story .story-body p:last-child { font-size: 21px; }
+  .quiz-feature h3 { font-size: 28px; }
+  .author-card { min-height: 210px; flex-basis: 78vw; }
+}
+
+@media print { .narrative-bridge { font-size: 11pt; } }
