@@ -154,7 +154,7 @@ main { max-width: 1360px; margin-inline: auto; }
 .quiz-feature h3 { font-size: 31px; }
 .sources-heading { margin: 28px 0 22px; }
 .authors-heading { margin: 28px 0 24px; }
-.author-card { min-height: 225px; flex-basis: clamp(255px, 26vw, 320px); }
+.author-card { min-height: 0; aspect-ratio: 1; flex-basis: clamp(255px, 26vw, 320px); }
 .author-card-copy h3 { font-size: 26px; }
 
 @media (max-width: 700px) {
@@ -217,6 +217,6 @@ main { max-width: 1360px; margin-inline: auto; }
   .journey-panel > p { font-size: 18px; }
   .closing-story .story-body p:last-child { font-size: 21px; }
   .quiz-feature h3 { font-size: 28px; }
-  .author-card { min-height: 210px; flex-basis: 78vw; }
+  .author-card { min-height: 0; flex-basis: 78vw; }
 }
 

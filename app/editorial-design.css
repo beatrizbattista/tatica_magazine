@@ -4,6 +4,10 @@ html { scroll-padding-top: 128px; }
 body { background: #e4e5dc; }
 main { max-width: 1440px; background: var(--paper); }
 .topbar { background: #f4f2eaf5; }
+.topbar .index-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 6px 15px; border: 1px solid var(--ink); border-radius: 4px; background: var(--acid); font-size: 11px; font-weight: 500; line-height: 1; white-space: nowrap; transition: background .2s, color .2s; }
+.topbar .index-toggle:hover, .topbar .index-toggle[aria-expanded="true"] { background: var(--ink); color: var(--paper); }
+.index-toggle svg { display: block; width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+@media (max-width: 600px) { .topbar .index-toggle { font-size: 9px; padding: 6px 10px; gap: 7px; } .index-toggle svg { width: 18px; height: 18px; } }
 .section { padding: 58px 7%; }
 .section-label, .section .mono { line-height: 1.6; }
 .section-label { font-size: 10px; }
@@ -409,7 +413,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid #657f2c; outline-offs
 .cover-security small { display: block; font: 12px/1.6 'DM Sans', sans-serif; }
 .cover .eye-box { top: 10%; height: 56%; }
 .editorial-badge { display: inline-block; padding: 8px 12px; background: #304b3a; color: #f4f2ea; }
-.editorial-opening > .section-label { align-items: center; border-top: 2px solid #304b3a; }
+.editorial-opening > .section-label { align-items: center; border-top: 0; }
 .editorial-context { font: 14px/1.7 'DM Sans', sans-serif; padding: 16px 18px; margin-bottom: 25px; background: #e3e9d8; border-left: 3px solid #607845; }
 .story-body, .editorial-copy, .chapter-opening, .case-heading, .reader-pause, .sources-intro, .photo-essay > p { text-align: left; }
 .investigation-visual > p, .real-chart figcaption, .chart-reading { text-align: left; }
@@ -422,6 +426,21 @@ summary:hover .disclosure-cue { background: #d4ed83; color: #20291f; }
 .demo-boleto > button .clue-action { font: 500 10px/1.4 'DM Sans', sans-serif; white-space: nowrap; }
 .timeline-tabs button .step-action { font-size: 10px; }
 .story-body a, .case-source, .editorial-next, .source-list a, .report-photo figcaption a { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Remove only the separators and duplicate underlines selected for this edition. */
+.ticker { border-bottom: 0; }
+.authors-section, .authors-section > .section-label { border-top: 0; }
+/* Keep the former cover text slots in the layout so the eye retains its height. */
+.cover .cover-spacer { visibility: hidden; pointer-events: none; }
+
+
+.case-source, .source-list p > a { border-bottom: 0; }
+.chart-ai .chart-reading { border-top: 0; }
+#algoritmos .chapter-track,
+#consentimento .chapter-track,
+#protecao .chapter-track,
+.sources-section > .section-label,
+.journey > .editorial-note { border-top: 0; }
 .lourdes-case .photo-window img { filter: none; }
 @media (max-width: 700px) {
  .cover-security { bottom: 18%; gap: 10px; }

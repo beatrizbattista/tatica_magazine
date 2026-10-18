@@ -2,15 +2,15 @@
   "total": 19,
   "sections": {
     "inicio": [1, 1],
-    "editorial": [2, 2],
-    "sumario": [3, 3],
-    "rastros": [4, 5],
-    "mercado": [6, 7],
-    "inteligencia": [8, 10],
-    "algoritmos": [11, 12],
-    "consentimento": [13, 13],
-    "protecao": [14, 15],
-    "fontes": [16, 18],
-    "equipe": [19, 19]
+    "equipe": [2, 2],
+    "editorial": [3, 3],
+    "sumario": [4, 4],
+    "rastros": [5, 6],
+    "mercado": [7, 8],
+    "inteligencia": [9, 11],
+    "algoritmos": [12, 13],
+    "consentimento": [14, 14],
+    "protecao": [15, 16],
+    "fontes": [17, 19]
   }
 }

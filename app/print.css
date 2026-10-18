@@ -43,13 +43,12 @@
   /* Each part of the issue opens a new page. */
   .section { padding: 0 !important; background: none; color: var(--ink); min-height: 0; border: 0 !important; }
   .editorial-opening, .contents, .reportage-flow > section, .sources-section { break-before: page; }
-  .authors-section { break-inside: avoid; margin-top: 8mm; }
+  .authors-section { break-before: page; break-inside: avoid; margin-top: 0; }
   .section-label { font-size: 6.5pt; padding-top: 2.5mm; border-color: var(--ink); }
 
   /* Cover: one full-bleed page. */
   .cover-wrap { page: cover; height: 296mm; min-height: 0; padding: 13mm 14mm 11mm; display: flex; flex-direction: column; gap: 4mm; overflow: hidden; }
   .edition-line { position: relative; padding: 0; font-size: 7pt; }
-  .edition-line > span:nth-child(2) { position: absolute; top: 0; left: 50%; transform: translateX(-50%); white-space: nowrap; }
   .masthead { font-size: 158pt; line-height: .82; margin: 4mm 0 0; padding-bottom: 5mm; }
   .cover { flex: 1; min-height: 0; grid-template-columns: 1fr 1fr; gap: 7mm; padding: 2mm 0 0; }
   .cover-copy { display: flex; flex-direction: column; align-items: flex-start; padding: 4mm 0 2mm; gap: 6mm; justify-content: space-between; }
@@ -276,7 +275,7 @@
   .image-credits { grid-template-columns: 30mm 1fr 1fr; gap: 6mm; margin-top: 6mm; padding-top: 4mm; border-top: 1px solid var(--line); break-inside: avoid; }
   .image-credits > p { font-size: 7.5pt; line-height: 1.6; }
 
-  /* Team and colophon close the issue on the same page. */
+  /* Team opens the issue after the cover; the colophon remains at the end. */
   .authors-section { background: none; }
   .authors-heading { margin: 5mm 0 4mm; }
   .authors-heading h2 { font-size: 24pt; }
