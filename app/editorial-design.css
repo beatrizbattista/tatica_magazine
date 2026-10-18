@@ -456,10 +456,10 @@ summary:hover .disclosure-cue { background: #d4ed83; color: #20291f; }
 :root {
  --type-label: 10px;
  --type-caption: 12px;
- --type-body: 17px;
- --type-lead: 20px;
- --type-subhead: 30px;
- --type-chapter: 48px;
+ --type-body: 16px;
+ --type-lead: 18px;
+ --type-subhead: 28px;
+ --type-chapter: 44px;
 }
 .section-label, .chapter-track > .mono, .case-heading > .mono, .chapter .mono { font-size: var(--type-label); }
 .section-label { border-top: 0; }
@@ -491,6 +491,32 @@ summary:hover .disclosure-cue { background: #d4ed83; color: #20291f; }
 .case-source { max-width: min(100%, 380px); white-space: normal; }
 
 @media (max-width: 700px) {
- :root { --type-caption: 11px; --type-body: 16px; --type-lead: 18px; --type-subhead: 27px; --type-chapter: 36px; }
+ :root { --type-caption: 11px; --type-body: 16px; --type-lead: 18px; --type-subhead: 27px; --type-chapter: 34px; }
  .reader-pause { padding: 20px; }
+}
+
+/* Screen edition: ease the overall scale without shrinking the reading text. */
+@media screen and (min-width: 761px) {
+ main { max-width: 1320px; }
+ .section { padding-block: 48px; }
+ .cover-wrap { min-height: calc(90svh - var(--header-height)); }
+ .masthead { font-size: min(20.5vw, 18svh); }
+ .cover h1 { font-size: clamp(48px, 5.4vw, 78px); }
+ .cover .eye-art { min-height: 320px; }
+ .ticker { font-size: 21px; }
+ .contents h2, .editorial-heading h2, .authors-heading h2, .sources-heading h2 { font-size: clamp(36px, 3.8vw, 52px); }
+ .report-title h2 { font-size: clamp(40px, 4.1vw, 58px); }
+ .case-heading h3 { font-size: clamp(30px, 2.8vw, 39px); }
+ .chapter { padding-block: 16px; }
+ .stat-signal strong { font-size: 86px; }
+ .author-card { flex-basis: clamp(240px, 24vw, 290px); }
+ .reading-trail a { padding-block: 12px 10px; }
+}
+
+@media screen and (max-width: 760px) {
+ .masthead { font-size: 21vw; }
+ .cover h1 { font-size: clamp(39px, 7vw, 52px); }
+ .cover .eye-art { min-height: 270px; }
+ .contents h2, .editorial-heading h2, .authors-heading h2, .sources-heading h2 { font-size: 35px; }
+ .author-card { flex-basis: 74vw; }
 }
