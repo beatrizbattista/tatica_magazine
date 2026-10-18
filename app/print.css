@@ -3,10 +3,10 @@
 @page {
   size: A4;
   margin: 15mm 14mm 16mm;
-  @top-left { content: 'TÁTICA®'; font: 700 11pt 'Barlow Condensed', 'Arial Narrow', sans-serif; color: #20291f; vertical-align: bottom; padding-bottom: 3mm; }
-  @top-right { content: 'EDIÇÃO 001 · QUEM ESTÁ OLHANDO?'; font: 6.5pt 'DM Sans', sans-serif; letter-spacing: .06em; color: #52604e; vertical-align: bottom; padding-bottom: 3.6mm; }
-  @bottom-left { content: 'SEGURANÇA PÚBLICA NA ERA DIGITAL · BRASIL / 2026'; font: 6.5pt 'DM Sans', sans-serif; letter-spacing: .06em; color: #52604e; vertical-align: top; padding-top: 4mm; }
-  @bottom-right { content: 'PÁG. ' counter(page, decimal-leading-zero) ' / ' counter(pages, decimal-leading-zero); font: 600 8pt 'DM Sans', sans-serif; letter-spacing: .04em; color: #20291f; vertical-align: top; padding-top: 3.6mm; }
+  @top-left { content: 'TÁTICA®'; font: 700 11pt 'Barlow Condensed', 'Arial Narrow', sans-serif; color: var(--color-ink); vertical-align: bottom; padding-bottom: 3mm; }
+  @top-right { content: 'EDIÇÃO 001 · QUEM ESTÁ OLHANDO?'; font: 6.5pt 'DM Sans', sans-serif; letter-spacing: .06em; color: color-mix(in srgb, var(--color-ink) 70%, var(--neutral-rule)); vertical-align: bottom; padding-bottom: 3.6mm; }
+  @bottom-left { content: 'SEGURANÇA PÚBLICA NA ERA DIGITAL · BRASIL / 2026'; font: 6.5pt 'DM Sans', sans-serif; letter-spacing: .06em; color: color-mix(in srgb, var(--color-ink) 70%, var(--neutral-rule)); vertical-align: top; padding-top: 4mm; }
+  @bottom-right { content: 'PÁG. ' counter(page, decimal-leading-zero) ' / ' counter(pages, decimal-leading-zero); font: 600 8pt 'DM Sans', sans-serif; letter-spacing: .04em; color: var(--color-ink); vertical-align: top; padding-top: 3.6mm; }
 }
 @page cover {
   margin: 0;
@@ -18,7 +18,7 @@
 
 @media print {
   html { scroll-padding-top: 0; }
-  body, main { background: #fff; }
+  body, main { background: var(--neutral-white); }
   main { max-width: none; margin: 0; }
   p { orphans: 2; widows: 2; }
   .editorial-context, .disclosure-cue { display: none !important; }
@@ -85,7 +85,7 @@
   .chapter-number { font-size: 22pt; }
   .chapter .mono { font-size: 6.5pt; }
   .chapter h3 { font-size: 16pt; line-height: 1.15; margin: 1.5mm 0 2mm; }
-  .chapter p { display: block; font-size: 8.5pt; line-height: 1.55; color: #4b5942; }
+  .chapter p { display: block; font-size: 8.5pt; line-height: 1.55; color: color-mix(in srgb, var(--color-ink) 75%, var(--neutral-rule)); }
   .chapter-page { display: none; }
 
   /* Running text: magazine columns wherever the text spans the page. */
@@ -228,13 +228,13 @@
   /* Chapter 05: the dark spread becomes a light page, with legible text. */
   .investigation { background: none; color: var(--ink); }
   .investigation .story-body p, .investigation .chapter-opening .chapter-lead, .investigation .narrative-bridge { color: var(--ink) !important; }
-  .investigation .chapter-index, .investigation .chapter-position, .investigation .chapter-track .chapter-folio { color: #586d38; }
+  .investigation .chapter-index, .investigation .chapter-position, .investigation .chapter-track .chapter-folio { color: color-mix(in srgb, var(--color-olive) 90%, var(--neutral-black)); }
   .investigation .chapter-track { border-color: var(--ink); }
-  .investigation .depth-marks i { background: #ced5c5; }
-  .investigation .depth-marks .filled { background: #607845; }
+  .investigation .depth-marks i { background: color-mix(in srgb, var(--neutral-paper) 20%, var(--neutral-rule)); }
+  .investigation .depth-marks .filled { background: var(--color-olive); }
   .investigation-grid { grid-template-columns: 40mm 1fr; gap: 6mm; margin: 0 0 2mm; }
   .investigation-visual { padding: 4mm; break-inside: avoid; color: var(--paper); }
-  .investigation-visual > .mono, .trace-branches > span { color: #dfe6d6; }
+  .investigation-visual > .mono, .trace-branches > span { color: color-mix(in srgb, var(--color-olive) 20%, var(--neutral-white)); }
   .investigation-visual > .mono { margin-bottom: 2.5mm; }
   .trace-node { padding: 1.8mm; }
   .trace-path { font-size: 10pt; gap: .5mm; margin: .5mm 0; }
@@ -242,7 +242,7 @@
   .investigation-visual > p { font-size: 7.5pt; margin-top: 2.5mm; }
   .beccaria-quote { padding: 2mm 0; margin: 2mm 0; border-color: var(--ink); }
   .beccaria-quote.story-body { columns: auto; }
-  .beccaria-quote blockquote { font-size: 12pt !important; line-height: 1.4; color: #4d6a2e; }
+  .beccaria-quote blockquote { font-size: 12pt !important; line-height: 1.4; color: color-mix(in srgb, var(--color-olive) 80%, var(--neutral-black)); }
 
   /* Chapter 06. */
   .proposal-break { margin: 4mm 0; padding: 2.5mm 0; font-size: 7pt; }
@@ -264,7 +264,7 @@
   .source-list > li > .mono { font-size: 6.5pt; }
   .source-list p { font-size: 7.6pt; line-height: 1.5; }
   .source-list p > a { display: block; margin: 1mm 0 0; border: 0; font-size: 0; }
-  .source-list p > a::after { content: attr(href); font: 6.3pt/1.45 'DM Sans', sans-serif; color: #52604e; overflow-wrap: anywhere; }
+  .source-list p > a::after { content: attr(href); font: 6.3pt/1.45 'DM Sans', sans-serif; color: color-mix(in srgb, var(--color-ink) 70%, var(--neutral-rule)); overflow-wrap: anywhere; }
   .reporting-notes { padding: 5mm 0 0; margin-top: 6mm; border-bottom: 0; columns: 2; column-gap: 7mm; }
   .reporting-notes > summary { column-span: all; }
   .reporting-notes .story-body { columns: auto !important; }
