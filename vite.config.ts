@@ -48,20 +48,18 @@ export default defineConfig(async ({ command }) => {
   process.env.WRANGLER_REGISTRY_PATH ??= ".wrangler/dev-registry";
   process.env.MINIFLARE_REGISTRY_PATH ??= ".wrangler/registry";
 
-  // Wrangler snapshots its log path while the Cloudflare plugin is imported.
-  const { cloudflare } = await import("@cloudflare/vite-plugin");
+  const isVercelBuild = command === "build" && process.env.VERCEL === "1";
+  const plugins = [vinext()];
 
-  return {
-    server: {
-      ...(managedLinux
-        ? { host: "0.0.0.0", allowedHosts: ["terminal.local"] }
-        : {}),
-      ...(isCodexSeatbeltSandbox
-        ? { watch: { useFsEvents: false, usePolling: true } }
-        : {}),
-    },
-    plugins: [
-      vinext(),
+  if (isVercelBuild) {
+    // Vercel needs Nitro's Build Output API adapter instead of Cloudflare's
+    // Workers output. Nitro detects Vercel from the build environment.
+    const { nitro } = await import("nitro/vite");
+    plugins.push(nitro());
+  } else {
+    // Wrangler snapshots its log path while the Cloudflare plugin is imported.
+    const { cloudflare } = await import("@cloudflare/vite-plugin");
+    plugins.push(
       sites({ mockAuth: !managedLinux }),
       connectorPreview(),
       cloudflare({
@@ -95,6 +93,18 @@ export default defineConfig(async ({ command }) => {
             }
           : {}),
       }),
-    ],
+    );
+  }
+
+  return {
+    server: {
+      ...(managedLinux
+        ? { host: "0.0.0.0", allowedHosts: ["terminal.local"] }
+        : {}),
+      ...(isCodexSeatbeltSandbox
+        ? { watch: { useFsEvents: false, usePolling: true } }
+        : {}),
+    },
+    plugins,
   };
 });
