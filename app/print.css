@@ -4,9 +4,9 @@
   size: A4;
   margin: 15mm 14mm 16mm;
   @top-left { content: 'TÁTICA®'; font: 700 11pt 'Barlow Condensed', 'Arial Narrow', sans-serif; color: #20291f; vertical-align: bottom; padding-bottom: 3mm; }
-  @top-right { content: 'EDIÇÃO 001 · QUEM ESTÁ OLHANDO?'; font: 6.5pt 'IBM Plex Mono', monospace; letter-spacing: .06em; color: #52604e; vertical-align: bottom; padding-bottom: 3.6mm; }
-  @bottom-left { content: 'SEGURANÇA PÚBLICA NA ERA DIGITAL · BRASIL / 2026'; font: 6.5pt 'IBM Plex Mono', monospace; letter-spacing: .06em; color: #52604e; vertical-align: top; padding-top: 4mm; }
-  @bottom-right { content: 'PÁG. ' counter(page, decimal-leading-zero) ' / ' counter(pages, decimal-leading-zero); font: 600 8pt 'IBM Plex Mono', monospace; letter-spacing: .04em; color: #20291f; vertical-align: top; padding-top: 3.6mm; }
+  @top-right { content: 'EDIÇÃO 001 · QUEM ESTÁ OLHANDO?'; font: 6.5pt 'DM Sans', sans-serif; letter-spacing: .06em; color: #52604e; vertical-align: bottom; padding-bottom: 3.6mm; }
+  @bottom-left { content: 'SEGURANÇA PÚBLICA NA ERA DIGITAL · BRASIL / 2026'; font: 6.5pt 'DM Sans', sans-serif; letter-spacing: .06em; color: #52604e; vertical-align: top; padding-top: 4mm; }
+  @bottom-right { content: 'PÁG. ' counter(page, decimal-leading-zero) ' / ' counter(pages, decimal-leading-zero); font: 600 8pt 'DM Sans', sans-serif; letter-spacing: .04em; color: #20291f; vertical-align: top; padding-top: 3.6mm; }
 }
 @page cover {
   margin: 0;
@@ -71,7 +71,7 @@
   .editorial-heading h2 { font-size: 40pt; margin: 3mm 0 0; }
   .editorial-byline { font-size: 6.5pt; }
   .editorial-copy.editorial-full { max-width: none; columns: 2; column-gap: 8mm; }
-  .editorial-full p { font: 11pt/1.62 Georgia, serif; margin: 0 0 1em; }
+  .editorial-full p { font: 11pt/1.62 'DM Sans', sans-serif; margin: 0 0 1em; }
   .editorial-full p:first-child::first-letter { font-size: 50pt; margin: 2pt 6pt 0 0; }
   .editorial-full p:last-of-type { padding-top: 3mm; }
 
@@ -91,7 +91,7 @@
   /* Running text: magazine columns wherever the text spans the page. */
   .story-body p, .market .story-body p, .ai .story-body p, .reading .story-body p,
   .story-continuation .story-body p, .proposal-text .story-body p, .reporting-notes > p, .reporting-notes .story-body p {
-    font: 9pt/1.45 Georgia, serif !important; max-width: none; margin: 0 0 .7em; color: var(--ink);
+    font: 9pt/1.45 'DM Sans', sans-serif !important; max-width: none; margin: 0 0 .7em; color: var(--ink);
   }
   .story-continuation, .proposal-text, .closing-story, .narrow-story { max-width: none; margin: 4mm 0 0; }
   .story-continuation .story-body, .proposal-text .story-body, .closing-story .story-body, .ai-data-context > .story-body,
@@ -264,7 +264,7 @@
   .source-list > li > .mono { font-size: 6.5pt; }
   .source-list p { font-size: 7.6pt; line-height: 1.5; }
   .source-list p > a { display: block; margin: 1mm 0 0; border: 0; font-size: 0; }
-  .source-list p > a::after { content: attr(href); font: 6.3pt/1.45 'IBM Plex Mono', monospace; color: #52604e; overflow-wrap: anywhere; }
+  .source-list p > a::after { content: attr(href); font: 6.3pt/1.45 'DM Sans', sans-serif; color: #52604e; overflow-wrap: anywhere; }
   .reporting-notes { padding: 5mm 0 0; margin-top: 6mm; border-bottom: 0; columns: 2; column-gap: 7mm; }
   .reporting-notes > summary { column-span: all; }
   .reporting-notes .story-body { columns: auto !important; }
