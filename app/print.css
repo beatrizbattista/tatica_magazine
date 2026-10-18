@@ -1,0 +1,289 @@
+/* Print edition: the web magazine paginated as an A4 issue, with folios on every page.
+   Everything here applies to print only; the screen layout is untouched. */
+@page {
+  size: A4;
+  margin: 15mm 14mm 16mm;
+  @top-left { content: 'TÁTICA®'; font: 700 11pt 'Barlow Condensed', 'Arial Narrow', sans-serif; color: #20291f; vertical-align: bottom; padding-bottom: 3mm; }
+  @top-right { content: 'EDIÇÃO 001 · QUEM ESTÁ OLHANDO?'; font: 6.5pt 'IBM Plex Mono', monospace; letter-spacing: .06em; color: #52604e; vertical-align: bottom; padding-bottom: 3.6mm; }
+  @bottom-left { content: 'SEGURANÇA PÚBLICA NA ERA DIGITAL · BRASIL / 2026'; font: 6.5pt 'IBM Plex Mono', monospace; letter-spacing: .06em; color: #52604e; vertical-align: top; padding-top: 4mm; }
+  @bottom-right { content: 'PÁG. ' counter(page, decimal-leading-zero) ' / ' counter(pages, decimal-leading-zero); font: 600 8pt 'IBM Plex Mono', monospace; letter-spacing: .04em; color: #20291f; vertical-align: top; padding-top: 3.6mm; }
+}
+@page cover {
+  margin: 0;
+  @top-left { content: none; }
+  @top-right { content: none; }
+  @bottom-left { content: none; }
+  @bottom-right { content: none; }
+}
+
+@media print {
+  html { scroll-padding-top: 0; }
+  body, main { background: #fff; }
+  main { max-width: none; margin: 0; }
+  p { orphans: 2; widows: 2; }
+  h2, h3, h4, summary { break-after: avoid; }
+
+  /* Screen-only chrome and interactions that cannot work on paper. */
+  .progress, .topbar, .index-panel, .index-backdrop, .reading-trail, .quiz-feature, .quiz-backdrop, .quiz-dialog,
+  .reading-button, .download-links, .chart-switch, .chart-original, .case-timeline, .boleto-lab, .journey,
+  .uses-panel, .authors-controls, .authors-hint, .editorial-next, .read-link, .case-source, .art-bottom button,
+  details > summary > b, .glossary summary > span { display: none !important; }
+
+  /* Collapsed reading blocks are printed open. */
+  details::details-content { content-visibility: visible; display: contents; }
+  details > summary { cursor: auto; }
+
+  /* Accent blocks keep their color even without "background graphics". */
+  .eye-art, .case-connection, .public-dimension, .transparency-number, .institution-map, .investigation-visual,
+  .ods-note, .real-bar, .author-card, footer, .depth-marks i, .ai-margin, .stat-signal strong {
+    print-color-adjust: exact; -webkit-print-color-adjust: exact;
+  }
+
+  /* Each part of the issue opens a new page. */
+  .section { padding: 0 !important; background: none; color: var(--ink); min-height: 0; border: 0 !important; }
+  .editorial-opening, .contents, .reportage-flow > section, .sources-section { break-before: page; }
+  .authors-section { break-inside: avoid; margin-top: 8mm; }
+  .section-label { font-size: 6.5pt; padding-top: 2.5mm; border-color: var(--ink); }
+
+  /* Cover: one full-bleed page. */
+  .cover-wrap { page: cover; height: 296mm; min-height: 0; padding: 13mm 14mm 11mm; display: flex; flex-direction: column; gap: 4mm; overflow: hidden; }
+  .edition-line { position: relative; padding: 0; font-size: 7pt; }
+  .edition-line > span:nth-child(2) { position: absolute; top: 0; left: 50%; transform: translateX(-50%); white-space: nowrap; }
+  .masthead { font-size: 158pt; line-height: .82; margin: 4mm 0 0; padding-bottom: 5mm; }
+  .cover { flex: 1; min-height: 0; grid-template-columns: 1fr 1fr; gap: 7mm; padding: 2mm 0 0; }
+  .cover-copy { display: flex; flex-direction: column; align-items: flex-start; padding: 4mm 0 2mm; gap: 6mm; justify-content: space-between; }
+  .cover-copy p br { display: inline; }
+  .cover .eyebrow { font-size: 8pt; }
+  .cover h1 { font-size: 72pt; line-height: .94; margin: 0; }
+  .cover-copy p { font-size: 12pt; line-height: 1.6; }
+  .cover .cover-bottom { font-size: 7pt; }
+  .cover .eye-art { min-height: 0; height: 100%; }
+  .art-top, .art-bottom { padding: 5mm; font-size: 7pt; }
+  .cover .eye-label { font-size: 7pt; }
+  .ticker { font-size: 17pt; padding: 3mm 0; }
+
+  /* Editorial. */
+  .editorial-opening { min-height: 0; padding: 0 !important; }
+  .editorial-opening-grid { display: block; padding-top: 7mm; }
+  .editorial-heading { position: static; display: grid; grid-template-columns: 1fr 1fr; align-items: end; column-gap: 8mm; margin-bottom: 6mm; }
+  .editorial-heading > .mono { grid-column: 1 / -1; }
+  .editorial-heading > .mono { font-size: 7pt; }
+  .editorial-heading h2 { font-size: 40pt; margin: 3mm 0 0; }
+  .editorial-byline { font-size: 6.5pt; }
+  .editorial-copy.editorial-full { max-width: none; columns: 2; column-gap: 8mm; }
+  .editorial-full p { font: 11pt/1.62 Georgia, serif; margin: 0 0 1em; }
+  .editorial-full p:first-child::first-letter { font-size: 50pt; margin: 2pt 6pt 0 0; }
+  .editorial-full p:last-of-type { padding-top: 3mm; }
+
+  /* Contents, with every chapter's summary. */
+  .contents { background: none; }
+  .contents-heading { margin: 9mm 0 6mm; align-items: end; }
+  .contents h2 { font-size: 36pt; }
+  .contents-heading p { font-size: 10pt; }
+  .chapter-list { gap: 0 9mm; }
+  .chapter { padding: 5mm 0; gap: 4mm; break-inside: avoid; }
+  .chapter-number { font-size: 22pt; }
+  .chapter .mono { font-size: 6.5pt; }
+  .chapter h3 { font-size: 16pt; line-height: 1.15; margin: 1.5mm 0 2mm; }
+  .chapter p { display: block; font-size: 8.5pt; line-height: 1.55; color: #4b5942; }
+  .chapter-page { display: none; }
+
+  /* Running text: magazine columns wherever the text spans the page. */
+  .story-body p, .market .story-body p, .ai .story-body p, .reading .story-body p,
+  .story-continuation .story-body p, .proposal-text .story-body p, .reporting-notes > p, .reporting-notes .story-body p {
+    font: 9pt/1.45 Georgia, serif !important; max-width: none; margin: 0 0 .7em; color: var(--ink);
+  }
+  .story-continuation, .proposal-text, .closing-story, .narrow-story { max-width: none; margin: 4mm 0 0; }
+  .story-continuation .story-body, .proposal-text .story-body, .closing-story .story-body, .ai-data-context > .story-body,
+  .reporting-notes .story-body, .infrastructure-intro > .story-body, .investigation-grid > .story-body,
+  .market-grid .story-body, .data-uses .story-body, .ai-intro > .story-body, .public-dimension .story-body {
+    columns: 2; column-gap: 7mm;
+  }
+  .story-body p:last-child { margin-bottom: 0; }
+  .story-body + .story-body, .story-body + p { margin-top: .75em; }
+  .source-ref { font-size: 6.5pt; padding: 0 1px; border: 0; }
+  blockquote { break-inside: avoid; }
+  .editorial-note { font-size: 7.5pt; }
+  .narrative-bridge { font-size: 9.5pt; }
+
+  /* Chapter openings. */
+  .chapter-opening { margin-bottom: 4.5mm; break-after: avoid; }
+  .chapter-track { padding-top: 3mm; gap: 4mm; }
+  .chapter-index { font-size: 28pt; }
+  .chapter-track > .mono, .chapter-position { font-size: 7pt; }
+  .section .chapter-opening h2 { font-size: 26pt; margin: 2.5mm 0 2mm; max-width: 28ch; }
+  .section .chapter-opening .chapter-lead { font-size: 10.5pt; line-height: 1.45; }
+  .story-continuation > h3, .proposal-text > h3, .substory-title { font-size: 17pt; margin: 0 0 2.5mm; }
+  .case-heading { margin-bottom: 4mm; }
+  .case-heading > .mono, .closing-story > .mono, .reader-pause > .mono { font-size: 7pt; }
+  .case-heading h3 { font-size: 17.5pt; max-width: none; text-wrap: wrap; }
+  .mono { font-size: 7pt; }
+
+  /* Chapter 01. */
+  .report-title { padding: 0 0 4mm; }
+  .report-deck > p { font-size: 10.5pt; max-width: none; }
+  .lourdes-case, .diogo-case { padding: 3.5mm 0; border-top: 1px solid var(--ink); }
+  /* Case spreads: photo on the left, heading and story beside it. Floats (not grid) so a case
+     can start at the foot of one page and its text continue on the next. */
+  .lourdes-case, .diogo-case { --photo: 50mm; display: flow-root; }
+  .lourdes-case { --photo: 76mm; }
+  /* Diogo's photo, heading and story stay on one page. */
+  .diogo-case { break-inside: avoid; }
+  .case-heading { float: right; width: calc(100% - var(--photo) - 7mm); }
+  .lourdes-grid { display: block; }
+  .lourdes-grid > div:first-child { float: left; width: var(--photo); max-width: none; }
+  .lourdes-grid > div:last-child { margin-left: calc(var(--photo) + 7mm); }
+  .lourdes-grid .photo-window img, .diogo-case .report-portrait img { aspect-ratio: 1; }
+  .diogo-case .report-portrait img { object-position: center 22%; }
+  .case-heading { break-inside: avoid; }
+  .report-photo { break-inside: avoid; max-width: none; }
+  .report-photo figcaption { font-size: 6.5pt; margin-top: 2mm; gap: 1mm; }
+  .case-number { padding-bottom: 2.5mm; margin-bottom: 2.5mm; }
+  .case-number strong { font-size: 21pt; }
+  .case-fact { margin-top: 2.5mm; padding-top: 1.5mm; font-size: 6.5pt; }
+  .case-connection { grid-template-columns: 1fr 1.1fr; gap: 7mm; padding: 3.5mm 6mm; margin: 1mm 0 3.5mm; break-inside: avoid; }
+  .connection-arrow { margin-block: .5mm; font-size: 12pt; }
+  .connection-evidence p { margin-top: 1mm; }
+  .connection-evidence { border: 0; padding: 0; }
+  .case-connection h3 { font-size: 15pt; margin: 1.5mm 0; }
+  .case-connection p, .connection-evidence p, .connection-evidence strong { font-size: 9pt; }
+  .public-dimension { margin: 0; padding: 4mm 6mm; }
+  .public-dimension > h3 { font-size: 16pt; padding-bottom: 2.5mm; margin-bottom: 3mm; }
+  .dimension-grid { display: block; }
+  .stat-signal { display: grid; grid-template-columns: auto 1fr; align-items: center; column-gap: 6mm; margin-bottom: 3mm; }
+  .stat-signal a { grid-column: 2; }
+  .stat-signal strong { font-size: 38pt; }
+  .stat-signal p { font-size: 8.5pt; margin: 1mm 0; }
+
+  /* Chapter 02. */
+  .market-grid { grid-template-columns: 50mm 1fr; gap: 8mm; padding: 0; }
+  .market .receipt { display: none; }
+  .thinker-spread { grid-template-columns: 46mm 1fr; gap: 8mm; padding: 6mm 0; margin-top: 6mm; break-inside: auto; }
+  .thinker-spread h3 { font-size: 18pt; margin: 2mm 0 3mm; }
+  .glossary { grid-template-columns: 46mm 1fr; gap: 8mm; margin-top: 6mm; padding-top: 5mm; break-inside: avoid; }
+  .glossary h3 { font-size: 16pt; }
+  .glossary summary { padding: 2.5mm 0 1mm; font-size: 9.5pt; font-weight: 600; }
+  .glossary details p { font-size: 8.8pt; line-height: 1.55; margin: 0 0 2.5mm; }
+
+  /* Chapter 03. */
+  .ai-intro { grid-template-columns: 50mm 1fr; gap: 8mm; margin: 0 0 5mm; }
+  .ai-margin { padding: 5mm; }
+  .ai-margin h3 { font-size: 15pt; margin: 2mm 0; }
+  .ai .ai-margin p { font-size: 8.8pt; line-height: 1.55; }
+  .margin-arrow { display: none; }
+  .safety-path { grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 4mm 0; margin: 4mm 0; gap: 6mm; break-inside: avoid; }
+  .safety-path li + li { border-top: 0; border-left: 1px solid var(--line); padding: 0 0 0 5mm; }
+  .safety-path h3 { font-size: 13pt; margin: 2mm 0; }
+  .ai .safety-path p { font-size: 8.5pt; line-height: 1.5; margin-top: 1mm; }
+  .reader-pause { padding: 4mm 0; margin: 5mm 0; gap: 7mm; grid-template-columns: 46mm 1fr; break-inside: avoid; }
+  .reader-pause h3 { font-size: 15pt; margin-bottom: 2mm; }
+  .reader-pause p, .ai .reader-pause p { font-size: 9pt; line-height: 1.55; }
+  .ai-data-context { padding: 5mm 0 0; margin-top: 6mm; background: none; border: 0; border-top: 1px solid var(--ink); }
+  .ai-data-context > summary { margin-bottom: 4mm; }
+  .ai-data-context > summary strong { font-size: 17pt; }
+  .data-uses { margin: 5mm 0; padding: 5mm; background: none; border: 1px solid var(--line); break-inside: avoid; }
+  .data-uses > h3 { font-size: 15pt; margin: 2mm 0 3mm; }
+  .uses-tabs { margin-bottom: 4mm; }
+  .uses-tabs button { padding: 2.5mm; font-size: 7pt; background: none !important; color: var(--ink) !important; }
+  .uses-tabs button > span { font-size: 12pt; }
+  .transparency-spread { grid-template-columns: 50mm 1fr; gap: 8mm; padding-top: 5mm; margin-top: 5mm; }
+  .transparency-number { position: static; padding: 5mm; break-inside: avoid; }
+  .transparency-number strong { font-size: 40pt; margin: 4mm 0 2mm; }
+  .transparency-number p { font-size: 8.5pt; }
+  .transparency-spread > div > h3 { font-size: 18pt; margin: 0 0 3mm; }
+
+  /* Charts. */
+  .real-chart { margin-top: 4mm; padding: 4mm 6mm; break-inside: avoid; background: none; }
+  .real-chart h3 { font-size: 17pt; margin: 1mm 0; }
+  .real-chart .graphic-header p { font-size: 8.5pt; }
+  .real-chart-plot { height: 25mm; margin: 7mm 0 8mm; }
+  .real-bar > strong { font-size: 18pt; bottom: calc(100% + 2mm); }
+  .real-bar-label { font-size: 8pt; top: calc(100% + 3mm); }
+  .chart-grid > div > span { font-size: 6.5pt; }
+  .chart-reading { font-size: 9pt !important; min-height: 0; margin: 3mm 0 2mm !important; padding-top: 2mm; }
+  .real-chart figcaption { padding-top: 2mm; }
+  .real-chart figcaption p { font-size: 7.5pt !important; margin-bottom: 1.5mm !important; }
+  .real-chart figcaption > a { font-size: 6.5pt; }
+
+  /* Chapter 04. */
+  .infrastructure-intro { grid-template-columns: 44mm 1fr; gap: 6mm; margin: 0 0 4mm; }
+  .institution-map { padding: 5mm; break-inside: avoid; }
+  .institution-map > div { padding: 2.5mm 0; }
+  .institution-map strong { font-size: 15pt; }
+  .institution-map > p { font-size: 8pt; margin-top: 3mm; }
+  /* The pull quote repeats the paragraph just above it, so paper keeps only the photo. */
+  .photo-essay { display: block; padding-top: 3mm; margin-top: 3mm; break-inside: avoid; }
+  .photo-essay > p { display: none; }
+  .photo-essay .report-photo { display: grid; grid-template-columns: 74mm 1fr; gap: 7mm; align-items: end; }
+  .photo-essay .photo-window img { aspect-ratio: 1.75; }
+  .photo-essay .report-photo figcaption { font-size: 8pt; line-height: 1.5; border-left: 2px solid var(--ink); padding-left: 4mm; }
+
+  /* Chapter 05: the dark spread becomes a light page, with legible text. */
+  .investigation { background: none; color: var(--ink); }
+  .investigation .story-body p, .investigation .chapter-opening .chapter-lead, .investigation .narrative-bridge { color: var(--ink) !important; }
+  .investigation .chapter-index, .investigation .chapter-position, .investigation .chapter-track .chapter-folio { color: #586d38; }
+  .investigation .chapter-track { border-color: var(--ink); }
+  .investigation .depth-marks i { background: #ced5c5; }
+  .investigation .depth-marks .filled { background: #607845; }
+  .investigation-grid { grid-template-columns: 40mm 1fr; gap: 6mm; margin: 0 0 2mm; }
+  .investigation-visual { padding: 4mm; break-inside: avoid; color: var(--paper); }
+  .investigation-visual > .mono, .trace-branches > span { color: #dfe6d6; }
+  .investigation-visual > .mono { margin-bottom: 2.5mm; }
+  .trace-node { padding: 1.8mm; }
+  .trace-path { font-size: 10pt; gap: .5mm; margin: .5mm 0; }
+  .trace-branches > span { padding: 2mm 1.5mm; font-size: 6.5pt; }
+  .investigation-visual > p { font-size: 7.5pt; margin-top: 2.5mm; }
+  .beccaria-quote { padding: 2mm 0; margin: 2mm 0; border-color: var(--ink); }
+  .beccaria-quote.story-body { columns: auto; }
+  .beccaria-quote blockquote { font-size: 12pt !important; line-height: 1.4; color: #4d6a2e; }
+
+  /* Chapter 06. */
+  .proposal-break { margin: 4mm 0; padding: 2.5mm 0; font-size: 7pt; }
+  .ods-note { padding: 5mm 6mm; margin: 5mm 0; gap: 6mm; break-inside: avoid; }
+  .ods-note > strong { font-size: 32pt; }
+  .ods-note p { font-size: 9pt; margin-top: 1.5mm; }
+  .ods-note > span { font-size: 20pt; }
+  .closing-story { margin: 5mm 0 0; }
+  .closing-story > .mono { margin-bottom: 3mm; }
+  .closing-story .story-body p:last-child { column-span: all; font-size: 12.5pt !important; line-height: 1.55 !important; font-style: italic !important; padding-top: 4mm; margin-top: 4mm; }
+
+  /* Sources: the full addresses replace the screen's "consult" links. */
+  .sources-section { background: none; }
+  .sources-heading { margin: 7mm 0 3mm; }
+  .sources-heading h2 { font-size: 30pt; }
+  .sources-intro { font-size: 9pt; margin-bottom: 4mm; max-width: none; }
+  .source-list { gap: 0 7mm; }
+  .source-list > li { padding: 2.5mm 0; gap: 3mm; break-inside: avoid; }
+  .source-list > li > .mono { font-size: 6.5pt; }
+  .source-list p { font-size: 7.6pt; line-height: 1.5; }
+  .source-list p > a { display: block; margin: 1mm 0 0; border: 0; font-size: 0; }
+  .source-list p > a::after { content: attr(href); font: 6.3pt/1.45 'IBM Plex Mono', monospace; color: #52604e; overflow-wrap: anywhere; }
+  .reporting-notes { padding: 5mm 0 0; margin-top: 6mm; border-bottom: 0; columns: 2; column-gap: 7mm; }
+  .reporting-notes > summary { column-span: all; }
+  .reporting-notes .story-body { columns: auto !important; }
+  .reporting-notes > summary { margin-bottom: 4mm; }
+  .reporting-notes > summary strong { font-size: 17pt; }
+  .reporting-notes > p, .reporting-notes .story-body p { font-size: 8.4pt !important; line-height: 1.45 !important; }
+  .reporting-notes > h4 { font-size: 13pt; margin: 4mm 0 2mm; column-span: all; }
+  .image-credits { grid-template-columns: 30mm 1fr 1fr; gap: 6mm; margin-top: 6mm; padding-top: 4mm; border-top: 1px solid var(--line); break-inside: avoid; }
+  .image-credits > p { font-size: 7.5pt; line-height: 1.6; }
+
+  /* Team and colophon close the issue on the same page. */
+  .authors-section { background: none; }
+  .authors-heading { margin: 5mm 0 4mm; }
+  .authors-heading h2 { font-size: 24pt; }
+  .authors-intro > p { font-size: 10pt; }
+  .authors-rail { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; overflow: visible; padding: 0; }
+  .author-card { min-height: 27mm; padding: 3.5mm; break-inside: avoid; }
+  .author-card:after { display: none; }
+  .author-mark { font-size: 34pt; top: 7mm; right: 4mm; }
+  .author-card-copy { padding-top: 2.5mm; }
+  .author-card-copy h3 { font-size: 14pt; }
+  .author-card-copy p { font-size: 6pt; margin-top: 1mm; }
+  footer { margin-top: 5mm; padding: 5mm 6mm; break-inside: avoid; }
+  .footer-top { padding-bottom: 5mm; }
+  .footer-brand { font-size: 26pt; }
+  .footer-top p { font-size: 9pt; }
+  .footer-top .mono { display: none; }
+  .footer-bottom { font-size: 6pt; margin-top: 4mm; }
+}

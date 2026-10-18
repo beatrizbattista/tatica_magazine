@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState, useMemo } from 'react';
 
 import { chapters, ReportageContent } from '@/components/reportage';
 import editorial from '@/lib/editorial.json';
+import { folio, pageLabel, printSections, type PrintSection } from '@/lib/print-pages';
 
 function Eye({ offset, small=false }: { offset: {x:number;y:number}; small?: boolean }) {
   return <svg className={small?'eye small-eye':'eye'} viewBox="0 0 700 440" aria-hidden="true"><defs><radialGradient id={small?'irisSmall':'iris'}><stop stopColor="#121713"/><stop offset=".3" stopColor="#697855"/><stop offset=".67" stopColor="#bcd48b"/><stop offset="1" stopColor="#222d1a"/></radialGradient><clipPath id={small?'clipSmall':'clip'}><path d="M35 220 Q350 -50 665 220 Q350 490 35 220Z"/></clipPath></defs><g clipPath={`url(#${small?'clipSmall':'clip'})`}><path d="M35 220 Q350 -50 665 220 Q350 490 35 220Z" fill="#dedfd3"/><g transform={`translate(${offset.x} ${offset.y})`}><circle cx="350" cy="220" r="139" fill={`url(#${small?'irisSmall':'iris'})`}/>{Array.from({length:110},(_,i)=>{const a=i*Math.PI/55;return <line key={i} x1={(350+65*Math.cos(a)).toFixed(3)} y1={(220+65*Math.sin(a)).toFixed(3)} x2={(350+(128+(i%7))*Math.cos(a+.025)).toFixed(3)} y2={(220+(128+(i%7))*Math.sin(a+.025)).toFixed(3)} stroke={i%3?'#18271c':'#e4efbe'} strokeWidth={i%4?1:2} opacity=".65"/>})}<circle cx="350" cy="220" r="61" fill="#080c09"/><circle cx="319" cy="181" r="18" fill="#fff" opacity=".8"/><circle cx="375" cy="253" r="7" fill="#fff" opacity=".35"/></g></g><path d="M35 220 Q350 -50 665 220 Q350 490 35 220Z" fill="none" stroke="currentColor" strokeWidth="3"/><path d="M45 195 Q350 -91 655 195" fill="none" stroke="currentColor" strokeWidth="1" opacity=".45"/></svg>
@@ -31,7 +32,7 @@ function AuthorsSection() {
  const moveRail = (direction: number) => railRef.current?.scrollBy({ left: direction * 320, behavior: 'smooth' });
 
  return <section id="equipe" className="authors-section section" aria-labelledby="authors-title">
-  <div className="section-label"><span>08 / EQUIPE EDITORIAL</span><span>QUEM FAZ A TÁTICA</span></div>
+  <div className="section-label"><span>08 / EQUIPE EDITORIAL</span><span>QUEM FAZ A TÁTICA · {folio('equipe')}</span></div>
   <div className="authors-heading">
    <div><span className="mono">REVISTA TÁTICA / EDIÇÃO 001</span><h2 id="authors-title">Equipe <em>editorial</em></h2></div>
    <div className="authors-intro"><p>Conheça as pessoas por trás desta edição.</p><div className="authors-controls"><button type="button" aria-label="Ver integrantes anteriores" onClick={()=>moveRail(-1)}>←</button><button type="button" aria-label="Ver próximos integrantes" onClick={()=>moveRail(1)}>→</button></div></div>
@@ -116,11 +117,39 @@ function PrivacyQuiz() {
 
 function EditorialSection() {
  return <section id="editorial" className="editorial-opening section" aria-labelledby="editorial-title">
-  <div className="section-label"><span>ABERTURA / EDITORIAL</span><span>A POSIÇÃO DA EQUIPE · EDIÇÃO 001</span></div>
+  <div className="section-label"><span>ABERTURA / EDITORIAL</span><span>A POSIÇÃO DA EQUIPE · EDIÇÃO 001 · {folio('editorial')}</span></div>
   <div className="editorial-opening-grid"><div className="editorial-heading"><span className="mono">SEGURANÇA, DADOS E RESPONSABILIDADE</span><h2 id="editorial-title">Quem está<br/><em>olhando?</em></h2><div className="editorial-byline"><span className="mono">POR EQUIPE TÁTICA</span><span className="mono">BRASIL / 2026</span></div></div>
    <div className="editorial-copy editorial-full">{editorial.paragraphs.map((paragraph,index)=><p key={index}>{paragraph}</p>)}<a className="editorial-next mono" href="#rastros">SEGUIR PARA A REPORTAGEM <span aria-hidden="true">↘</span></a></div>
   </div>
  </section>;
+}
+
+// Shows the printed-edition page that matches the passage on screen.
+function PageIndicator() {
+ const [page, setPage] = useState(1);
+ useEffect(() => {
+  let pending = 0;
+  const update = () => {
+   pending = 0;
+   const reading = window.scrollY + window.innerHeight * .35;
+   let next = 1;
+   for (const [id, [first, last]] of printSections) {
+    const el = document.getElementById(id);
+    if (!el) continue;
+    const top = el.getBoundingClientRect().top + window.scrollY;
+    if (reading < top) break;
+    const progress = Math.min(.999, (reading - top) / Math.max(1, el.offsetHeight));
+    next = first + Math.floor(progress * (last - first + 1));
+   }
+   setPage(next);
+  };
+  const schedule = () => { if (!pending) pending = requestAnimationFrame(update); };
+  update();
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', schedule);
+  return () => { window.removeEventListener('scroll', schedule); window.removeEventListener('resize', schedule); cancelAnimationFrame(pending); };
+ }, []);
+ return <div className="page-indicator mono" aria-hidden="true">{pageLabel(page)}</div>;
 }
 
 export default function Home() {
@@ -159,13 +188,14 @@ export default function Home() {
  return <main className={reading?'reading':''}>
  <div className="progress" style={{width:`${progress}%`}}/>
  <header ref={headerRef} className="topbar"><a href="#inicio" className={`wordmark${wordmarkVisible ? ' is-visible' : ''}`} aria-label="Tática — voltar ao início" aria-hidden={!wordmarkVisible} tabIndex={wordmarkVisible ? 0 : -1}><span className="wordmark-text" aria-hidden="true">{Array.from('TÁTICA').map((letter, i) => <span className="wordmark-letter" key={i} style={{ transitionDelay: `${i * 45}ms` }}>{letter}</span>)}</span><span className="wordmark-registration" aria-hidden="true">®</span></a><span className="top-note">UMA REVISTA PARA OLHAR ALÉM.</span><button onClick={()=>setIndex(!index)} aria-expanded={index} aria-controls="indice">{index?'FECHAR ×':'EXPLORAR EDIÇÃO ↗'}</button></header>
-  {indexMounted&&<><button type="button" className={`index-backdrop${index?'':' is-closing'}`} aria-label="Fechar o sumário" onClick={()=>setIndex(false)} tabIndex={index?0:-1}/><nav id="indice" className={`index-panel${index?'':' is-closing'}`} aria-label="Sumário" aria-hidden={!index}><span className="mono">QUEM ESTÁ OLHANDO? / EDIÇÃO 001</span><h2>Em pauta.</h2><a className="index-editorial-link" href="#editorial" onClick={()=>setIndex(false)} tabIndex={index?0:-1}><span>AB.</span>EDITORIAL<b>↗</b></a>{chapters.map(c=><a key={c.id} href={`#${c.id}`} onClick={()=>setIndex(false)} tabIndex={index?0:-1}><span>{c.n}</span>{c.title}<b>↗</b></a>)}<a className="index-team-link" href="#equipe" onClick={()=>setIndex(false)} tabIndex={index?0:-1}><span>08</span>EQUIPE EDITORIAL<b>↗</b></a><p>Reportagem especial · dados, relatos e responsabilidades</p></nav></>}
+  {indexMounted&&<><button type="button" className={`index-backdrop${index?'':' is-closing'}`} aria-label="Fechar o sumário" onClick={()=>setIndex(false)} tabIndex={index?0:-1}/><nav id="indice" className={`index-panel${index?'':' is-closing'}`} aria-label="Sumário" aria-hidden={!index}><span className="mono">QUEM ESTÁ OLHANDO? / EDIÇÃO 001</span><h2>Em pauta.</h2><a className="index-editorial-link" href="#editorial" onClick={()=>setIndex(false)} tabIndex={index?0:-1}><span>AB.</span>EDITORIAL<small className="index-folio">{folio('editorial')}</small><b>↗</b></a>{chapters.map(c=><a key={c.id} href={`#${c.id}`} onClick={()=>setIndex(false)} tabIndex={index?0:-1}><span>{c.n}</span>{c.title}<small className="index-folio">{folio(c.id as PrintSection)}</small><b>↗</b></a>)}<a className="index-team-link" href="#equipe" onClick={()=>setIndex(false)} tabIndex={index?0:-1}><span>08</span>EQUIPE EDITORIAL<small className="index-folio">{folio('equipe')}</small><b>↗</b></a><p>Reportagem especial · dados, relatos e responsabilidades</p></nav></>}
  <section id="inicio" className="cover-wrap"><div className="edition-line"><span>EDIÇÃO 001 — QUEM ESTÁ OLHANDO?</span><span>SEGURANÇA PÚBLICA NA ERA DIGITAL</span><span>BRASIL / MULTI</span></div><div ref={mastheadRef} className="masthead">TÁTICA<span className="mast-star">✳</span></div>
  <div className="cover"><div className="cover-copy"><div className="eyebrow"><span className="dot"/> SEGURANÇA PÚBLICA NA ERA DIGITAL</div><h1>QUEM<br/>ESTÁ<br/><span>OLHANDO?</span></h1><p>Seus dados, a confiança e a segurança<br/>de quem vive conectado.</p><a className="read-link" href="#editorial">ENTRAR NA EDIÇÃO <span>↘</span></a><div className="cover-bottom mono">[ PRIVACIDADE NÃO É UM DETALHE. ]</div></div><CoverEye/></div>
  <div className="ticker" aria-hidden="true"><span>SEUS DADOS.</span> SEUS RASTROS. <span>QUEM CONTROLA?</span> SEUS DADOS. <span>SEUS RASTROS.</span> QUEM CONTROLA? ↗</div></section>
- <EditorialSection/><section id="sumario" className="contents section"><div className="section-label"><span>01 / NESTA EDIÇÃO</span><span>UMA INVESTIGAÇÃO EM SEIS ETAPAS.</span></div><div className="contents-heading"><h2>Uma leitura em <em>seis etapas</em></h2><p>Comece pelos casos. A cada etapa, acompanhe mais uma parte do problema — e da proteção.</p></div><div className="chapter-list">{chapters.map(c=><a key={c.id} className="chapter" href={`#${c.id}`}><span className="chapter-number">{c.n}</span><div><span className="mono">{c.tag}</span><h3>{c.title}</h3><p>{c.desc}</p></div><span className="chapter-page mono">CAP. {c.n}<b>↗</b></span></a>)}</div></section>
+ <EditorialSection/><section id="sumario" className="contents section"><div className="section-label"><span>01 / NESTA EDIÇÃO · {folio('sumario')}</span><span>UMA INVESTIGAÇÃO EM SEIS ETAPAS.</span></div><div className="contents-heading"><h2>Uma leitura em <em>seis etapas</em></h2><p>Comece pelos casos. A cada etapa, acompanhe mais uma parte do problema — e da proteção.</p></div><div className="chapter-list">{chapters.map(c=><a key={c.id} className="chapter" href={`#${c.id}`}><span className="chapter-number">{c.n}</span><div><span className="mono">{c.tag}</span> <span className="chapter-folio mono">{folio(c.id as PrintSection)}</span><h3>{c.title}</h3><p>{c.desc}</p></div><span className="chapter-page mono">CAP. {c.n}<b>↗</b></span></a>)}</div></section>
  <ReportageContent reading={reading} onReadingChange={toggleReading} quiz={quiz}/>
  <AuthorsSection/>
+ <PageIndicator/>
  <footer><div className="footer-top"><a href="#inicio" className="footer-brand">TÁTICA↗</a><p>Olhar com atenção.<br/>Questionar com intenção.</p><a href="#inicio" className="mono">VOLTAR AO TOPO ↑</a></div><div className="footer-bottom mono"><span>MULTI / REVISTA TÁTICA — 2026</span><span>EDIÇÃO 001 · QUEM ESTÁ OLHANDO?</span><span>REPORTAGEM · DADOS · RESPONSABILIDADES</span></div></footer>
  </main>
 }

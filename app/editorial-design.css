@@ -328,11 +328,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid #657f2c; outline-offs
  .connection-evidence { gap: 14px; }
  .connection-evidence > div + div { padding-left: 14px; }
 }
-@media print {
- .reading-trail { display: none !important; }
- .chapter-opening { break-after: avoid; }
- .reader-pause, .case-connection { break-inside: avoid; }
-}
 
 /* Cover reprise: the original eye and typographic composition. */
 .cover-wrap { min-height: calc(100svh - var(--header-height)); display: grid; grid-template-rows: auto auto 1fr auto; gap: 12px; padding-bottom: 14px; }
@@ -391,4 +386,18 @@ a:focus-visible, button:focus-visible { outline: 2px solid #657f2c; outline-offs
  .art-bottom button { font-size: 8px; }
  .cover .eye-label { font-size: 8px; }
 }
-@media print { .editorial-heading { position: static; } }
+
+/* Folios: the printed edition's page numbers, shown on screen as well. */
+.chapter-folio { color: #586d38; }
+.chapter .chapter-folio { margin-left: 10px; padding-left: 10px; border-left: 1px solid #bdc7b1; }
+.chapter-track .chapter-folio { padding: 4px 8px; border: 1px solid currentColor; font-size: 9px; white-space: nowrap; }
+.investigation .chapter-track .chapter-folio { color: #d4ed83; }
+.index-panel > a .index-folio { margin-left: auto; font: 10px 'IBM Plex Mono', monospace; letter-spacing: .06em; white-space: nowrap; }
+.index-panel > a .index-folio + b { margin-left: 14px; }
+.page-indicator { position: fixed; right: 18px; bottom: 18px; z-index: 25; padding: 8px 12px; border: 1px solid var(--ink); background: #f4f2eaf2; color: var(--ink); font-size: 10px; letter-spacing: .08em; pointer-events: none; box-shadow: 3px 3px 0 #20291f1a; }
+@media (max-width: 760px) {
+ .chapter .chapter-folio { display: block; margin: 4px 0 0; padding: 0; border: 0; }
+ .chapter-track .chapter-folio { font-size: 8px; padding: 3px 6px; }
+ .page-indicator { right: 12px; bottom: 12px; padding: 6px 9px; font-size: 9px; }
+}
+@media print { .page-indicator { display: none !important; } }

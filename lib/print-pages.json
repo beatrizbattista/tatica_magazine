@@ -1,0 +1,16 @@
+{
+  "total": 19,
+  "sections": {
+    "inicio": [1, 1],
+    "editorial": [2, 2],
+    "sumario": [3, 3],
+    "rastros": [4, 5],
+    "mercado": [6, 7],
+    "inteligencia": [8, 10],
+    "algoritmos": [11, 12],
+    "consentimento": [13, 13],
+    "protecao": [14, 15],
+    "fontes": [16, 18],
+    "equipe": [19, 19]
+  }
+}

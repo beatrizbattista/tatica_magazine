@@ -104,6 +104,7 @@ main { max-width: 1360px; margin-inline: auto; }
 .glossary { margin-top: 34px; padding-top: 28px; }
 .glossary h3 { font-size: 29px; line-height: 1.15; }
 .glossary summary { padding: 18px 0; font-size: 14px; }
+.glossary details:first-child { border-top: 0; }
 .ai-intro { grid-template-columns: .8fr 1.2fr; margin: 8px 0 28px; gap: 7%; }
 .ai-intro > div:first-child { align-self: start; }
 .data-uses { padding: 26px; margin: 32px 0; }
@@ -219,4 +220,3 @@ main { max-width: 1360px; margin-inline: auto; }
   .author-card { min-height: 210px; flex-basis: 78vw; }
 }
 
-@media print { .narrative-bridge { font-size: 11pt; } }
