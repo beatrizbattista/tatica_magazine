@@ -520,3 +520,12 @@ summary:hover .disclosure-cue { background: #d4ed83; color: #20291f; }
  .contents h2, .editorial-heading h2, .authors-heading h2, .sources-heading h2 { font-size: 35px; }
  .author-card { flex-basis: 74vw; }
 }
+
+/* Citation links use a single underline, including inside superscripts. */
+.source-ref {
+ border-bottom: 0;
+ text-decoration: underline;
+ text-decoration-thickness: 1px;
+ text-underline-offset: 2px;
+ vertical-align: baseline;
+}
