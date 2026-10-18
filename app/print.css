@@ -73,7 +73,7 @@
   .editorial-copy.editorial-full { max-width: none; columns: 2; column-gap: 8mm; }
   .editorial-full p { font: 11pt/1.62 'DM Sans', sans-serif; margin: 0 0 1em; }
   .editorial-full p:first-child::first-letter { font-size: 50pt; margin: 2pt 6pt 0 0; }
-  .editorial-full p:last-of-type { padding-top: 3mm; }
+  .editorial-full p:last-of-type { padding-top: 0; }
 
   /* Contents, with every chapter's summary. */
   .contents { background: none; }
