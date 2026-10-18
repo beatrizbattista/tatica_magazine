@@ -21,6 +21,7 @@
   body, main { background: #fff; }
   main { max-width: none; margin: 0; }
   p { orphans: 2; widows: 2; }
+  .editorial-context, .disclosure-cue { display: none !important; }
   h2, h3, h4, summary { break-after: avoid; }
 
   /* Screen-only chrome and interactions that cannot work on paper. */
@@ -136,6 +137,7 @@
   .lourdes-grid .photo-window img, .diogo-case .report-portrait img { aspect-ratio: 1; }
   .diogo-case .report-portrait img { object-position: center 22%; }
   .case-heading { break-inside: avoid; }
+  .lourdes-case { break-inside: avoid; }
   .report-photo { break-inside: avoid; max-width: none; }
   .report-photo figcaption { font-size: 6.5pt; margin-top: 2mm; gap: 1mm; }
   .case-number { padding-bottom: 2.5mm; margin-bottom: 2.5mm; }
@@ -176,6 +178,12 @@
   .safety-path h3 { font-size: 13pt; margin: 2mm 0; }
   .ai .safety-path p { font-size: 8.5pt; line-height: 1.5; margin-top: 1mm; }
   .reader-pause { padding: 4mm 0; margin: 5mm 0; gap: 7mm; grid-template-columns: 46mm 1fr; break-inside: avoid; }
+  .reader-pause { border-bottom: 0; }
+  .story-continuation { orphans: 3; widows: 3; }
+  .chapter-opening, .case-heading, .graphic-header { break-after: avoid-page; }
+  .cover-security { bottom: 14%; }
+  .cover-security strong { font-size: 8pt; }
+  .cover-security small { font-size: 7pt; }
   .reader-pause h3 { font-size: 15pt; margin-bottom: 2mm; }
   .reader-pause p, .ai .reader-pause p { font-size: 9pt; line-height: 1.55; }
   .ai-data-context { padding: 5mm 0 0; margin-top: 6mm; background: none; border: 0; border-top: 1px solid var(--ink); }

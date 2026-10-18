@@ -401,3 +401,34 @@ a:focus-visible, button:focus-visible { outline: 2px solid #657f2c; outline-offs
  .page-indicator { right: 12px; bottom: 12px; padding: 6px 9px; font-size: 9px; }
 }
 @media print { .page-indicator { display: none !important; } }
+
+/* Feedback da equipe: identificar opinião, ações e o tema da edição. */
+.cover-security { position: absolute; bottom: 16%; left: 6%; right: 6%; display: flex; align-items: center; gap: 12px; color: #e5efcf; }
+.cover-security svg { width: 32px; height: 38px; fill: none; stroke: #d4ed83; stroke-width: 2; flex-shrink: 0; }
+.cover-security strong { display: block; font: 500 12px/1.5 'IBM Plex Mono', monospace; }
+.cover-security small { display: block; font: 12px/1.6 'DM Sans', sans-serif; }
+.cover .eye-box { top: 10%; height: 56%; }
+.editorial-badge { display: inline-block; padding: 8px 12px; background: #304b3a; color: #f4f2ea; }
+.editorial-opening > .section-label { align-items: center; border-top: 2px solid #304b3a; }
+.editorial-context { font: 14px/1.7 'DM Sans', sans-serif; padding: 16px 18px; margin-bottom: 25px; background: #e3e9d8; border-left: 3px solid #607845; }
+.story-body, .editorial-copy, .chapter-opening, .case-heading, .reader-pause, .sources-intro, .photo-essay > p { text-align: left; }
+.investigation-visual > p, .real-chart figcaption, .chart-reading { text-align: left; }
+.disclosure-cue { display: inline-flex; align-items: center; flex-shrink: 0; border: 1px solid currentColor; border-radius: 3px; padding: 7px 10px; font: 500 12px/1.4 'DM Sans', sans-serif !important; transform: none !important; }
+details > summary .when-open { display: none; }
+details[open] > summary .when-open { display: inline; }
+details[open] > summary .when-closed { display: none; }
+.glossary details[open] summary > .disclosure-cue { transform: none; }
+summary:hover .disclosure-cue { background: #d4ed83; color: #20291f; }
+.demo-boleto > button .clue-action { font: 500 10px/1.4 'DM Sans', sans-serif; white-space: nowrap; }
+.timeline-tabs button .step-action { font-size: 10px; }
+.story-body a, .case-source, .editorial-next, .source-list a, .report-photo figcaption a { text-decoration: underline; text-underline-offset: 3px; }
+.lourdes-case .photo-window img { filter: none; }
+@media (max-width: 700px) {
+ .cover-security { bottom: 18%; gap: 10px; }
+ .cover-security svg { width: 25px; height: 30px; }
+ .cover-security strong { font-size: 10px; }
+ .cover-security small { font-size: 10px; }
+ .ai-data-context > summary, .reporting-notes > summary { flex-wrap: wrap; }
+ .glossary summary { gap: 12px; }
+ .disclosure-cue { font-size: 11px !important; }
+}

@@ -1,5 +1,5 @@
 import vinext from "vinext";
-import { defineConfig } from "vite";
+import { defineConfig, type PluginOption } from "vite";
 import hostingConfig from "./.openai/hosting.json";
 import { readExecutionProfile } from "./scripts/execution-profile.mjs";
 import { sites } from "./build/sites-vite-plugin";
@@ -49,7 +49,7 @@ export default defineConfig(async ({ command }) => {
   process.env.MINIFLARE_REGISTRY_PATH ??= ".wrangler/registry";
 
   const isVercelBuild = command === "build" && process.env.VERCEL === "1";
-  const plugins = [vinext()];
+  const plugins: PluginOption[] = [vinext()];
 
   if (isVercelBuild) {
     // Vercel needs Nitro's Build Output API adapter instead of Cloudflare's
