@@ -1,16 +1,16 @@
 {
-  "total": 19,
+  "total": 30,
   "sections": {
     "inicio": [1, 1],
     "equipe": [2, 2],
     "editorial": [3, 3],
     "sumario": [4, 4],
     "rastros": [5, 6],
-    "mercado": [7, 8],
-    "inteligencia": [9, 11],
-    "algoritmos": [12, 13],
-    "consentimento": [14, 14],
-    "protecao": [15, 16],
-    "fontes": [17, 19]
+    "mercado": [7, 10],
+    "inteligencia": [11, 16],
+    "algoritmos": [17, 20],
+    "consentimento": [21, 22],
+    "protecao": [23, 26],
+    "fontes": [27, 30]
   }
 }

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "celular",
+    "src": "/images/editorial/celular.jpg",
+    "alt": "Mãos seguram um celular diante de um fundo escuro.",
+    "caption": "Celular no cotidiano: mensagens e serviços acompanham a vida fora da tela. Fotografia de contexto, sem relação com os casos relatados.",
+    "author": "Gilles Lambert",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Man_on_a_smartphone_(Unsplash).jpg",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "id": "mercado",
+    "src": "/images/editorial/mercado.jpg",
+    "alt": "Pessoa atravessa a Times Square cercada por painéis publicitários.",
+    "caption": "Publicidade na Times Square, em Nova York. A imagem contextualiza a disputa por atenção; não documenta coleta de dados. Sem relação com os casos relatados.",
+    "author": "Saulo Mohana",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:At_the_bustling_Times_Square_(Unsplash).jpg",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "width": 1920,
+    "height": 1277
+  },
+  {
+    "id": "infraestrutura",
+    "src": "/images/editorial/infraestrutura.jpg",
+    "alt": "Fileira de servidores com cabeamento no centro de computação NERSC.",
+    "caption": "Servidores no NERSC, nos Estados Unidos, em 2011: serviços digitais dependem de infraestrutura física. Fotografia de contexto, sem relação com os casos relatados.",
+    "author": "Derrick Coetzee",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Front_of_server_racks_at_NERSC.jpg",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "width": 1920,
+    "height": 1275
+  },
+  {
+    "id": "pagamento",
+    "src": "/images/editorial/servicos-digitais.jpg",
+    "alt": "Pessoa usa um notebook com um celular sobre a mesa.",
+    "caption": "Computador e celular conectam pessoas a serviços digitais. Fotografia de contexto para discutir cuidados antes de pagamentos; não registra uma transação nem os golpes relatados.",
+    "author": "Alejandro Escamilla",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Man_typing_on_laptop_(Unsplash).jpg",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "id": "investigacao",
+    "src": "/images/editorial/investigacao.jpg",
+    "alt": "Profissionais trabalham diante de computadores em um laboratório de perícia digital.",
+    "caption": "Laboratório de perícia digital: analisar evidências exige procedimentos e profissionais especializados. Fotografia de contexto, sem relação com as investigações dos casos relatados.",
+    "author": "ViktorDFC",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Digital_forensics_lab.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "id": "protecao",
+    "src": "/images/editorial/protecao.jpg",
+    "alt": "Pessoa utiliza um celular ao lado de um notebook sobre a mesa.",
+    "caption": "Celular e computador fazem parte da mesma rotina conectada. Fotografia de contexto para discutir cuidados em diferentes dispositivos; sem relação com os casos relatados.",
+    "author": "Alejandro Escamilla",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Man_with_smartphone_and_laptop_(Unsplash).jpg",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "width": 1920,
+    "height": 1280
+  },
+  {
+    "id": "conversa-ia",
+    "src": "/images/editorial/conversa-ia.jpg",
+    "alt": "Mãos digitam no teclado de um notebook sobre uma mesa.",
+    "caption": "Cada mensagem começa com informações que alguém decide fornecer. Fotografia de contexto, sem demonstração de uma ferramenta de IA ou relação com os casos relatados.",
+    "author": "Simon Hattinga Verschure",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Typing_on_a_laptop_(Unsplash).jpg",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "width": 1920,
+    "height": 1280
+  }
+]

@@ -1,0 +1,429 @@
+{
+  "checkedAt": "2026-10-21",
+  "sources": [
+    {
+      "id": "cetic-pr19",
+      "name": "Cetic.br / NIC.br · Painel TIC 2025, PR19",
+      "url": "https://cetic.br/pt/tics/painel/painel/privacidade3/PR19/expandido/",
+      "note": "Usuários de Internet com 16 anos ou mais que utilizaram ferramentas de IA. Categorias não exclusivas."
+    },
+    {
+      "id": "cetic-golpes",
+      "name": "Cetic.br / NIC.br · divulgação de 31/08/2026",
+      "url": "https://cetic.br/pt/noticia/um-em-cada-tres-usuarios-de-internet-no-brasil-relatou-sofrer-tentativa-de-golpe-com-uso-de-seus-dados-pessoais-aponta-cetic-br/",
+      "note": "Pesquisa Privacidade e proteção de dados pessoais 2025. Tentativa não equivale a perda financeira."
+    },
+    {
+      "id": "meta-2025",
+      "name": "Meta · Form 10-K 2025, receitas por segmento",
+      "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231.htm",
+      "note": "Valores originais em milhões de dólares; divididos por 1.000 para exibição em bilhões."
+    },
+    {
+      "id": "alphabet-2025",
+      "name": "Alphabet · Form 10-K 2025, nota 2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm",
+      "note": "Google advertising inclui Search & other, YouTube ads e Google Network."
+    },
+    {
+      "id": "fbsp-2026",
+      "name": "FBSP · Anuário 2026, tabela 17, p. 120",
+      "url": "https://forumseguranca.org.br/wp-content/uploads/2026/07/anuario-2026.pdf",
+      "note": "Estelionato eletrônico. Ceará, Rio de Janeiro e São Paulo sem dados da modalidade. Excluímos Pernambuco por classificar a modalidade apenas desde dezembro de 2024."
+    },
+    {
+      "id": "cert",
+      "name": "CERT.br / NIC.br · Cartilha de Segurança para Internet",
+      "url": "https://cartilha.cert.br/fasciculos/",
+      "note": "Guias de autenticação, privacidade, proteção de dados e resposta a golpes."
+    },
+    {
+      "id": "med",
+      "name": "Banco Central · Mecanismo Especial de Devolução",
+      "url": "https://bcb.gov.br/meubc/faqs/p/o-que-e-e-como-funciona-o-mecanismo-especial-de-devolucao-med",
+      "note": "Pedido ao banco em até 80 dias após o Pix. A devolução depende da análise e dos recursos disponíveis; agir imediatamente é essencial."
+    },
+    {
+      "id": "anpd-direitos",
+      "name": "ANPD · Denúncia e petição de titular",
+      "url": "https://www.gov.br/anpd/pt-br/canais_atendimento/cidadao-titular-de-dados/denuncia-peticao-de-titular-referente-lgpd",
+      "note": "Desde janeiro de 2025, usar o Sistema de Requerimentos. A petição de titular pressupõe tentativa de resolver com o controlador."
+    },
+    {
+      "id": "lgpd",
+      "name": "Brasil · Lei Geral de Proteção de Dados",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+      "note": "Arts. 4º, 6º, 7º, 18, 20 e 46. Investigações de segurança pública têm regime específico e devem respeitar necessidade, proporcionalidade e devido processo."
+    },
+    {
+      "id": "fmti",
+      "name": "Stanford CRFM · FMTI 2025, figura 7, p. 19",
+      "url": "https://crfm.stanford.edu/fmti/December-2025/paper.pdf",
+      "note": "13 empresas, 100 indicadores. Média calculada dos resultados: 40,69/100. Os critérios mudaram entre edições; a nota mede transparência pública."
+    },
+    {
+      "id": "dbir",
+      "name": "Verizon · DBIR 2025, pp. 11, 15 e 34",
+      "url": "https://www.verizon.com/business/resources/reports/2025-dbir-data-breach-investigations-report.pdf",
+      "note": "Relatório internacional; incidentes principalmente entre 01/11/2023 e 31/10/2024. Figura 37: tipos de dados, n=12.063 violações. Não é uma estimativa de todos os vazamentos do mundo."
+    },
+    {
+      "id": "anpd-gestao",
+      "name": "ANPD · Relatório de Gestão 2025 e comunicado oficial",
+      "url": "https://www.gov.br/anpd/pt-br/assuntos/noticias/capa-relatorio-integrado-de-gestao-2025",
+      "note": "362 comunicações de incidentes; 81 processos de fiscalização instaurados; 12.701 requerimentos. O relatório usa processados/recebidos e o comunicado, respondidos; nenhum desses termos significa casos solucionados ou indenizações."
+    }
+  ],
+  "charts": [
+    {
+      "id": "ia",
+      "title": "O que entregamos à inteligência artificial",
+      "eyebrow": "INTIMIDADE EM NÚMEROS",
+      "unit": "%",
+      "max": 100,
+      "period": "Pesquisa 2025 · divulgação em 2026",
+      "population": "Internautas brasileiros de 16 anos ou mais que utilizaram ferramentas de IA",
+      "sources": [
+        "cetic-pr19"
+      ],
+      "reading": "Uma conversa pode reunir informações íntimas de diferentes áreas da vida.",
+      "caveat": "As categorias se sobrepõem e não somam 100%. O envio de informações não comprova uso para treinamento nem vazamento.",
+      "rows": [
+        {
+          "id": "trabalho",
+          "label": "Trabalho ou estudo",
+          "value": 73
+        },
+        {
+          "id": "preferencias",
+          "label": "Preferências e gostos",
+          "value": 58
+        },
+        {
+          "id": "sentimentos",
+          "label": "Sentimentos e emoções",
+          "value": 54
+        },
+        {
+          "id": "saude",
+          "label": "Dados de saúde",
+          "value": 52
+        },
+        {
+          "id": "fotos",
+          "label": "Fotos próprias ou de conhecidos",
+          "value": 50
+        },
+        {
+          "id": "financas",
+          "label": "Finanças pessoais",
+          "value": 41
+        },
+        {
+          "id": "identificacao",
+          "label": "Nome, endereço, nascimento ou CPF",
+          "value": 37
+        }
+      ]
+    },
+    {
+      "id": "receitas",
+      "title": "Quanto a publicidade movimenta",
+      "eyebrow": "QUEM GANHA COM A ATENÇÃO",
+      "unit": "US$ bi",
+      "max": 300,
+      "period": "Anos completos de 2024 e 2025",
+      "population": "Receita publicitária mundial de Meta e Google, em bilhões de dólares",
+      "sources": [
+        "meta-2025",
+        "alphabet-2025"
+      ],
+      "reading": "A publicidade sustenta negócios de grande escala. Perfis e sinais de uso ajudam a selecionar e medir anúncios.",
+      "caveat": "Receita não é lucro. Os relatórios não isolam uma receita de venda de dados pessoais. Nem todo anúncio depende de perfilamento; isso não demonstra que houve vazamento ou prática ilegal.",
+      "rows": [
+        {
+          "id": "meta-2024",
+          "label": "Meta · 2024",
+          "value": 160.633,
+          "series": "2024"
+        },
+        {
+          "id": "meta-2025",
+          "label": "Meta · 2025",
+          "value": 196.175,
+          "series": "2025"
+        },
+        {
+          "id": "google-2024",
+          "label": "Google · 2024",
+          "value": 264.59,
+          "series": "2024"
+        },
+        {
+          "id": "google-2025",
+          "label": "Google · 2025",
+          "value": 294.691,
+          "series": "2025"
+        }
+      ]
+    },
+    {
+      "id": "fraudes",
+      "title": "Uma demanda crescente por resposta",
+      "eyebrow": "ESTELIONATO ELETRÔNICO",
+      "unit": "registros",
+      "max": 350000,
+      "period": "2024–2025",
+      "population": "Boletins de estelionato eletrônico em 23 unidades da federação comparáveis",
+      "sources": [
+        "fbsp-2026"
+      ],
+      "reading": "O aumento dos registros exige capacidade de atendimento, investigação e cooperação entre instituições.",
+      "caveat": "Cálculo: 286.226 − 648 (PE) em 2024; 346.753 − 29.126 (PE) em 2025. CE, RJ e SP não informaram a modalidade. PE foi excluído porque iniciou a classificação em dezembro de 2024. Registros não medem todos os crimes ocorridos.",
+      "rows": [
+        {
+          "id": "2024",
+          "label": "2024",
+          "value": 285578,
+          "series": "2024"
+        },
+        {
+          "id": "2025",
+          "label": "2025",
+          "value": 317627,
+          "series": "2025"
+        }
+      ]
+    },
+    {
+      "id": "transparencia",
+      "title": "O que as empresas deixam conhecer",
+      "eyebrow": "TRANSPARÊNCIA / FMTI",
+      "unit": "pontos",
+      "max": 100,
+      "period": "Edição de dezembro de 2025",
+      "population": "13 desenvolvedores de modelos fundamentais avaliados em 100 indicadores",
+      "sources": [
+        "fmti"
+      ],
+      "reading": "A pontuação mostra quanto foi divulgado publicamente. Saber mais permite cobrar e examinar as práticas.",
+      "caveat": "Nota de transparência não é nota de segurança, qualidade ou legalidade. As empresas e os indicadores mudaram entre edições; não fazemos comparação anual direta.",
+      "rows": [
+        {
+          "id": "ibm",
+          "label": "IBM",
+          "value": 95
+        },
+        {
+          "id": "writer",
+          "label": "Writer",
+          "value": 72
+        },
+        {
+          "id": "ai21-labs",
+          "label": "AI21 Labs",
+          "value": 66
+        },
+        {
+          "id": "anthropic",
+          "label": "Anthropic",
+          "value": 46
+        },
+        {
+          "id": "google",
+          "label": "Google",
+          "value": 41
+        },
+        {
+          "id": "amazon",
+          "label": "Amazon",
+          "value": 39
+        },
+        {
+          "id": "openai",
+          "label": "OpenAI",
+          "value": 35
+        },
+        {
+          "id": "deepseek",
+          "label": "DeepSeek",
+          "value": 32
+        },
+        {
+          "id": "meta",
+          "label": "Meta",
+          "value": 31
+        },
+        {
+          "id": "alibaba",
+          "label": "Alibaba",
+          "value": 26
+        },
+        {
+          "id": "mistral",
+          "label": "Mistral",
+          "value": 18
+        },
+        {
+          "id": "midjourney",
+          "label": "Midjourney",
+          "value": 14
+        },
+        {
+          "id": "xai",
+          "label": "xAI",
+          "value": 14
+        }
+      ]
+    },
+    {
+      "id": "terceiros",
+      "title": "A proteção depende de toda a cadeia",
+      "eyebrow": "FORNECEDORES E PARCEIROS",
+      "unit": "%",
+      "max": 100,
+      "period": "Comparação das edições DBIR 2024 e 2025",
+      "population": "Participação de terceiros nas violações analisadas pelo DBIR, em recorte internacional",
+      "sources": [
+        "dbir"
+      ],
+      "reading": "Proteger uma empresa também exige examinar os acessos e os sistemas de seus fornecedores.",
+      "caveat": "O valor da edição 2024 é aproximado. Edições não são anos de ocorrência; a de 2025 analisa principalmente incidentes de novembro de 2023 a outubro de 2024. As bases variam. Participação de terceiros não significa que fornecedores cometeram os crimes.",
+      "rows": [
+        {
+          "id": "2024",
+          "label": "DBIR 2024 · aproximadamente",
+          "value": 15,
+          "series": "2024"
+        },
+        {
+          "id": "2025",
+          "label": "DBIR 2025",
+          "value": 30,
+          "series": "2025"
+        }
+      ]
+    },
+    {
+      "id": "dados-expostos",
+      "title": "O que um vazamento pode comprometer",
+      "eyebrow": "DENTRO DAS VIOLAÇÕES",
+      "unit": "%",
+      "max": 100,
+      "period": "DBIR 2025 · figura 37, p. 34",
+      "population": "12.063 violações com classificação dos dados comprometidos, em recorte internacional",
+      "sources": [
+        "dbir"
+      ],
+      "reading": "O dano pode alcançar identidades, acesso a contas, saúde e operações de organizações.",
+      "caveat": "Categorias se sobrepõem. “Identificadores pessoais” traduz Sensitive Personal (documentos/identificadores), não a categoria de dados sensíveis da LGPD. “Segredos” inclui informações confidenciais de negócios. Percentuais referem-se a violações, não a pessoas.",
+      "rows": [
+        {
+          "id": "internos",
+          "label": "Dados internos",
+          "value": 50
+        },
+        {
+          "id": "pessoais",
+          "label": "Dados pessoais",
+          "value": 32
+        },
+        {
+          "id": "credenciais",
+          "label": "Credenciais de acesso",
+          "value": 19
+        },
+        {
+          "id": "sistema",
+          "label": "Dados de sistema",
+          "value": 12
+        },
+        {
+          "id": "segredos",
+          "label": "Segredos",
+          "value": 12
+        },
+        {
+          "id": "medicos",
+          "label": "Dados médicos",
+          "value": 9
+        },
+        {
+          "id": "bancarios",
+          "label": "Dados bancários",
+          "value": 6
+        },
+        {
+          "id": "identificadores-pessoais",
+          "label": "Identificadores pessoais",
+          "value": 4
+        },
+        {
+          "id": "chaves-sessao",
+          "label": "Chaves de sessão",
+          "value": 3
+        },
+        {
+          "id": "outros",
+          "label": "Outros",
+          "value": 1.4
+        },
+        {
+          "id": "pagamento",
+          "label": "Dados de pagamento",
+          "value": 1.2
+        }
+      ]
+    }
+  ],
+  "indicators": [
+    {
+      "id": "tentativas",
+      "value": 32,
+      "unit": "%",
+      "label": "dos internautas de 16 anos ou mais relataram tentativas de golpe com seus dados pessoais",
+      "period": "Brasil · pesquisa 2025",
+      "source": "cetic-golpes"
+    },
+    {
+      "id": "med-prazo",
+      "value": 80,
+      "unit": "dias",
+      "label": "é o prazo máximo para pedir ao banco a devolução via MED após um Pix fraudulento",
+      "period": "Regra consultada em 21/10/2026 · avise o banco imediatamente",
+      "source": "med"
+    },
+    {
+      "id": "fmti-media",
+      "value": 40.69230769230769,
+      "unit": "pontos",
+      "label": "é a média de transparência das 13 empresas avaliadas pelo FMTI",
+      "period": "Dezembro de 2025 · não mede segurança ou legalidade",
+      "source": "fmti"
+    },
+    {
+      "id": "anpd-incidentes",
+      "value": 362,
+      "unit": "",
+      "label": "comunicações de incidentes de segurança recebidas pela ANPD",
+      "period": "2025 · comunicações não equivalem a todos os incidentes no país",
+      "source": "anpd-gestao"
+    },
+    {
+      "id": "anpd-fiscalizacao",
+      "value": 81,
+      "unit": "",
+      "label": "processos de fiscalização instaurados pela ANPD",
+      "period": "2025 · instaurar um processo não significa aplicar uma sanção",
+      "source": "anpd-gestao"
+    },
+    {
+      "id": "anpd-requerimentos",
+      "value": 12701,
+      "unit": "",
+      "label": "requerimentos processados, conforme a tabela 11 do relatório de gestão",
+      "period": "2025 · não representa casos solucionados ou indenizações",
+      "source": "anpd-gestao"
+    }
+  ]
+}

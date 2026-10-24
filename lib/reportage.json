@@ -1,410 +1,512 @@
 [
   {
     "style": "Title",
-    "text": "Segurança pública digital e proteção de dados"
+    "text": "Segurança pública digital e proteção de dados",
+    "id": "seguranca-publica-digital-e-protecao-de-dados"
   },
   {
     "style": "Normal",
-    "text": "Roteiro de pauta e texto da reportagem"
+    "text": "Roteiro de pauta e texto da reportagem",
+    "id": "roteiro-de-pauta-e-texto-da-reportagem"
   },
   {
     "style": "Heading 1",
-    "text": "Direção e sequência da reportagem"
+    "text": "Direção e sequência da reportagem",
+    "id": "direcao-e-sequencia-da-reportagem"
   },
   {
     "style": "Normal",
-    "text": "Tese central: a segurança no ambiente digital depende de controlar o uso dos dados ao longo de seu percurso. Empresas e Estado concentram informações e instrumentos de ação que o cidadão não possui; a proteção se torna desigual quando as obrigações dessas instituições são vagas e a prevenção recai sobre o usuário. Enfrentar fraudes exige tanto capacidade de investigação quanto limites verificáveis para a coleta, o compartilhamento e o uso das informações."
+    "text": "Tese central: a segurança no ambiente digital depende de controlar o uso dos dados ao longo de seu percurso. Empresas e Estado concentram informações e instrumentos de ação que o cidadão não possui; a proteção se torna desigual quando as obrigações dessas instituições são vagas e a prevenção recai sobre o usuário. Enfrentar fraudes exige tanto capacidade de investigação quanto limites verificáveis para a coleta, o compartilhamento e o uso das informações.",
+    "id": "tese-central-a-seguranca-no-ambiente-digital-depende"
   },
   {
     "style": "Plan",
-    "text": "1. Dois casos independentes na introdução. Apresentar Lourdes Diana em um bloco próprio e, depois, o relato de Diogo, professor de Desenvolvimento 2 do Instituto J&F, em outro. Cada episódio terá sua sequência, seus efeitos e sua análise. A passagem ao tema geral da segurança digital preservará essa separação, sem sugerir uma mesma operação criminosa ou uma origem comum dos dados."
+    "text": "1. Dois casos independentes na introdução. Apresentar Lourdes Diana em um bloco próprio e, depois, o relato de Diogo, professor de Desenvolvimento 2 do Instituto J&F, em outro. Cada episódio terá sua sequência, seus efeitos e sua análise. A passagem ao tema geral da segurança digital preservará essa separação, sem sugerir uma mesma operação criminosa ou uma origem comum dos dados.",
+    "id": "1-dois-casos-independentes-na-introducao-apresentar-lourdes"
   },
   {
     "style": "Plan",
-    "text": "2. A concentração de dados também concentra poder. Desenvolver com Zuboff os incentivos econômicos à coleta e a diferença entre usar um serviço e controlar o destino das informações. Relacionar essa assimetria à prevenção dos danos e à capacidade de cobrar respostas."
+    "text": "2. A concentração de dados também concentra poder. Desenvolver com Zuboff os incentivos econômicos à coleta e a diferença entre usar um serviço e controlar o destino das informações. Relacionar essa assimetria à prevenção dos danos e à capacidade de cobrar respostas.",
+    "id": "2-a-concentracao-de-dados-tambem-concentra-poder"
   },
   {
     "style": "Plan",
-    "text": "3. A IA amplia a questão da finalidade. Usar Cetic.br, FMTI e um caso de atuação da ANPD para distinguir o envio de informações, seu armazenamento e o treinamento de modelos. A discussão permanece centrada em quem decide os usos e como o cidadão pode contestá-los."
+    "text": "3. A IA amplia a questão da finalidade. Usar Cetic.br, FMTI e um caso de atuação da ANPD para distinguir o envio de informações, seu armazenamento e o treinamento de modelos. A discussão permanece centrada em quem decide os usos e como o cidadão pode contestá-los.",
+    "id": "3-a-ia-amplia-a-questao-da-finalidade"
   },
   {
     "style": "Plan",
-    "text": "4. Da abordagem à movimentação do dinheiro. Retomar cada episódio conforme o problema examinado e explicar por que a prevenção depende de bancos e plataformas. Garland ajuda a analisar a transferência de tarefas ao usuário; os registros de fraude dimensionam a necessidade de resposta institucional."
+    "text": "4. Da abordagem à movimentação do dinheiro. Retomar cada episódio conforme o problema examinado e explicar por que a prevenção depende de bancos e plataformas. Garland ajuda a analisar a transferência de tarefas ao usuário; os registros de fraude dimensionam a necessidade de resposta institucional.",
+    "id": "4-da-abordagem-a-movimentacao-do-dinheiro-retomar"
   },
   {
     "style": "Plan",
-    "text": "5. Investigar com dados exige controlar o acesso. Examinar cooperação, rastreamento e recuperação financeira, distinguindo-os de responsabilização penal. Beccaria sustenta a importância da resposta efetiva. O acesso investigativo deve ter finalidade, limites e fiscalização."
+    "text": "5. Investigar com dados exige controlar o acesso. Examinar cooperação, rastreamento e recuperação financeira, distinguindo-os de responsabilização penal. Beccaria sustenta a importância da resposta efetiva. O acesso investigativo deve ter finalidade, limites e fiscalização.",
+    "id": "5-investigar-com-dados-exige-controlar-o-acesso"
   },
   {
     "style": "Plan",
-    "text": "6. Proteger antes e responder depois. Propor medidas articuladas para empresas, fornecedores de IA, ANPD, instituições financeiras e órgãos de investigação. Definir implementação, indicadores e possibilidade de contestação. Encerrar com o que essa proteção deveria significar para Lourdes e para a família de Diogo."
+    "text": "6. Proteger antes e responder depois. Propor medidas articuladas para empresas, fornecedores de IA, ANPD, instituições financeiras e órgãos de investigação. Definir implementação, indicadores e possibilidade de contestação. Encerrar com o que essa proteção deveria significar para Lourdes e para a família de Diogo.",
+    "id": "6-proteger-antes-e-responder-depois-propor-medidas"
   },
   {
     "style": "Heading 1",
-    "text": "Texto da reportagem"
+    "text": "Texto da reportagem",
+    "id": "texto-da-reportagem"
   },
   {
     "style": "Heading 2",
-    "text": "Quem controla os dados que deveriam nos proteger"
+    "text": "Quem controla os dados que deveriam nos proteger",
+    "id": "quem-controla-os-dados-que-deveriam-nos-proteger"
   },
   {
     "style": "Normal",
-    "text": "Fotografias, nomes e informações financeiras podem ser usados para simular identidades, apresentar cobranças falsas e induzir transferências. Esta reportagem examina como proteger as pessoas desse uso indevido dos dados e quais responsabilidades cabem às empresas, às plataformas e ao Estado."
+    "text": "Fotografias, nomes e informações financeiras podem ser usados para simular identidades, apresentar cobranças falsas e induzir transferências. Esta reportagem examina como proteger as pessoas desse uso indevido dos dados e quais responsabilidades cabem às empresas, às plataformas e ao Estado.",
+    "id": "fotografias-nomes-e-informacoes-financeiras-podem-ser-usados"
   },
   {
     "style": "Heading 2",
-    "text": "O caso de Lourdes Diana"
+    "text": "O caso de Lourdes Diana",
+    "id": "o-caso-de-lourdes-diana"
   },
   {
     "style": "Normal",
-    "text": "A fotografia era da filha. A mensagem pedia dinheiro para um imprevisto durante uma viagem. Em agosto de 2024, Lourdes Diana, então com 77 anos, acreditou que estava ajudando alguém da família e fez a transferência. Perdeu R$ 1.000. O caso foi relatado pela jornalista Simone Machado, da DW, em reportagem publicada pela Folha de S.Paulo em maio de 2025. A imagem conhecida serviu para apresentar uma identidade falsa como se fosse verdadeira. [1]"
+    "text": "A fotografia era da filha. A mensagem pedia dinheiro para um imprevisto durante uma viagem. Em agosto de 2024, Lourdes Diana, então com 77 anos, acreditou que estava ajudando alguém da família e fez a transferência. Perdeu R$ 1.000. O caso foi relatado pela jornalista Simone Machado, da DW, em reportagem publicada pela Folha de S.Paulo em maio de 2025. A imagem conhecida serviu para apresentar uma identidade falsa como se fosse verdadeira. [1]",
+    "id": "a-fotografia-era-da-filha-a-mensagem-pedia"
   },
   {
     "style": "Normal",
-    "text": "No caso de Lourdes, a imagem de uma pessoa próxima deu credibilidade ao pedido de dinheiro. A relação familiar foi usada para simular uma identidade e explorar a disposição de ajudar. A fonte não informa como o responsável obteve a fotografia nem demonstra uso de inteligência artificial. O episódio permite examinar essa abordagem, mas não estabelecer a origem dos dados."
+    "text": "No caso de Lourdes, a imagem de uma pessoa próxima deu credibilidade ao pedido de dinheiro. A relação familiar foi usada para simular uma identidade e explorar a disposição de ajudar. A fonte não informa como o responsável obteve a fotografia nem demonstra uso de inteligência artificial. O episódio permite examinar essa abordagem, mas não estabelecer a origem dos dados.",
+    "id": "no-caso-de-lourdes-a-imagem-de-uma"
   },
   {
     "style": "Heading 2",
-    "text": "O relato do professor Diogo"
+    "text": "O relato do professor Diogo",
+    "id": "o-relato-do-professor-diogo"
   },
   {
     "style": "Normal",
-    "text": "Diogo, professor da disciplina de Desenvolvimento 2 do Instituto J&F, conta que recebeu uma ligação sobre três parcelas em atraso de um financiamento imobiliário. Ao consultar o aplicativo, confirmou que estavam em aberto. O casal acreditava que as parcelas já estavam quitadas."
+    "text": "Diogo, professor da disciplina de Desenvolvimento 2 do Instituto J&F, conta que recebeu uma ligação sobre três parcelas em atraso de um financiamento imobiliário. Ao consultar o aplicativo, confirmou que estavam em aberto. O casal acreditava que as parcelas já estavam quitadas.",
+    "id": "diogo-professor-da-disciplina-de-desenvolvimento-2-do"
   },
   {
     "style": "Normal",
-    "text": "Segundo o professor, tudo começou com uma dificuldade para acessar o aplicativo na data do pagamento. Depois, chegou um boleto com o nome completo da esposa, a identidade visual do banco e o valor exato da prestação, descrita por Diogo como próxima de R$ 4 mil. O casal interpretou o documento como uma alternativa enviada pela instituição e efetuou o pagamento sem confirmar sua origem. Nos dois meses seguintes, novos boletos chegaram na mesma data, e os pagamentos se repetiram. A cobrança posterior do banco levou o casal a verificar os documentos e descobrir que não eram boletos da instituição. [12]"
+    "text": "Segundo o professor, tudo começou com uma dificuldade para acessar o aplicativo na data do pagamento. Depois, chegou um boleto com o nome completo da esposa, a identidade visual do banco e o valor exato da prestação, descrita por Diogo como próxima de R$ 4 mil. O casal interpretou o documento como uma alternativa enviada pela instituição e efetuou o pagamento sem confirmar sua origem. Nos dois meses seguintes, novos boletos chegaram na mesma data, e os pagamentos se repetiram. A cobrança posterior do banco levou o casal a verificar os documentos e descobrir que não eram boletos da instituição. [12]",
+    "id": "segundo-o-professor-tudo-comecou-com-uma-dificuldade"
   },
   {
     "style": "Normal",
-    "text": "Ao buscar assessoria jurídica, Diogo relata ter sido informado de que os três pagamentos estavam ligados a contas de pessoas jurídicas diferentes: os dois primeiros boletos foram associados à Paraíba e o terceiro, ao Paraná. Ele também conta que as contas eram abertas para o golpe e encerradas logo depois. Essas informações fazem parte de seu depoimento; a reportagem não dispõe dos registros bancários para verificá-las. O professor estima o prejuízo em quase R$ 13 mil e afirma que precisou pagar também a dívida verdadeira ao banco. A fraude consumiu recursos destinados a uma obrigação que continuava existindo."
+    "text": "Ao buscar assessoria jurídica, Diogo relata ter sido informado de que os três pagamentos estavam ligados a contas de pessoas jurídicas diferentes: os dois primeiros boletos foram associados à Paraíba e o terceiro, ao Paraná. Ele também conta que as contas eram abertas para o golpe e encerradas logo depois. Essas informações fazem parte de seu depoimento; a reportagem não dispõe dos registros bancários para verificá-las. O professor estima o prejuízo em quase R$ 13 mil e afirma que precisou pagar também a dívida verdadeira ao banco. A fraude consumiu recursos destinados a uma obrigação que continuava existindo.",
+    "id": "ao-buscar-assessoria-juridica-diogo-relata-ter-sido"
   },
   {
     "style": "Normal",
-    "text": "Diogo suspeita de vazamento dos dados do financiamento, mas não identifica sua origem. Explica que banco, imobiliária, corretores e cartório haviam tido acesso a informações durante a contratação, anos antes, e afirma que a família não as compartilhou depois. Essa circulação ajuda a formular perguntas sobre a proteção dos dados; não permite apontar qual participante teria falhado. Ele relata ainda ter recebido da assessoria a orientação de que não haveria como recorrer e de que o banco não seria responsável. Sem acesso aos documentos e à análise jurídica, essa orientação não pode ser transformada em conclusão da reportagem sobre o caso ou em regra para outras vítimas. [12]"
+    "text": "Diogo suspeita de vazamento dos dados do financiamento, mas não identifica sua origem. Explica que banco, imobiliária, corretores e cartório haviam tido acesso a informações durante a contratação, anos antes, e afirma que a família não as compartilhou depois. Essa circulação ajuda a formular perguntas sobre a proteção dos dados; não permite apontar qual participante teria falhado. Ele relata ainda ter recebido da assessoria a orientação de que não haveria como recorrer e de que o banco não seria responsável. Sem acesso aos documentos e à análise jurídica, essa orientação não pode ser transformada em conclusão da reportagem sobre o caso ou em regra para outras vítimas. [12]",
+    "id": "diogo-suspeita-de-vazamento-dos-dados-do-financiamento"
   },
   {
     "style": "Normal",
-    "text": "No episódio narrado por Diogo, a aparência de uma comunicação bancária e a coincidência com uma dificuldade real tornaram plausível o recebimento do boleto. A repetição mensal passou a fazer parte da rotina de pagamentos. O nome e o valor corretos funcionaram como sinais de credibilidade, embora não garantissem que o dinheiro fosse destinado ao credor verdadeiro."
+    "text": "No episódio narrado por Diogo, a aparência de uma comunicação bancária e a coincidência com uma dificuldade real tornaram plausível o recebimento do boleto. A repetição mensal passou a fazer parte da rotina de pagamentos. O nome e o valor corretos funcionaram como sinais de credibilidade, embora não garantissem que o dinheiro fosse destinado ao credor verdadeiro.",
+    "id": "no-episodio-narrado-por-diogo-a-aparencia-de"
   },
   {
     "style": "Normal",
-    "text": "Diogo reconhece que ele e a esposa deixaram de conferir a origem dos boletos. Essa verificação importa, mas a análise não termina no comportamento de quem pagou. O relato também exige perguntar como informações sobre uma obrigação financeira foram parar em documentos falsos, como as contas receptoras foram utilizadas e quais meios existiam para interromper os pagamentos e buscar reparação. Seu depoimento não esclarece a origem dos dados nem demonstra uso de IA. A continuidade da dívida, mesmo depois dos pagamentos, evidencia uma consequência concreta da fraude narrada: a família perdeu os recursos sem se liberar da obrigação financeira."
+    "text": "Diogo reconhece que ele e a esposa deixaram de conferir a origem dos boletos. Essa verificação importa, mas a análise não termina no comportamento de quem pagou. O relato também exige perguntar como informações sobre uma obrigação financeira foram parar em documentos falsos, como as contas receptoras foram utilizadas e quais meios existiam para interromper os pagamentos e buscar reparação. Seu depoimento não esclarece a origem dos dados nem demonstra uso de IA. A continuidade da dívida, mesmo depois dos pagamentos, evidencia uma consequência concreta da fraude narrada: a família perdeu os recursos sem se liberar da obrigação financeira.",
+    "id": "diogo-reconhece-que-ele-e-a-esposa-deixaram"
   },
   {
     "style": "Heading 2",
-    "text": "A dimensão pública da segurança digital"
+    "text": "A dimensão pública da segurança digital",
+    "id": "a-dimensao-publica-da-seguranca-digital"
   },
   {
     "style": "Normal",
-    "text": "Lourdes e a família de Diogo viveram episódios independentes, com circunstâncias e desdobramentos próprios. Sua apresentação nesta reportagem permite partir de experiências concretas para discutir segurança digital; não estabelece uma ligação entre as fraudes nem mede sua frequência na população. Para dimensionar a exposição, o Cetic.br identificou que 32% dos internautas brasileiros com 16 anos ou mais relataram tentativas de golpe com uso de seus dados pessoais. O levantamento não identifica a origem dessas informações em cada episódio. [2]"
+    "text": "Lourdes e a família de Diogo viveram episódios independentes, com circunstâncias e desdobramentos próprios. Sua apresentação nesta reportagem permite partir de experiências concretas para discutir segurança digital; não estabelece uma ligação entre as fraudes nem mede sua frequência na população. Para dimensionar a exposição, o Cetic.br identificou que 32% dos internautas brasileiros com 16 anos ou mais relataram tentativas de golpe com uso de seus dados pessoais. O levantamento não identifica a origem dessas informações em cada episódio. [2]",
+    "id": "lourdes-e-a-familia-de-diogo-viveram-episodios"
   },
   {
     "style": "Normal",
-    "text": "A questão ultrapassa o cuidado com uma mensagem. Para estudar, trabalhar, pagar contas ou pedir orientação, as pessoas entregam informações a serviços que decidem como processá-las. Bancos e plataformas possuem recursos para detectar irregularidades que o usuário não tem. O Estado depende de registros dessas instituições para investigar. A proteção precisa acompanhar esse percurso: quais dados são necessários, quem pode utilizá-los e quem responde quando algo dá errado. Sem essa divisão clara de obrigações, o cidadão fica encarregado de administrar riscos produzidos em sistemas que não controla."
+    "text": "A questão ultrapassa o cuidado com uma mensagem. Para estudar, trabalhar, pagar contas ou pedir orientação, as pessoas entregam informações a serviços que decidem como processá-las. Bancos e plataformas possuem recursos para detectar irregularidades que o usuário não tem. O Estado depende de registros dessas instituições para investigar. A proteção precisa acompanhar esse percurso: quais dados são necessários, quem pode utilizá-los e quem responde quando algo dá errado. Sem essa divisão clara de obrigações, o cidadão fica encarregado de administrar riscos produzidos em sistemas que não controla.",
+    "id": "a-questao-ultrapassa-o-cuidado-com-uma-mensagem"
   },
   {
     "style": "Heading 2",
-    "text": "O valor dos dados e o poder de decidir seus usos"
+    "text": "O valor dos dados e o poder de decidir seus usos",
+    "id": "o-valor-dos-dados-e-o-poder-de"
   },
   {
     "style": "Normal",
-    "text": "Um dado ganha significado quando é relacionado a outros. Uma fotografia pode identificar uma pessoa; combinada com um vínculo familiar, pode ajudar alguém a imitá-la. Um nome e o valor de uma prestação podem tornar uma cobrança falsa compatível com uma obrigação verdadeira. Um histórico de compras, associado a outros registros, pode contribuir para construir um perfil. Essas combinações podem servir a finalidades legítimas. Também tornam decisiva uma escolha que costuma permanecer distante de quem forneceu a informação: até onde o serviço pode ampliar seu uso?"
+    "text": "Um dado ganha significado quando é relacionado a outros. Uma fotografia pode identificar uma pessoa; combinada com um vínculo familiar, pode ajudar alguém a imitá-la. Um nome e o valor de uma prestação podem tornar uma cobrança falsa compatível com uma obrigação verdadeira. Um histórico de compras, associado a outros registros, pode contribuir para construir um perfil. Essas combinações podem servir a finalidades legítimas. Também tornam decisiva uma escolha que costuma permanecer distante de quem forneceu a informação: até onde o serviço pode ampliar seu uso?",
+    "id": "um-dado-ganha-significado-quando-e-relacionado-a"
   },
   {
     "style": "Normal",
-    "text": "Shoshana Zuboff analisa um modelo econômico em que experiências cotidianas são transformadas em dados para prever comportamentos e gerar receitas. O conceito de capitalismo de vigilância ajuda a compreender o incentivo à coleta que ultrapassa a necessidade imediata do serviço. A informação passa a valer pelo que permite antecipar sobre a pessoa. A autora chama de superávit comportamental a parcela apropriada para essa exploração adicional. [3]"
+    "text": "Shoshana Zuboff analisa um modelo econômico em que experiências cotidianas são transformadas em dados para prever comportamentos e gerar receitas. O conceito de capitalismo de vigilância ajuda a compreender o incentivo à coleta que ultrapassa a necessidade imediata do serviço. A informação passa a valer pelo que permite antecipar sobre a pessoa. A autora chama de superávit comportamental a parcela apropriada para essa exploração adicional. [3]",
+    "id": "shoshana-zuboff-analisa-um-modelo-economico-em-que"
   },
   {
     "style": "Normal",
-    "text": "A consequência política é uma desigualdade de conhecimento. O usuário consegue observar a tela e aquilo que decidiu enviar. A organização pode administrar os registros, suas combinações e seus usos posteriores. Quanto menos visível for esse processo, mais difícil será avaliar se a troca continua aceitável. A pessoa participa do serviço, mas tem pouca capacidade de negociar individualmente as condições em que sua vida é convertida em informação."
+    "text": "A consequência política é uma desigualdade de conhecimento. O usuário consegue observar a tela e aquilo que decidiu enviar. A organização pode administrar os registros, suas combinações e seus usos posteriores. Quanto menos visível for esse processo, mais difícil será avaliar se a troca continua aceitável. A pessoa participa do serviço, mas tem pouca capacidade de negociar individualmente as condições em que sua vida é convertida em informação.",
+    "id": "a-consequencia-politica-e-uma-desigualdade-de-conhecimento"
   },
   {
     "style": "Normal",
-    "text": "Essa análise não torna toda coleta abusiva nem equipara empresas a golpistas. Ajuda a localizar um conflito: a possibilidade de extrair valor de mais dados pode estimular sua conservação e reutilização, enquanto a proteção exige justificar por que eles precisam existir naquela base e por quanto tempo. Quando uma organização acumula informações que não necessita, amplia o volume que terá de proteger e o alcance possível de um acesso indevido. Esse risco é uma razão para avaliar a necessidade da coleta, além de investir em barreiras técnicas."
+    "text": "Essa análise não torna toda coleta abusiva nem equipara empresas a golpistas. Ajuda a localizar um conflito: a possibilidade de extrair valor de mais dados pode estimular sua conservação e reutilização, enquanto a proteção exige justificar por que eles precisam existir naquela base e por quanto tempo. Quando uma organização acumula informações que não necessita, amplia o volume que terá de proteger e o alcance possível de um acesso indevido. Esse risco é uma razão para avaliar a necessidade da coleta, além de investir em barreiras técnicas.",
+    "id": "essa-analise-nao-torna-toda-coleta-abusiva-nem"
   },
   {
     "style": "Normal",
-    "text": "O custo de uma fraude pode continuar depois da transferência. No relato de Diogo, a perda se somou à necessidade de quitar a dívida original. Em outras situações, uma pessoa pode precisar contestar transações, corrigir registros e provar que não realizou determinada operação. Se essas tarefas exigem tempo, familiaridade com procedimentos e ajuda especializada, a capacidade de obter proteção torna-se desigual. O problema social não é apenas quem consegue acessar a tecnologia, mas quem consegue se defender das consequências de seu uso."
+    "text": "O custo de uma fraude pode continuar depois da transferência. No relato de Diogo, a perda se somou à necessidade de quitar a dívida original. Em outras situações, uma pessoa pode precisar contestar transações, corrigir registros e provar que não realizou determinada operação. Se essas tarefas exigem tempo, familiaridade com procedimentos e ajuda especializada, a capacidade de obter proteção torna-se desigual. O problema social não é apenas quem consegue acessar a tecnologia, mas quem consegue se defender das consequências de seu uso.",
+    "id": "o-custo-de-uma-fraude-pode-continuar-depois"
   },
   {
     "style": "Normal",
-    "text": "Por isso, uma política de privacidade publicada não basta para demonstrar controle efetivo. É preciso que as práticas possam ser verificadas e que o titular encontre meios de exercer seus direitos. Ler um documento extenso não permite ao usuário inspecionar bancos de dados, contratos com terceiros ou permissões internas. Tratar a leitura dos termos como solução completa transfere a fiscalização para a parte que possui menos condições de realizá-la."
+    "text": "Por isso, uma política de privacidade publicada não basta para demonstrar controle efetivo. É preciso que as práticas possam ser verificadas e que o titular encontre meios de exercer seus direitos. Ler um documento extenso não permite ao usuário inspecionar bancos de dados, contratos com terceiros ou permissões internas. Tratar a leitura dos termos como solução completa transfere a fiscalização para a parte que possui menos condições de realizá-la.",
+    "id": "por-isso-uma-politica-de-privacidade-publicada-nao"
   },
   {
     "style": "Heading 2",
-    "text": "A inteligência artificial torna a finalidade ainda mais importante"
+    "text": "A inteligência artificial torna a finalidade ainda mais importante",
+    "id": "a-inteligencia-artificial-torna-a-finalidade-ainda-mais"
   },
   {
     "style": "Normal",
-    "text": "A chegada de ferramentas de IA ao cotidiano amplia o tipo de informação entregue aos serviços. Na pesquisa do Cetic.br, 52% dos usuários de IA generativa disseram ter fornecido dados de saúde, como sintomas e exames. Uma conversa que parece apenas uma busca por orientação pode, portanto, envolver informações íntimas. [2]"
+    "text": "A chegada de ferramentas de IA ao cotidiano amplia o tipo de informação entregue aos serviços. Na pesquisa do Cetic.br, 52% dos usuários de IA generativa disseram ter fornecido dados de saúde, como sintomas e exames. Uma conversa que parece apenas uma busca por orientação pode, portanto, envolver informações íntimas. [2]",
+    "id": "a-chegada-de-ferramentas-de-ia-ao-cotidiano"
   },
   {
     "style": "Normal",
-    "text": "Há uma diferença decisiva entre processar uma pergunta para respondê-la, conservar seu conteúdo e utilizá-lo no treinamento de um modelo. São usos distintos, que precisam ser explicados separadamente. Nem toda ferramenta realiza todos eles, e o levantamento sobre o que as pessoas enviam não demonstra o que os fornecedores fazem depois. A pergunta relevante é se o usuário consegue conhecer e controlar a finalidade efetiva de cada tratamento."
+    "text": "Há uma diferença decisiva entre processar uma pergunta para respondê-la, conservar seu conteúdo e utilizá-lo no treinamento de um modelo. São usos distintos, que precisam ser explicados separadamente. Nem toda ferramenta realiza todos eles, e o levantamento sobre o que as pessoas enviam não demonstra o que os fornecedores fazem depois. A pergunta relevante é se o usuário consegue conhecer e controlar a finalidade efetiva de cada tratamento.",
+    "id": "ha-uma-diferenca-decisiva-entre-processar-uma-pergunta"
   },
   {
     "style": "Normal",
-    "text": "A interface de conversa pode fazer uma relação com uma organização parecer uma troca pessoal. O sistema responde de maneira individualizada, enquanto as condições de armazenamento e reutilização permanecem definidas pelo serviço. Surge uma assimetria: a pessoa revela detalhes de sua vida para melhorar a resposta, mas essa proximidade aparente não lhe dá poder equivalente sobre o destino dos dados. O benefício imediato é perceptível; as consequências de um uso posterior são mais difíceis de avaliar."
+    "text": "A interface de conversa pode fazer uma relação com uma organização parecer uma troca pessoal. O sistema responde de maneira individualizada, enquanto as condições de armazenamento e reutilização permanecem definidas pelo serviço. Surge uma assimetria: a pessoa revela detalhes de sua vida para melhorar a resposta, mas essa proximidade aparente não lhe dá poder equivalente sobre o destino dos dados. O benefício imediato é perceptível; as consequências de um uso posterior são mais difíceis de avaliar.",
+    "id": "a-interface-de-conversa-pode-fazer-uma-relacao"
   },
   {
     "style": "Normal",
-    "text": "O treinamento de modelos merece atenção justamente porque amplia a distância entre a situação em que uma informação foi produzida e a finalidade para a qual pode ser reutilizada. Uma postagem feita para determinado público não expressa, por si só, a concordância com qualquer tratamento futuro. Tampouco a disponibilidade pública elimina as obrigações de proteção. A questão envolve a justificativa do uso, a informação oferecida às pessoas e os meios para exercer direitos, conforme o contexto e a legislação aplicável."
+    "text": "O treinamento de modelos merece atenção justamente porque amplia a distância entre a situação em que uma informação foi produzida e a finalidade para a qual pode ser reutilizada. Uma postagem feita para determinado público não expressa, por si só, a concordância com qualquer tratamento futuro. Tampouco a disponibilidade pública elimina as obrigações de proteção. A questão envolve a justificativa do uso, a informação oferecida às pessoas e os meios para exercer direitos, conforme o contexto e a legislação aplicável.",
+    "id": "o-treinamento-de-modelos-merece-atencao-justamente-porque"
   },
   {
     "style": "Normal",
-    "text": "Essa dificuldade de escrutínio aparece no Foundation Model Transparency Index de 2025. O estudo avaliou 13 empresas e encontrou média de 40,69 pontos em uma escala de 100. Trata-se de transparência, não de uma nota de segurança ou de legalidade. O resultado indica limites no que pode ser conhecido e verificado publicamente sobre os sistemas avaliados. Não permite afirmar que uma empresa vazou dados ou que cada conversa com uma IA foi usada para treiná-la. [4]"
+    "text": "Essa dificuldade de escrutínio aparece no Foundation Model Transparency Index de 2025. O estudo avaliou 13 empresas e encontrou média de 40,69 pontos em uma escala de 100. Trata-se de transparência, não de uma nota de segurança ou de legalidade. O resultado indica limites no que pode ser conhecido e verificado publicamente sobre os sistemas avaliados. Não permite afirmar que uma empresa vazou dados ou que cada conversa com uma IA foi usada para treiná-la. [4]",
+    "id": "essa-dificuldade-de-escrutinio-aparece-no-foundation-model"
   },
   {
     "style": "Normal",
-    "text": "Há um exemplo brasileiro de como a regulação pode intervir nessa relação. Em agosto de 2024, a ANPD anunciou que a Meta poderia retomar, com restrições, o tratamento de dados para treinamento de IA após a aprovação de um plano de conformidade, com exigências e compromissos assumidos pela empresa. Entre as medidas estavam comunicação aos usuários e facilitação do direito de oposição. A decisão mostra que as condições de uso dos dados podem ser submetidas a controle externo; não precisam depender exclusivamente da regra definida pela plataforma. [5]"
+    "text": "Há um exemplo brasileiro de como a regulação pode intervir nessa relação. Em agosto de 2024, a autoridade brasileira de proteção de dados (ANPD) anunciou que a Meta poderia retomar, com restrições, o tratamento de dados para treinamento de IA após a aprovação de um plano de conformidade, com exigências e compromissos assumidos pela empresa. Entre as medidas estavam comunicação aos usuários e facilitação do direito de oposição. A decisão mostra que as condições de uso dos dados podem ser submetidas a controle externo; não precisam depender exclusivamente da regra definida pela plataforma. [5]",
+    "id": "ha-um-exemplo-brasileiro-de-como-a-regulacao"
   },
   {
     "style": "Normal",
-    "text": "A ligação com segurança pública está no controle dessas condições. Uma finalidade pouco clara dificulta identificar o que deveria ter acontecido com a informação e quem falhou em protegê-la. Isso prejudica a prevenção e a responsabilização quando existe uso indevido. O treinamento de IA e a fraude são fenômenos diferentes; o ponto comum é a necessidade de impedir que a circulação dos dados retire das pessoas toda possibilidade de acompanhar e contestar seu uso."
+    "text": "A ligação com segurança pública está no controle dessas condições. Uma finalidade pouco clara dificulta identificar o que deveria ter acontecido com a informação e quem falhou em protegê-la. Isso prejudica a prevenção e a responsabilização quando existe uso indevido. O treinamento de IA e a fraude são fenômenos diferentes; o ponto comum é a necessidade de impedir que a circulação dos dados retire das pessoas toda possibilidade de acompanhar e contestar seu uso.",
+    "id": "a-ligacao-com-seguranca-publica-esta-no-controle"
   },
   {
     "style": "Heading 2",
-    "text": "O cuidado individual termina onde começa a infraestrutura"
+    "text": "O cuidado individual termina onde começa a infraestrutura",
+    "id": "o-cuidado-individual-termina-onde-comeca-a-infraestrutura"
   },
   {
     "style": "Normal",
-    "text": "No caso de Lourdes, verificar o pedido por outro canal poderia ter evitado a transferência. Essa orientação é necessária, mas alcança apenas uma etapa. A aposentada não poderia fiscalizar a conta que recebeu o dinheiro, identificar outros pagamentos ligados ao mesmo esquema ou exigir, por conta própria, registros de terceiros."
+    "text": "No caso de Lourdes, verificar o pedido por outro canal poderia ter evitado a transferência. Essa orientação é necessária, mas alcança apenas uma etapa. A aposentada não poderia fiscalizar a conta que recebeu o dinheiro, identificar outros pagamentos ligados ao mesmo esquema ou exigir, por conta própria, registros de terceiros.",
+    "id": "no-caso-de-lourdes-verificar-o-pedido-por"
   },
   {
     "style": "Normal",
-    "text": "No episódio narrado por Diogo, a conferência dos boletos não substituiria os controles sobre a abertura e a movimentação das contas receptoras. A prevenção depende de quem administra esses serviços e de como cada etapa pode ser verificada."
+    "text": "No episódio narrado por Diogo, a conferência dos boletos não substituiria os controles sobre a abertura e a movimentação das contas receptoras. A prevenção depende de quem administra esses serviços e de como cada etapa pode ser verificada.",
+    "id": "no-episodio-narrado-por-diogo-a-conferencia-dos"
   },
   {
     "style": "Normal",
-    "text": "David Garland ajuda a analisar essa divisão. Ao estudar o caso britânico, descreve estratégias de prevenção que mobilizam empresas, comunidades e indivíduos, coordenadas pelo Estado. Aplicada ao ambiente digital, a reflexão permite distinguir colaboração de transferência de ônus. Pedir que o cidadão confira uma mensagem é diferente de esperar que ele compense sozinho falhas na identificação de contas, no atendimento ou na preservação de provas. [6]"
+    "text": "David Garland ajuda a analisar essa divisão. Ao estudar o caso britânico, descreve estratégias de prevenção que mobilizam empresas, comunidades e indivíduos, coordenadas pelo Estado. Aplicada ao ambiente digital, a reflexão permite distinguir colaboração de transferência de ônus. Pedir que o cidadão confira uma mensagem é diferente de esperar que ele compense sozinho falhas na identificação de contas, no atendimento ou na preservação de provas. [6]",
+    "id": "david-garland-ajuda-a-analisar-essa-divisao-ao"
   },
   {
     "style": "Normal",
-    "text": "Uma política centrada apenas em alertas pode produzir uma resposta circular: o usuário é informado de que precisa tomar cuidado e, quando sofre o golpe, o prejuízo é atribuído à falta desse cuidado. Com isso, a qualidade da infraestrutura deixa de ser examinada. O dever de atenção pessoal deve coexistir com obrigações para quem possui maior capacidade de prevenir e interromper o dano."
+    "text": "Uma política centrada apenas em alertas pode produzir uma resposta circular: o usuário é informado de que precisa tomar cuidado e, quando sofre o golpe, o prejuízo é atribuído à falta desse cuidado. Com isso, a qualidade da infraestrutura deixa de ser examinada. O dever de atenção pessoal deve coexistir com obrigações para quem possui maior capacidade de prevenir e interromper o dano.",
+    "id": "uma-politica-centrada-apenas-em-alertas-pode-produzir"
   },
   {
     "style": "Normal",
-    "text": "Os registros ajudam a dimensionar essa demanda. Nas 23 unidades da federação que permitem a comparação utilizada nesta reportagem, os boletins de estelionato eletrônico cresceram 11,2% entre 2024 e 2025. A variação é de registros, não uma medição completa dos crimes ocorridos. Ainda assim, revela uma demanda institucional que não pode ser respondida apenas por recomendações ao consumidor. [7]"
+    "text": "Os registros ajudam a dimensionar essa demanda. Nas 23 unidades da federação que permitem a comparação utilizada nesta reportagem, os boletins de estelionato eletrônico cresceram 11,2% entre 2024 e 2025. A variação é de registros, não uma medição completa dos crimes ocorridos. Ainda assim, revela uma demanda institucional que não pode ser respondida apenas por recomendações ao consumidor. [7]",
+    "id": "os-registros-ajudam-a-dimensionar-essa-demanda-nas"
   },
   {
     "style": "Normal",
-    "text": "A velocidade do pagamento torna essa responsabilidade concreta. O Banco Central explica que fraudadores podem transferir rapidamente os recursos para outras contas, dificultando a devolução. A vítima percebe o prejuízo inteiro; cada instituição conhece uma parte do percurso. Quando a comunicação demora ou ninguém acompanha o caso, a separação entre organizações cria uma vantagem para quem movimenta o dinheiro. [8]"
+    "text": "A velocidade do pagamento torna essa responsabilidade concreta. O Banco Central explica que fraudadores podem transferir rapidamente os recursos para outras contas, dificultando a devolução. A vítima percebe o prejuízo inteiro; cada instituição conhece uma parte do percurso. Quando a comunicação demora ou ninguém acompanha o caso, a separação entre organizações cria uma vantagem para quem movimenta o dinheiro. [8]",
+    "id": "a-velocidade-do-pagamento-torna-essa-responsabilidade-concreta"
   },
   {
     "style": "Normal",
-    "text": "A crítica não exige concluir que bancos ou plataformas pretendem favorecer o crime. Ela examina como objetivos legítimos podem entrar em tensão. Um serviço procura facilitar transações; a prevenção pode exigir uma verificação adicional. Um bloqueio protege contra uma fraude, mas também pode impedir um pagamento legítimo. A obrigação institucional é administrar esse conflito e responder pelos erros. Medir apenas quantos bloqueios foram feitos esconderia quem teve o dinheiro retido injustificadamente e quanto tempo levou para resolver o problema."
+    "text": "A crítica não exige concluir que bancos ou plataformas pretendem favorecer o crime. Ela examina como objetivos legítimos podem entrar em tensão. Um serviço procura facilitar transações; a prevenção pode exigir uma verificação adicional. Um bloqueio protege contra uma fraude, mas também pode impedir um pagamento legítimo. A obrigação institucional é administrar esse conflito e responder pelos erros. Medir apenas quantos bloqueios foram feitos esconderia quem teve o dinheiro retido injustificadamente e quanto tempo levou para resolver o problema.",
+    "id": "a-critica-nao-exige-concluir-que-bancos-ou"
   },
   {
     "style": "Normal",
-    "text": "Essa dimensão da segurança também afeta a participação social. Se usar serviços essenciais exige desconfiar permanentemente de cada interação, parte das pessoas pode restringir atividades ou depender de terceiros. Quem tem menos apoio para contestar uma cobrança ou recuperar uma conta fica em posição mais frágil. A inclusão digital precisa considerar a possibilidade de usar os serviços com proteção e de obter ajuda quando os mecanismos falham."
+    "text": "Essa dimensão da segurança também afeta a participação social. Se usar serviços essenciais exige desconfiar permanentemente de cada interação, parte das pessoas pode restringir atividades ou depender de terceiros. Quem tem menos apoio para contestar uma cobrança ou recuperar uma conta fica em posição mais frágil. A inclusão digital precisa considerar a possibilidade de usar os serviços com proteção e de obter ajuda quando os mecanismos falham.",
+    "id": "essa-dimensao-da-seguranca-tambem-afeta-a-participacao"
   },
   {
     "style": "Heading 2",
-    "text": "Investigar com dados sem transformar todos em suspeitos"
+    "text": "Investigar com dados sem transformar todos em suspeitos",
+    "id": "investigar-com-dados-sem-transformar-todos-em-suspeitos"
   },
   {
     "style": "Normal",
-    "text": "Os dados que exigem proteção também são necessários para reconstruir um crime. Registros de acesso e de transações podem ajudar a identificar vínculos entre ocorrências e seguir o dinheiro. As contas diferentes mencionadas por Diogo mostram por que seu relato precisaria ser acompanhado dos registros de cada pagamento para permitir uma apuração. Um depoimento orienta perguntas; não substitui a documentação necessária à investigação."
+    "text": "Os dados que exigem proteção também são necessários para reconstruir um crime. Registros de acesso e de transações podem ajudar a identificar vínculos entre ocorrências e seguir o dinheiro. As contas diferentes mencionadas por Diogo mostram por que seu relato precisaria ser acompanhado dos registros de cada pagamento para permitir uma apuração. Um depoimento orienta perguntas; não substitui a documentação necessária à investigação.",
+    "id": "os-dados-que-exigem-protecao-tambem-sao-necessarios"
   },
   {
     "style": "Normal",
-    "text": "Os caminhos de resposta dependem também da modalidade de pagamento. No Pix, o Mecanismo Especial de Devolução passou a permitir o rastreamento para além da primeira conta receptora. É um avanço no desenho da resposta, cujo resultado deve ser avaliado pelos prazos e pelos recursos efetivamente devolvidos. O relato não informa como os boletos do caso de Diogo foram pagos; por isso, não permite afirmar que esse mecanismo seria aplicável à sua situação. Recuperação financeira e responsabilização criminal continuam sendo tarefas diferentes. [8]"
+    "text": "Os caminhos de resposta dependem também da modalidade de pagamento. No Pix, o Mecanismo Especial de Devolução passou a permitir o rastreamento para além da primeira conta receptora. É um avanço no desenho da resposta, cujo resultado deve ser avaliado pelos prazos e pelos recursos efetivamente devolvidos. O relato não informa como os boletos do caso de Diogo foram pagos; por isso, não permite afirmar que esse mecanismo seria aplicável à sua situação. Recuperação financeira e responsabilização criminal continuam sendo tarefas diferentes. [8]",
+    "id": "os-caminhos-de-resposta-dependem-tambem-da-modalidade"
   },
   {
     "style": "Normal",
-    "text": "Beccaria oferece um critério para essa distinção entre anunciar reação e produzir resposta: a possibilidade de responsabilização importa mais que a severidade isolada da ameaça penal. Aplicar essa reflexão à fraude exige olhar a capacidade de preservar provas, analisá-las e chegar a uma decisão fundamentada. Uma pena elevada não realiza nenhuma dessas tarefas automaticamente. [9]"
+    "text": "Beccaria oferece um critério para essa distinção entre anunciar reação e produzir resposta: a possibilidade de responsabilização importa mais que a severidade isolada da ameaça penal. Aplicar essa reflexão à fraude exige olhar a capacidade de preservar provas, analisá-las e chegar a uma decisão fundamentada. Uma pena elevada não realiza nenhuma dessas tarefas automaticamente. [9]",
+    "id": "beccaria-oferece-um-criterio-para-essa-distincao-entre"
   },
   {
     "style": "Eye",
-    "text": "“Não é o rigor do suplício que previne os crimes com mais segurança, mas a certeza do castigo [...]” — Cesare Beccaria."
+    "text": "“Não é o rigor do suplício que previne os crimes com mais segurança, mas a certeza do castigo [...]” — Cesare Beccaria.",
+    "id": "nao-e-o-rigor-do-suplicio-que-previne"
   },
   {
     "style": "Normal",
-    "text": "A cooperação entre bancos, plataformas e investigadores, porém, não justifica reunir indiscriminadamente informações sobre toda a população. É preciso estabelecer quais registros são pertinentes, quem pode acessá-los e por quanto tempo serão necessários. A LGPD prevê um regime específico para o tratamento exclusivamente destinado à segurança pública e à investigação penal, com proporcionalidade e devido processo. Isso não representa autorização para vigilância sem limites. [10]"
+    "text": "A cooperação entre bancos, plataformas e investigadores, porém, não justifica reunir indiscriminadamente informações sobre toda a população. É preciso estabelecer quais registros são pertinentes, quem pode acessá-los e por quanto tempo serão necessários. A Lei Geral de Proteção de Dados (LGPD) prevê um regime específico para o tratamento exclusivamente destinado à segurança pública e à investigação penal, com proporcionalidade e devido processo. Isso não representa autorização para vigilância sem limites. [10]",
+    "id": "a-cooperacao-entre-bancos-plataformas-e-investigadores-porem"
   },
   {
     "style": "Normal",
-    "text": "O motivo não se resume à intimidade. Um dado incorreto ou interpretado fora de contexto pode orientar uma decisão que prejudique alguém. Considere um sistema que sinalize uma transação como suspeita: o alerta deve iniciar uma verificação, e não valer como prova de culpa. Se a pessoa não consegue contestar um erro, a instituição transforma uma classificação técnica em uma restrição difícil de enfrentar. A possibilidade de revisão precisa fazer parte da proteção desde o início."
+    "text": "O motivo não se resume à intimidade. Um dado incorreto ou interpretado fora de contexto pode orientar uma decisão que prejudique alguém. Considere um sistema que sinalize uma transação como suspeita: o alerta deve iniciar uma verificação, e não valer como prova de culpa. Se a pessoa não consegue contestar um erro, a instituição transforma uma classificação técnica em uma restrição difícil de enfrentar. A possibilidade de revisão precisa fazer parte da proteção desde o início.",
+    "id": "o-motivo-nao-se-resume-a-intimidade-um"
   },
   {
     "style": "Normal",
-    "text": "A tensão central da reportagem reaparece: quem concentra informação passa a ter maior capacidade de agir sobre a vida dos outros. Isso vale para uma empresa que decide reutilizar dados e para um órgão público que os acessa em uma investigação. Limitar esse poder não impede seu uso legítimo. Obriga a justificar a finalidade, preservar registros da decisão e aceitar fiscalização. A segurança digital depende tanto de conseguir investigar um golpe quanto de impedir que sua investigação se torne pretexto para ampliar controles sem relação com o caso."
+    "text": "A tensão central da reportagem reaparece: quem concentra informação passa a ter maior capacidade de agir sobre a vida dos outros. Isso vale para uma empresa que decide reutilizar dados e para um órgão público que os acessa em uma investigação. Limitar esse poder não impede seu uso legítimo. Obriga a justificar a finalidade, preservar registros da decisão e aceitar fiscalização. A segurança digital depende tanto de conseguir investigar um golpe quanto de impedir que sua investigação se torne pretexto para ampliar controles sem relação com o caso.",
+    "id": "a-tensao-central-da-reportagem-reaparece-quem-concentra"
   },
   {
     "style": "Heading 2",
-    "text": "A proteção precisa acompanhar o percurso dos dados"
+    "text": "A proteção precisa acompanhar o percurso dos dados",
+    "id": "a-protecao-precisa-acompanhar-o-percurso-dos-dados"
   },
   {
     "style": "Normal",
-    "text": "Uma resposta coerente começa antes do incidente. Empresas e fornecedores de IA deveriam manter um inventário dos dados tratados, distinguir as finalidades de cada uso e justificar prazos de conservação. O uso para treinamento precisa ser explicado separadamente do processamento necessário à resposta, com canais acessíveis para o exercício dos direitos aplicáveis. Nos contextos de maior risco, a ANPD pode priorizar a fiscalização das práticas efetivas. A proposta é combinar informações claras ao usuário com evidências técnicas e documentais para a autoridade, sem publicar detalhes que exponham os sistemas a ataques."
+    "text": "Uma resposta coerente começa antes do incidente. Empresas e fornecedores de IA deveriam manter um inventário dos dados tratados, distinguir as finalidades de cada uso e justificar prazos de conservação. O uso para treinamento precisa ser explicado separadamente do processamento necessário à resposta, com canais acessíveis para o exercício dos direitos aplicáveis. Nos contextos de maior risco, a ANPD pode priorizar a fiscalização das práticas efetivas. A proposta é combinar informações claras ao usuário com evidências técnicas e documentais para a autoridade, sem publicar detalhes que exponham os sistemas a ataques.",
+    "id": "uma-resposta-coerente-comeca-antes-do-incidente-empresas"
   },
   {
     "style": "Normal",
-    "text": "Para isso, a organização deve designar responsáveis, revisar permissões de acesso e testar a resposta a incidentes. Uma primeira etapa viável seria auditar os serviços que tratam dados sensíveis ou grandes volumes de informações pessoais, corrigindo retenções sem justificativa e acessos excessivos. O acompanhamento poderia verificar quantos usos têm finalidade documentada, quantos pedidos de titulares foram atendidos e em quanto tempo. Em operações com vários participantes, como um financiamento imobiliário, cada organização deveria documentar com quem compartilha informações e para qual finalidade. Isso permitiria examinar o percurso de um dado sem depender de a família descobrir, sozinha, todos os locais em que ele foi armazenado. Publicar termos mais longos, sem mudar essas práticas, não resolveria a assimetria discutida no texto."
+    "text": "Para isso, a organização deve designar responsáveis, revisar permissões de acesso e testar a resposta a incidentes. Uma primeira etapa viável seria auditar os serviços que tratam dados sensíveis ou grandes volumes de informações pessoais, corrigindo retenções sem justificativa e acessos excessivos. O acompanhamento poderia verificar quantos usos têm finalidade documentada, quantos pedidos de titulares foram atendidos e em quanto tempo. Em operações com vários participantes, como um financiamento imobiliário, cada organização deveria documentar com quem compartilha informações e para qual finalidade. Isso permitiria examinar o percurso de um dado sem depender de a família descobrir, sozinha, todos os locais em que ele foi armazenado. Publicar termos mais longos, sem mudar essas práticas, não resolveria a assimetria discutida no texto.",
+    "id": "para-isso-a-organizacao-deve-designar-responsaveis-revisar"
   },
   {
     "style": "Normal",
-    "text": "Quando houver suspeita de fraude, a prioridade muda para agir a tempo. Banco Central e instituições financeiras, em articulação com os órgãos de investigação e as plataformas pertinentes, poderiam integrar os canais existentes de contestação a um acompanhamento dos encaminhamentos. Cada etapa precisaria ter um responsável e um prazo operacional: receber o relato, preservar registros, avaliar medidas de proteção e atender solicitações legais. O cidadão deveria conseguir acompanhar o atendimento sem reconstruir sozinho o caminho entre as instituições, inclusive por canal humano quando necessário. Para cobranças recorrentes, bancos e credores poderiam oferecer uma consulta simples, em canal oficial acessado pelo próprio cliente, que relacionasse a parcela ao beneficiário autorizado e ao status do pagamento. Alertas de parcelas não reconhecidas como quitadas ajudariam a revelar divergências antes de sucessivas cobranças. A conferência pessoal ganharia apoio concreto, em vez de depender apenas da aparência do documento."
+    "text": "Quando houver suspeita de fraude, a prioridade muda para agir a tempo. Banco Central e instituições financeiras, em articulação com os órgãos de investigação e as plataformas pertinentes, poderiam integrar os canais existentes de contestação a um acompanhamento dos encaminhamentos. Cada etapa precisaria ter um responsável e um prazo operacional: receber o relato, preservar registros, avaliar medidas de proteção e atender solicitações legais. O cidadão deveria conseguir acompanhar o atendimento sem reconstruir sozinho o caminho entre as instituições, inclusive por canal humano quando necessário. Para cobranças recorrentes, bancos e credores poderiam oferecer uma consulta simples, em canal oficial acessado pelo próprio cliente, que relacionasse a parcela ao beneficiário autorizado e ao status do pagamento. Alertas de parcelas não reconhecidas como quitadas ajudariam a revelar divergências antes de sucessivas cobranças. A conferência pessoal ganharia apoio concreto, em vez de depender apenas da aparência do documento.",
+    "id": "quando-houver-suspeita-de-fraude-a-prioridade-muda"
   },
   {
     "style": "Normal",
-    "text": "Um projeto inicial em estados participantes permitiria testar essa cooperação por seis meses antes de ampliá-la. A avaliação deveria acompanhar a mesma leva de denúncias, distinguindo casos concluídos e ainda abertos. Tempo até a primeira medida, valores devolvidos e andamento das investigações mostrariam a capacidade de resposta. Bloqueios indevidos e tempo para corrigi-los mostrariam seus custos. Os resultados precisariam ser publicados de forma agregada, com recursos de pessoal e tecnologia previstos no planejamento."
+    "text": "Um projeto inicial em estados participantes permitiria testar essa cooperação por seis meses antes de ampliá-la. A avaliação deveria acompanhar a mesma leva de denúncias, distinguindo casos concluídos e ainda abertos. Tempo até a primeira medida, valores devolvidos e andamento das investigações mostrariam a capacidade de resposta. Bloqueios indevidos e tempo para corrigi-los mostrariam seus custos. Os resultados precisariam ser publicados de forma agregada, com recursos de pessoal e tecnologia previstos no planejamento.",
+    "id": "um-projeto-inicial-em-estados-participantes-permitiria-testar"
   },
   {
     "style": "Normal",
-    "text": "O compartilhamento investigativo, por sua vez, deveria gerar um registro auditável da finalidade, da autorização aplicável e de quem acessou a informação. Órgãos de controle competentes poderiam examinar desvios e exigir correções, preservando o sigilo necessário. Essa fiscalização enfrenta o risco de que a solução reproduza o problema: mais dados nas mãos de instituições, com pouca possibilidade de acompanhar seu uso."
+    "text": "O compartilhamento investigativo, por sua vez, deveria gerar um registro auditável da finalidade, da autorização aplicável e de quem acessou a informação. Órgãos de controle competentes poderiam examinar desvios e exigir correções, preservando o sigilo necessário. Essa fiscalização enfrenta o risco de que a solução reproduza o problema: mais dados nas mãos de instituições, com pouca possibilidade de acompanhar seu uso.",
+    "id": "o-compartilhamento-investigativo-por-sua-vez-deveria-gerar"
   },
   {
     "style": "Normal",
-    "text": "A educação digital completa essas medidas quando ensina procedimentos úteis e oferece apoio para executá-los. Escolas, serviços de defesa do consumidor e instituições financeiras podem trabalhar a verificação por outro canal, a compreensão dos usos de dados em ferramentas de IA e o acionamento rápido dos canais oficiais de ajuda. O ensino deve aumentar a autonomia do usuário; não servir como justificativa para retirar responsabilidades de empresas e Estado. Essa combinação aproxima a segurança digital das metas do ODS 16 sobre acesso à justiça, recuperação de recursos, instituições responsáveis e proteção das liberdades. [11]"
+    "text": "A educação digital completa essas medidas quando ensina procedimentos úteis e oferece apoio para executá-los. Escolas, serviços de defesa do consumidor e instituições financeiras podem trabalhar a verificação por outro canal, a compreensão dos usos de dados em ferramentas de IA e o acionamento rápido dos canais oficiais de ajuda. O ensino deve aumentar a autonomia do usuário; não servir como justificativa para retirar responsabilidades de empresas e Estado. Essa combinação aproxima a segurança digital das metas do ODS 16 sobre acesso à justiça, recuperação de recursos, instituições responsáveis e proteção das liberdades. [11]",
+    "id": "a-educacao-digital-completa-essas-medidas-quando-ensina"
   },
   {
     "style": "Normal",
-    "text": "Para Lourdes, o prejuízo começou com um pedido de ajuda que parecia vir da filha. Seu caso recoloca a importância de verificar a identidade de quem pede dinheiro e de conseguir uma resposta quando a fraude acontece."
+    "text": "Para Lourdes, o prejuízo começou com um pedido de ajuda que parecia vir da filha. Seu caso recoloca a importância de verificar a identidade de quem pede dinheiro e de conseguir uma resposta quando a fraude acontece.",
+    "id": "para-lourdes-o-prejuizo-comecou-com-um-pedido"
   },
   {
     "style": "Normal",
-    "text": "Na experiência relatada por Diogo, o problema foi acreditar que uma obrigação financeira estava sendo cumprida enquanto a dívida permanecia em aberto. Seu relato mostra por que a autenticidade de uma cobrança e a confirmação de sua quitação precisam ser acessíveis a quem paga."
+    "text": "Na experiência relatada por Diogo, o problema foi acreditar que uma obrigação financeira estava sendo cumprida enquanto a dívida permanecia em aberto. Seu relato mostra por que a autenticidade de uma cobrança e a confirmação de sua quitação precisam ser acessíveis a quem paga.",
+    "id": "na-experiencia-relatada-por-diogo-o-problema-foi"
   },
   {
     "style": "Normal",
-    "text": "Uma sociedade conectada precisa oferecer condições para que confiar e participar não exija assumir sozinho todo o risco. Isso começa por limitar os usos dos dados e continua na capacidade de interromper uma fraude, investigar seus responsáveis e corrigir erros. A proteção será mais efetiva quando quem controla a informação também tiver obrigações verificáveis perante as pessoas a quem ela diz respeito."
+    "text": "Uma sociedade conectada precisa oferecer condições para que confiar e participar não exija assumir sozinho todo o risco. Isso começa por limitar os usos dos dados e continua na capacidade de interromper uma fraude, investigar seus responsáveis e corrigir erros. A proteção será mais efetiva quando quem controla a informação também tiver obrigações verificáveis perante as pessoas a quem ela diz respeito.",
+    "id": "uma-sociedade-conectada-precisa-oferecer-condicoes-para-que"
   },
   {
     "style": "Heading 1",
-    "text": "Boxes para a diagramação da reportagem"
+    "text": "Boxes para a diagramação da reportagem",
+    "id": "boxes-para-a-diagramacao-da-reportagem"
   },
   {
     "style": "Heading 2",
-    "text": "A realidade digital em números"
+    "text": "A realidade digital em números",
+    "id": "a-realidade-digital-em-numeros"
   },
   {
     "style": "List Bullet",
-    "text": "32% dos internautas com 16 anos ou mais relataram tentativas de golpe com uso de dados pessoais. O indicador não identifica a origem dos dados usados. Cetic.br, pesquisa 2025. [2]"
+    "text": "32% dos internautas com 16 anos ou mais relataram tentativas de golpe com uso de dados pessoais. O indicador não identifica a origem dos dados usados. Cetic.br, pesquisa 2025. [2]",
+    "id": "32-dos-internautas-com-16-anos-ou-mais"
   },
   {
     "style": "List Bullet",
-    "text": "52% dos usuários de IA generativa informaram dados de saúde às ferramentas; 37%, dados como nome, endereço, nascimento ou CPF. As respostas não revelam o uso posterior pelo fornecedor. Cetic.br, pesquisa 2025. [2]"
+    "text": "52% dos usuários de IA generativa informaram dados de saúde às ferramentas; 37%, dados como nome, endereço, nascimento ou CPF. As respostas não revelam o uso posterior pelo fornecedor. Cetic.br, pesquisa 2025. [2]",
+    "id": "52-dos-usuarios-de-ia-generativa-informaram-dados"
   },
   {
     "style": "List Bullet",
-    "text": "40,69 pontos em 100 foi a média de transparência das 13 empresas avaliadas pelo FMTI 2025. A medida indica divulgação de informações, não segurança ou legalidade. [4]"
+    "text": "40,69 pontos em 100 foi a média de transparência das 13 empresas avaliadas pelo FMTI 2025. A medida indica divulgação de informações, não segurança ou legalidade. [4]",
+    "id": "40-69-pontos-em-100-foi-a-media"
   },
   {
     "style": "List Bullet",
-    "text": "317.627 boletins de estelionato eletrônico em 2025, contra 285.578 em 2024, no recorte comparável de 23 UFs: aumento de 11,2%. Registros não correspondem a todos os crimes ocorridos. Anuário 2026. [7]"
+    "text": "317.627 boletins de estelionato eletrônico em 2025, contra 285.578 em 2024, no recorte comparável de 23 UFs: aumento de 11,2%. Registros não correspondem a todos os crimes ocorridos. Anuário 2026. [7]",
+    "id": "317-627-boletins-de-estelionato-eletronico-em-2025"
   },
   {
     "style": "Heading 2",
-    "text": "Dicionário sociológico"
+    "text": "Dicionário sociológico",
+    "id": "dicionario-sociologico"
   },
   {
     "style": "Normal",
-    "text": "Capitalismo de vigilância: modelo analisado por Zuboff em que a experiência humana é convertida em dados para prever comportamentos e gerar valor econômico. O conceito explica incentivos à coleta e assimetrias de poder; não designa qualquer uso de informação nem comprova vazamentos. [3]"
+    "text": "Capitalismo de vigilância: modelo analisado por Zuboff em que a experiência humana é convertida em dados para prever comportamentos e gerar valor econômico. O conceito explica incentivos à coleta e assimetrias de poder; não designa qualquer uso de informação nem comprova vazamentos. [3]",
+    "id": "capitalismo-de-vigilancia-modelo-analisado-por-zuboff-em"
   },
   {
     "style": "Normal",
-    "text": "Assimetria informacional: diferença entre o que as partes de uma relação conseguem conhecer. Nesta reportagem, o usuário vê a interface, enquanto a organização administra registros e usos posteriores. A desigualdade se torna um problema de poder quando dificulta contestar decisões e exercer direitos."
+    "text": "Assimetria informacional: diferença entre o que as partes de uma relação conseguem conhecer. Nesta reportagem, o usuário vê a interface, enquanto a organização administra registros e usos posteriores. A desigualdade se torna um problema de poder quando dificulta contestar decisões e exercer direitos.",
+    "id": "assimetria-informacional-diferenca-entre-o-que-as-partes"
   },
   {
     "style": "Normal",
-    "text": "Responsabilização pela prevenção: em Garland, estratégias que atribuem tarefas de prevenção a organizações e indivíduos, com coordenação estatal. A aplicação ao digital pergunta se cada obrigação está acompanhada de capacidade para cumpri-la ou se apenas transfere o custo ao usuário. [6]"
+    "text": "Responsabilização pela prevenção: em Garland, estratégias que atribuem tarefas de prevenção a organizações e indivíduos, com coordenação estatal. A aplicação ao digital pergunta se cada obrigação está acompanhada de capacidade para cumpri-la ou se apenas transfere o custo ao usuário. [6]",
+    "id": "responsabilizacao-pela-prevencao-em-garland-estrategias-que-atribuem"
   },
   {
     "style": "Heading 2",
-    "text": "Usos de dados que precisam ser distinguidos"
+    "text": "Usos de dados que precisam ser distinguidos",
+    "id": "usos-de-dados-que-precisam-ser-distinguidos"
   },
   {
     "style": "Normal",
-    "text": "Processamento de uma solicitação: uso das informações para executar a tarefa pedida, como responder a uma pergunta. Armazenamento: conservação de registros após esse processamento. Compartilhamento: disponibilização a outro agente, dentro de uma finalidade e das condições aplicáveis. Treinamento: uso de dados para ajustar um modelo. Saber que a pessoa enviou uma informação não demonstra que as quatro operações aconteceram."
+    "text": "Processamento de uma solicitação: uso das informações para executar a tarefa pedida, como responder a uma pergunta. Armazenamento: conservação de registros após esse processamento. Compartilhamento: disponibilização a outro agente, dentro de uma finalidade e das condições aplicáveis. Treinamento: uso de dados para ajustar um modelo. Saber que a pessoa enviou uma informação não demonstra que as quatro operações aconteceram.",
+    "id": "processamento-de-uma-solicitacao-uso-das-informacoes-para"
   },
   {
     "style": "Normal",
-    "text": "Uso indevido e vazamento também diferem. Uma informação pode ser empregada para uma finalidade inadequada dentro de uma organização, sem ter sido exposta a terceiros. Um vazamento envolve comprometimento de sua confidencialidade. Distinguir os eventos ajuda a identificar responsabilidades e escolher medidas de prevenção."
+    "text": "Uso indevido e vazamento também diferem. Uma informação pode ser empregada para uma finalidade inadequada dentro de uma organização, sem ter sido exposta a terceiros. Um vazamento envolve comprometimento de sua confidencialidade. Distinguir os eventos ajuda a identificar responsabilidades e escolher medidas de prevenção.",
+    "id": "uso-indevido-e-vazamento-tambem-diferem-uma-informacao"
   },
   {
     "style": "Heading 2",
-    "text": "Dados e legendas para os gráficos"
+    "text": "Dados e legendas para os gráficos",
+    "id": "dados-e-legendas-para-os-graficos"
   },
   {
     "style": "Normal",
-    "text": "1. Informações fornecidas a ferramentas de IA. Duas barras com eixo de 0 a 100%: dados de saúde, 52%; dados como nome, endereço, nascimento ou CPF, 37%. Base: usuários de IA generativa da pesquisa Cetic.br 2025. Legenda: “As categorias podem se sobrepor. O levantamento mede o envio de informações, não o treinamento de modelos com elas.” Não incluir os 32% de tentativas de golpe no mesmo conjunto: a base é diferente. [2]"
+    "text": "1. Informações fornecidas a ferramentas de IA. Duas barras com eixo de 0 a 100%: dados de saúde, 52%; dados como nome, endereço, nascimento ou CPF, 37%. Base: usuários de IA generativa da pesquisa Cetic.br 2025. Legenda: “As categorias podem se sobrepor. O levantamento mede o envio de informações, não o treinamento de modelos com elas.” Não incluir os 32% de tentativas de golpe no mesmo conjunto: a base é diferente. [2]",
+    "id": "1-informacoes-fornecidas-a-ferramentas-de-ia-duas"
   },
   {
     "style": "Normal",
-    "text": "2. Registros de fraude eletrônica no recorte comparável. Duas barras com eixo iniciado em zero: 2024, 285.578; 2025, 317.627. Unidade: boletins em 23 UFs. Legenda: “Crescimento de 11,2% nos registros; não equivale, sozinho, ao aumento de todos os crimes ocorridos.” Fonte: Anuário 2026, tabela 17, p. 120. Ceará, Rio de Janeiro e São Paulo não informaram a modalidade. Pernambuco foi excluído porque iniciou a classificação apenas em dezembro de 2024. [7]"
+    "text": "2. Registros de fraude eletrônica no recorte comparável. Duas barras com eixo iniciado em zero: 2024, 285.578; 2025, 317.627. Unidade: boletins em 23 UFs. Legenda: “Crescimento de 11,2% nos registros; não equivale, sozinho, ao aumento de todos os crimes ocorridos.” Fonte: Anuário 2026, tabela 17, p. 120. Ceará, Rio de Janeiro e São Paulo não informaram a modalidade. Pernambuco foi excluído porque iniciou a classificação apenas em dezembro de 2024. [7]",
+    "id": "2-registros-de-fraude-eletronica-no-recorte-comparavel"
   },
   {
     "style": "Heading 1",
-    "text": "Fontes e notas de apuração"
+    "text": "Fontes e notas de apuração",
+    "id": "fontes-e-notas-de-apuracao"
   },
   {
     "style": "Sources",
-    "text": "[1] MACHADO, Simone. Os golpes que mais fazem os brasileiros perder dinheiro. Folha de S.Paulo / DW, 3 maio 2025. A fonte informa perda de R$ 1.000 e situa o golpe em agosto de 2024. Não permite identificar origem dos dados, uso de IA ou desfecho de eventual investigação. https://www1.folha.uol.com.br/mercado/2025/05/os-golpes-que-mais-fazem-os-brasileiros-perder-dinheiro.shtml"
+    "text": "[1] MACHADO, Simone. Os golpes que mais fazem os brasileiros perder dinheiro. Folha de S.Paulo / DW, 3 maio 2025. A fonte informa perda de R$ 1.000 e situa o golpe em agosto de 2024. Não permite identificar origem dos dados, uso de IA ou desfecho de eventual investigação. https://www1.folha.uol.com.br/mercado/2025/05/os-golpes-que-mais-fazem-os-brasileiros-perder-dinheiro.shtml",
+    "id": "1-machado-simone-os-golpes-que-mais-fazem"
   },
   {
     "style": "Sources",
-    "text": "[2] CETIC.BR / NIC.BR. Pesquisa Privacidade e proteção de dados pessoais 2025, divulgação em 31 ago. 2026. Bases: internautas de 16 anos ou mais para tentativas de golpe; usuários de IA generativa para informações fornecidas. https://cetic.br/pt/noticia/um-em-cada-tres-usuarios-de-internet-no-brasil-relatou-sofrer-tentativa-de-golpe-com-uso-de-seus-dados-pessoais-aponta-cetic-br/"
+    "text": "[2] CETIC.BR / NIC.BR. Pesquisa Privacidade e proteção de dados pessoais 2025, divulgação em 31 ago. 2026. Bases: internautas de 16 anos ou mais para tentativas de golpe; usuários de IA generativa para informações fornecidas. https://cetic.br/pt/noticia/um-em-cada-tres-usuarios-de-internet-no-brasil-relatou-sofrer-tentativa-de-golpe-com-uso-de-seus-dados-pessoais-aponta-cetic-br/",
+    "id": "2-cetic-br-nic-br-pesquisa-privacidade-e"
   },
   {
     "style": "Sources",
-    "text": "[3] ZUBOFF, Shoshana. A era do capitalismo de vigilância. Tradução de George Schlesinger. Rio de Janeiro: Intrínseca, 2020. Cap. 1, seção III. Original de 2019. Repertório já presente na pesquisa. Para discussão complementar da desigualdade de conhecimento pela própria autora: Caveat Usor: Surveillance Capitalism as Epistemic Inequality. In: After the Digital Tornado. Cambridge University Press, 2020. https://www.cambridge.org/core/books/after-the-digital-tornado/caveat-usor-surveillance-capitalism-as-epistemic-inequality/9EB949FA5BD07CF448C7D8F6A226B975"
+    "text": "[3] ZUBOFF, Shoshana. A era do capitalismo de vigilância. Tradução de George Schlesinger. Rio de Janeiro: Intrínseca, 2020. Cap. 1, seção III. Original de 2019. Repertório já presente na pesquisa. Para discussão complementar da desigualdade de conhecimento pela própria autora: Caveat Usor: Surveillance Capitalism as Epistemic Inequality. In: After the Digital Tornado. Cambridge University Press, 2020. https://www.cambridge.org/core/books/after-the-digital-tornado/caveat-usor-surveillance-capitalism-as-epistemic-inequality/9EB949FA5BD07CF448C7D8F6A226B975",
+    "id": "3-zuboff-shoshana-a-era-do-capitalismo-de"
   },
   {
     "style": "Sources",
-    "text": "[4] WAN, Alexander et al. The 2025 Foundation Model Transparency Index. 2025. Foram avaliadas 13 empresas, em 100 indicadores; média de 40,69/100. O índice é internacional e não representa todas as empresas atuantes no Brasil. Mudanças na amostra e nos indicadores exigem cautela em comparações com edições anteriores. https://crfm.stanford.edu/fmti/December-2025/paper.pdf"
+    "text": "[4] WAN, Alexander et al. The 2025 Foundation Model Transparency Index. 2025. Foram avaliadas 13 empresas, em 100 indicadores; média de 40,69/100. O índice é internacional e não representa todas as empresas atuantes no Brasil. Mudanças na amostra e nos indicadores exigem cautela em comparações com edições anteriores. https://crfm.stanford.edu/fmti/December-2025/paper.pdf",
+    "id": "4-wan-alexander-et-al-the-2025-foundation"
   },
   {
     "style": "Sources",
-    "text": "[5] ANPD. Meta cumpre exigências da ANPD e poderá retomar, com restrições, o uso de dados pessoais para treinamento de inteligência artificial. 30 ago. 2024. Exemplo histórico acrescentado à apuração para demonstrar intervenção regulatória; não descreve, por si só, a situação atual de todos os serviços da empresa. https://www.gov.br/anpd/pt-br/assuntos/noticias/meta-cumpre-exigencias-da-anpd-e-podera-retomar-com-restricoes-o-uso-de-dados-pessoais-para-treinamento-de-inteligencia-artificial"
+    "text": "[5] ANPD. Meta cumpre exigências da ANPD e poderá retomar, com restrições, o uso de dados pessoais para treinamento de inteligência artificial. 30 ago. 2024. Exemplo histórico acrescentado à apuração para demonstrar intervenção regulatória; não descreve, por si só, a situação atual de todos os serviços da empresa. https://www.gov.br/anpd/pt-br/assuntos/noticias/meta-cumpre-exigencias-da-anpd-e-podera-retomar-com-restricoes-o-uso-de-dados-pessoais-para-treinamento-de-inteligencia-artificial",
+    "id": "5-anpd-meta-cumpre-exigencias-da-anpd-e"
   },
   {
     "style": "Sources",
-    "text": "[6] GARLAND, David. As contradições da sociedade punitiva: o caso britânico. Revista de Sociologia e Política, n. 13, p. 59–80, 1999. A análise original trata do caso britânico; sua aplicação à divisão de tarefas na segurança digital é interpretação desta reportagem. https://revistas.ufpr.br/rsp/article/download/39244/24065/145582"
+    "text": "[6] GARLAND, David. As contradições da sociedade punitiva: o caso britânico. Revista de Sociologia e Política, n. 13, p. 59–80, 1999. A análise original trata do caso britânico; sua aplicação à divisão de tarefas na segurança digital é interpretação desta reportagem. https://revistas.ufpr.br/rsp/article/download/39244/24065/145582",
+    "id": "6-garland-david-as-contradicoes-da-sociedade-punitiva"
   },
   {
     "style": "Sources",
-    "text": "[7] FBSP. 20º Anuário Brasileiro de Segurança Pública 2026. Tabela 17, p. 120. Cálculo da série comparável: 286.226 − 648 registros de Pernambuco = 285.578 em 2024; 346.753 − 29.126 = 317.627 em 2025. Variação arredondada: 11,2%. O total de 2.261.055 boletins de estelionato em 2025 inclui modalidades presenciais e não deve ser tratado como total de crimes digitais. https://publicacoes.forumseguranca.org.br/items/bb542342-3cf8-47a5-a51d-a0eb911914b9"
+    "text": "[7] FBSP. 20º Anuário Brasileiro de Segurança Pública 2026. Tabela 17, p. 120. Cálculo da série comparável: 286.226 − 648 registros de Pernambuco = 285.578 em 2024; 346.753 − 29.126 = 317.627 em 2025. Variação arredondada: 11,2%. O total de 2.261.055 boletins de estelionato em 2025 inclui modalidades presenciais e não deve ser tratado como total de crimes digitais. https://publicacoes.forumseguranca.org.br/items/bb542342-3cf8-47a5-a51d-a0eb911914b9",
+    "id": "7-fbsp-20o-anuario-brasileiro-de-seguranca-publica"
   },
   {
     "style": "Sources",
-    "text": "[8] BANCO CENTRAL DO BRASIL. O que é e como funciona o Mecanismo Especial de Devolução MED; BC aprimora o Mecanismo Especial de Devolução do Pix. O mecanismo envolve análise e busca de recursos, não garantia de restituição. https://bcb.gov.br/meubc/faqs/p/o-que-e-e-como-funciona-o-mecanismo-especial-de-devolucao-med ; https://www.bcb.gov.br/detalhenoticia/20817/nota"
+    "text": "[8] BANCO CENTRAL DO BRASIL. O que é e como funciona o Mecanismo Especial de Devolução MED; BC aprimora o Mecanismo Especial de Devolução do Pix. O mecanismo envolve análise e busca de recursos, não garantia de restituição. https://bcb.gov.br/meubc/faqs/p/o-que-e-e-como-funciona-o-mecanismo-especial-de-devolucao-med ; https://www.bcb.gov.br/detalhenoticia/20817/nota",
+    "id": "8-banco-central-do-brasil-o-que-e"
   },
   {
     "style": "Sources",
-    "text": "[9] BECCARIA, Cesare. Dos delitos e das penas. Edição digital disponibilizada pela OAB, cap. XX, p. 40. Original de 1764. Repertório jurídico e filosófico usado como apoio à análise da resposta institucional. https://www.oab.org.br/editora/revista/revista_08/e-books/dos_delitos_e_das_penas.pdf"
+    "text": "[9] BECCARIA, Cesare. Dos delitos e das penas. Edição digital disponibilizada pela OAB, cap. XX, p. 40. Original de 1764. Repertório jurídico e filosófico usado como apoio à análise da resposta institucional. https://www.oab.org.br/editora/revista/revista_08/e-books/dos_delitos_e_das_penas.pdf",
+    "id": "9-beccaria-cesare-dos-delitos-e-das-penas"
   },
   {
     "style": "Sources",
-    "text": "[10] BRASIL. Lei 13.709/2018. Princípios de finalidade, adequação e necessidade, art. 6º; direitos dos titulares, arts. 18 e 20; segurança, art. 46; tratamento exclusivamente destinado à segurança pública e investigação penal, art. 4º, III e § 1º. As propostas precisam respeitar competências, sigilos e bases legais aplicáveis; consentimento não é a única hipótese legal de tratamento. https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+    "text": "[10] BRASIL. Lei 13.709/2018. Princípios de finalidade, adequação e necessidade, art. 6º; direitos dos titulares, arts. 18 e 20; segurança, art. 46; tratamento exclusivamente destinado à segurança pública e investigação penal, art. 4º, III e § 1º. As propostas precisam respeitar competências, sigilos e bases legais aplicáveis; consentimento não é a única hipótese legal de tratamento. https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+    "id": "10-brasil-lei-13-709-2018-principios-de"
   },
   {
     "style": "Sources",
-    "text": "[11] ONU BRASIL. ODS 16, metas de acesso à justiça (16.3), recuperação de recursos e enfrentamento do crime organizado (16.4), instituições responsáveis (16.6) e proteção das liberdades (16.10). https://brasil.un.org/pt-br/sdgs/16"
+    "text": "[11] ONU BRASIL. ODS 16, metas de acesso à justiça (16.3), recuperação de recursos e enfrentamento do crime organizado (16.4), instituições responsáveis (16.6) e proteção das liberdades (16.10). https://brasil.un.org/pt-br/sdgs/16",
+    "id": "11-onu-brasil-ods-16-metas-de-acesso"
   },
   {
     "style": "Sources",
-    "text": "[12] DIOGO. Entrevista presencial concedida aos alunos da equipe Tática para esta edição. Professor de Desenvolvimento 2 do Instituto J&F. Diogo autorizou a publicação do relato e o uso de sua fotografia na revista. Os valores são estimativas do entrevistado; a equipe não recebeu os boletos nem os registros bancários para verificar a origem dos dados ou a titularidade das contas receptoras."
+    "text": "[12] DIOGO. Entrevista presencial concedida aos alunos da equipe Tática para esta edição. Professor de Desenvolvimento 2 do Instituto J&F. Diogo autorizou a publicação do relato e o uso de sua fotografia na revista. Os valores são estimativas do entrevistado; a equipe não recebeu os boletos nem os registros bancários para verificar a origem dos dados ou a titularidade das contas receptoras.",
+    "id": "12-diogo-entrevista-presencial-concedida-aos-alunos-da"
   },
   {
     "style": "Heading 1",
-    "text": "Apuração do relato de Diogo"
+    "text": "Apuração do relato de Diogo",
+    "id": "apuracao-do-relato-de-diogo"
   },
   {
     "style": "Normal",
-    "text": "Os alunos da equipe Tática foram conversar com Diogo, professor de Desenvolvimento 2 do Instituto J&F, e perguntaram como ele e a esposa receberam e pagaram os boletos. Ele concordou com a publicação de seu relato nesta revista e autorizou o uso de sua fotografia."
+    "text": "Os alunos da equipe Tática foram conversar com Diogo, professor de Desenvolvimento 2 do Instituto J&F, e perguntaram como ele e a esposa receberam e pagaram os boletos. Ele concordou com a publicação de seu relato nesta revista e autorizou o uso de sua fotografia.",
+    "id": "os-alunos-da-equipe-tatica-foram-conversar-com"
   },
   {
     "style": "List Bullet",
-    "text": "Diogo contou que, após uma dificuldade de acesso ao aplicativo do banco, chegou um boleto com o nome completo da esposa, o valor esperado da prestação — próximo de R$ 4 mil — e a aparência da instituição. Os dois confiaram na cobrança sem confirmar sua origem e pagaram mais dois boletos recebidos nos meses seguintes."
+    "text": "Diogo contou que, após uma dificuldade de acesso ao aplicativo do banco, chegou um boleto com o nome completo da esposa, o valor esperado da prestação — próximo de R$ 4 mil — e a aparência da instituição. Os dois confiaram na cobrança sem confirmar sua origem e pagaram mais dois boletos recebidos nos meses seguintes.",
+    "id": "diogo-contou-que-apos-uma-dificuldade-de-acesso"
   },
   {
     "style": "List Bullet",
-    "text": "Segundo o professor, a fraude veio à tona quando o banco cobrou as três parcelas, ainda em aberto. Ele estima a perda em quase R$ 13 mil e diz que a família também precisou quitar a dívida original."
+    "text": "Segundo o professor, a fraude veio à tona quando o banco cobrou as três parcelas, ainda em aberto. Ele estima a perda em quase R$ 13 mil e diz que a família também precisou quitar a dívida original.",
+    "id": "segundo-o-professor-a-fraude-veio-a-tona"
   },
   {
     "style": "List Bullet",
-    "text": "Diogo relatou que a assessoria encontrou três contas receptoras de pessoas jurídicas distintas e levantou a hipótese de uso indevido de dados do financiamento. A equipe não recebeu os boletos nem os registros bancários para verificar a origem dessas informações ou a titularidade das contas. Por isso, apresenta esses pontos como parte do relato, sem atribuir responsabilidade a uma instituição."
+    "text": "Diogo relatou que a assessoria encontrou três contas receptoras de pessoas jurídicas distintas e levantou a hipótese de uso indevido de dados do financiamento. A equipe não recebeu os boletos nem os registros bancários para verificar a origem dessas informações ou a titularidade das contas. Por isso, apresenta esses pontos como parte do relato, sem atribuir responsabilidade a uma instituição.",
+    "id": "diogo-relatou-que-a-assessoria-encontrou-tres-contas"
   }
 ]
