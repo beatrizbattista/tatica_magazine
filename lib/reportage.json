@@ -176,7 +176,7 @@
   },
   {
     "style": "Normal",
-    "text": "Há uma diferença decisiva entre processar uma pergunta para respondê-la, conservar seu conteúdo e utilizá-lo no treinamento de um modelo. São usos distintos, que precisam ser explicados separadamente. Nem toda ferramenta realiza todos eles, e o levantamento sobre o que as pessoas enviam não demonstra o que os fornecedores fazem depois. A pergunta relevante é se o usuário consegue conhecer e controlar a finalidade efetiva de cada tratamento.",
+    "text": "Processar uma solicitação, conservar seu conteúdo e usá-lo para treinamento são operações distintas. Os controles abaixo ajudam a identificar o que cada uma significa; o envio de dados, sozinho, não comprova que todas ocorreram.",
     "id": "ha-uma-diferenca-decisiva-entre-processar-uma-pergunta"
   },
   {
@@ -246,7 +246,7 @@
   },
   {
     "style": "Normal",
-    "text": "Essa dimensão da segurança também afeta a participação social. Se usar serviços essenciais exige desconfiar permanentemente de cada interação, parte das pessoas pode restringir atividades ou depender de terceiros. Quem tem menos apoio para contestar uma cobrança ou recuperar uma conta fica em posição mais frágil. A inclusão digital precisa considerar a possibilidade de usar os serviços com proteção e de obter ajuda quando os mecanismos falham.",
+    "text": "Quando usar um serviço exige desconfiança constante, algumas pessoas podem restringir atividades ou depender de terceiros. A inclusão digital também exige condições para contestar cobranças, recuperar contas e obter ajuda quando a proteção falha.",
     "id": "essa-dimensao-da-seguranca-tambem-afeta-a-participacao"
   },
   {

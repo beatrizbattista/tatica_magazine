@@ -123,7 +123,7 @@ function EditorialSection() {
  return <section id="editorial" className="editorial-opening section" aria-labelledby="editorial-title">
   <div className="section-label"><span className="editorial-badge">EDITORIAL · OPINIÃO</span><span>A POSIÇÃO DA EQUIPE · EDIÇÃO 001</span></div>
   <div className="editorial-opening-grid"><div className="editorial-heading"><span className="mono">A POSIÇÃO DA EQUIPE</span><h2 id="editorial-title">Quem está<br/><em>olhando?</em></h2><div className="editorial-byline"><span className="mono">POR EQUIPE TÁTICA</span><span className="mono">BRASIL / 2026</span></div></div>
-   <div className="editorial-copy editorial-full"><div className="editorial-context">Neste editorial, o grupo defende propostas para a segurança digital. A reportagem a seguir apresenta os casos, os dados e a análise.</div>{editorial.paragraphs.map((paragraph,index)=><p key={index}>{paragraph}</p>)}</div>
+   <div className="editorial-copy editorial-full">{editorial.paragraphs.map((paragraph,index)=><p key={index}>{paragraph}</p>)}</div>
   </div>
  </section>;
 }

@@ -82,5 +82,17 @@
     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "width": 1920,
     "height": 1280
+  },
+  {
+    "id": "autenticacao",
+    "src": "/images/editorial/chave-autenticacao.jpg",
+    "alt": "Dispositivo físico preto de autenticação em um chaveiro sobre uma superfície clara.",
+    "caption": "Dispositivo físico de autenticação fotografado em 2011. Imagem de contexto; não representa recomendação de marca nem registro dos golpes narrados.",
+    "author": "Dennis",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yubikey_with_RFID_in_black.jpg",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "width": 2592,
+    "height": 1936
   }
 ]

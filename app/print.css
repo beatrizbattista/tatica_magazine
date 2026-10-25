@@ -399,3 +399,20 @@
   .dbir-context { margin:5mm auto; }
   .reader-questions, .reader-questions + .story-continuation { margin-block:5mm; }
 }
+
+@media print {
+ .data-uses .uses-tabs { display:none !important; }
+ .print-uses { display:block !important; margin:4mm 0; }
+ .print-uses > div { break-inside:avoid; margin-bottom:3mm; }
+ .print-uses dt { font-weight:700; font-size:10pt; }
+ .print-uses dd { margin:1mm 0 0; font-size:9pt; line-height:1.5; text-align:justify; }
+ .authentication-visual { grid-template-columns:48mm 1fr; gap:5mm; margin:5mm 0; break-inside:avoid; }
+ .authentication-visual .editorial-photo img { max-height:40mm; }
+ .authentication-visual h4 { font-size:14pt; }
+ .authentication-visual > div > p { font-size:9pt; line-height:1.5; }
+ .editorial-data-note { font-size:8pt; line-height:1.5; margin:3mm auto; padding:2mm; break-inside:avoid; }
+ .fmti-context { margin-top:6mm; }
+ .fmti-context > h3, .responsibility-heading { font-size:18pt; }
+ .fmti-context > .story-body { margin-block:3mm; }
+ .proposal-summary { font-size:9pt; line-height:1.6; }
+}
