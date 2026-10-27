@@ -35,7 +35,7 @@ function CitedText({ text }: { text:string }) {
 }
 
 function Paragraphs({ ids, className='' }: { ids:string[]; className?:string }) {
- return <div className={`story-body ${className}`}>{ids.map(id=>{const p=blockById.get(id);if(!p)throw new Error(`Bloco ausente: ${id}`);return p.style==='Eye'?<blockquote key={id}><CitedText text={p.text}/></blockquote>:<p key={id} data-block={id}><CitedText text={p.text}/></p>;})}</div>;
+ return <div className={`story-body ${className}`}>{ids.map(id=>{const p=blockById.get(id);if(!p)throw new Error(`Bloco ausente: ${id}`);if(p.style==='Eye'){const [quote,author]=p.text.split(' — ');return <blockquote key={id}><CitedText text={quote}/>{author&&<cite className="quote-author">— {author}</cite>}</blockquote>;}return <p key={id} data-block={id}><CitedText text={p.text}/></p>;})}</div>;
 }
 
 function ChapterOpening({chapter}:{chapter:number}) {
