@@ -379,3 +379,10 @@ main .boleto-lab .boleto-intro h3 { text-align:left !important; margin-inline:0 
  .boleto-lab { grid-template-columns:minmax(0,1fr); gap:28px; }
  .boleto-lab .demo-boleto { width:100%; }
 }
+
+/* Keep chart descriptions on the same axis as their titles. */
+main .evidence-heading p { margin-inline:0 !important; max-width:none; width:100%; text-align:left !important; }
+main .story-continuation h3.anpd-context-heading { width:100%; text-align:center !important; }
+@media(min-width:801px) {
+ .questions-grid > article + article { border-left:1px solid #7797a2; padding-left:24px; }
+}
