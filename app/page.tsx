@@ -13,7 +13,31 @@ function Eye({ offset, small=false }: { offset: {x:number;y:number}; small?: boo
 function CoverEye() {
  const [signal,setSignal]=useState(true);
  const [offset,setOffset]=useState({x:0,y:0});
- return <div className={`eye-art ${!signal?'offline':''}`} onPointerMove={event=>{if(!signal||event.pointerType==='touch'||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;const bounds=event.currentTarget.getBoundingClientRect();setOffset({x:((event.clientX-bounds.left)/bounds.width-.5)*40,y:((event.clientY-bounds.top)/bounds.height-.5)*28});}} onPointerLeave={()=>setOffset({x:0,y:0})}><div className="art-top mono"><span>{signal?'CAM_01 / ONLINE':'CAM_01 / OFFLINE'}</span><span>REC <i/></span></div><div className="code-wall" aria-hidden="true">{Array.from({length:26},(_,i)=><div key={i}>{`${(i+1).toString().padStart(3,'0')}  ${['const identity = await collect(data);','if (consent === undefined) { observe(); }','01001001 00100000 01010011 01000101','user.history.map(trace => store(trace));','// quem está do outro lado da tela?','access.log({ location, clicks, identity });'][i%6]}`}</div>)}</div><div className="eye-box"><Eye offset={signal?offset:{x:0,y:0}}/><div className="target-line horizontal"/><div className="target-line vertical"/><span className="corner tl"/><span className="corner tr"/><span className="corner bl"/><span className="corner br"/></div><div className="cover-security"><svg viewBox="0 0 40 46" aria-hidden="true"><path d="M20 3 36 9v12c0 10-7 17-16 22C11 38 4 31 4 21V9Z"/><path d="m12 23 5 5 11-12"/></svg><span><strong>SEGURANÇA PÚBLICA</strong><small>Prevenção · investigação · direitos</small></span></div><div className="art-bottom mono"><span>{signal?'SUJEITO: VOCÊ_':'SINAL INTERROMPIDO_'}</span><button type="button" aria-pressed={!signal} onClick={()=>setSignal(!signal)}>{signal?'INTERROMPER SINAL ⏻':'RESTABELECER SINAL ⏻'}</button></div></div>;
+ useEffect(()=>{
+  if(!signal)return;
+  const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+  let frame=0;
+  let next={x:0,y:0};
+  const reset=()=>{cancelAnimationFrame(frame);frame=0;setOffset({x:0,y:0});};
+  const follow=(event:PointerEvent)=>{
+   if(event.pointerType==='touch'||reducedMotion.matches)return;
+   const clamp=(value:number)=>Math.max(-1,Math.min(1,value));
+   next={x:clamp(event.clientX/window.innerWidth*2-1)*20,y:clamp(event.clientY/window.innerHeight*2-1)*14};
+   if(!frame)frame=requestAnimationFrame(()=>{frame=0;setOffset(next);});
+  };
+  window.addEventListener('pointermove',follow,{passive:true});
+  document.documentElement.addEventListener('pointerleave',reset);
+  window.addEventListener('blur',reset);
+  reducedMotion.addEventListener('change',reset);
+  return()=>{
+   cancelAnimationFrame(frame);
+   window.removeEventListener('pointermove',follow);
+   document.documentElement.removeEventListener('pointerleave',reset);
+   window.removeEventListener('blur',reset);
+   reducedMotion.removeEventListener('change',reset);
+  };
+ },[signal]);
+ return <div className={`eye-art ${!signal?'offline':''}`}><div className="art-top mono"><span>{signal?'CAM_01 / ONLINE':'CAM_01 / OFFLINE'}</span><span>REC <i/></span></div><div className="code-wall" aria-hidden="true">{Array.from({length:26},(_,i)=><div key={i}>{`${(i+1).toString().padStart(3,'0')}  ${['const identity = await collect(data);','if (consent === undefined) { observe(); }','01001001 00100000 01010011 01000101','user.history.map(trace => store(trace));','// quem está do outro lado da tela?','access.log({ location, clicks, identity });'][i%6]}`}</div>)}</div><div className="eye-box"><Eye offset={signal?offset:{x:0,y:0}}/><div className="target-line horizontal"/><div className="target-line vertical"/><span className="corner tl"/><span className="corner tr"/><span className="corner bl"/><span className="corner br"/></div><div className="cover-security"><svg viewBox="0 0 40 46" aria-hidden="true"><path d="M20 3 36 9v12c0 10-7 17-16 22C11 38 4 31 4 21V9Z"/><path d="m12 23 5 5 11-12"/></svg><span><strong>SEGURANÇA PÚBLICA</strong><small>Prevenção · investigação · direitos</small></span></div><div className="art-bottom mono"><span>{signal?'SUJEITO: VOCÊ_':'SINAL INTERROMPIDO_'}</span><button type="button" aria-pressed={!signal} onClick={()=>setSignal(!signal)}>{signal?'INTERROMPER SINAL ⏻':'RESTABELECER SINAL ⏻'}</button></div></div>;
 }
 
 
