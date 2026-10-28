@@ -22,7 +22,7 @@ const authors = [
  { name: 'Beatriz Battista', initials: 'BB', photo: '/images/integrantes/beatriz-battista.jpg', position: '50% 50%' },
  { name: 'Enzo Christowam', initials: 'EC', photo: '/images/integrantes/enzo-christowam.jpeg', position: '50% 58%' },
  { name: 'Giovanna Almeida', initials: 'GA', photo: '/images/integrantes/giovanna-almeida.jpg', position: '50% 50%' },
- { name: 'Gustavo Costa', initials: 'GC', photo: '/images/integrantes/gustavo-costa.jpg', position: '50% 50%' },
+ { name: 'Gustavo Costa', initials: 'GC', photo: '/images/integrantes/gustavo-costa-retrato.png', position: '50% 35%' },
  { name: 'Kevin Martins', initials: 'KM', photo: '/images/integrantes/kevin-martins.png', position: '50% 40%' },
  { name: 'Lucas Guerriero', initials: 'LG', photo: '/images/integrantes/lucas-guerriero.jpeg', position: '50% 68%' },
 ];
