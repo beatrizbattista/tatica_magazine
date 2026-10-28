@@ -305,3 +305,55 @@ main :is(h1, h2, h3, h4, h5) { text-align:center !important; }
 /* Keep the cover's original alignment outside the centered reading layout. */
 main .cover-copy > :is(h1, p) { margin-inline:0 !important; text-align:left !important; }
 .beccaria-quote .quote-author { display:block; margin-top:20px; font-size:.75em; font-style:normal; text-align:right; hyphens:none; overflow-wrap:normal; word-break:normal; }
+
+/* Feedback on 27 October: align headings with the content they introduce. */
+.section .chapter-opening .chapter-lead { width:100%; max-width:none; }
+main :is(.safety-path, .evidence-heading, .data-uses, .reader-questions) :is(h3,h4) {
+ text-align:left !important;
+ margin-inline:0 !important;
+}
+.evidence-heading > div { min-width:0; width:100%; }
+.evidence-heading h3 { max-width:32ch; }
+.safety-path h3 { max-width:none; text-wrap:pretty; }
+.data-uses .uses-panel { border-bottom:0; margin-bottom:0; }
+.data-uses .uses-note { margin-top:8px; padding-top:24px; }
+.story-continuation > div > h3 {
+ font:600 clamp(28px,3vw,36px)/1.2 'Barlow Condensed',sans-serif;
+ text-align:left !important;
+ margin:0 0 28px !important;
+}
+.questions-grid article { display:flex; flex-direction:column; align-items:flex-start; min-width:0; }
+.questions-grid h4 { width:100%; min-height:2.5em; margin-block:20px 18px; }
+.questions-grid article > .evidence-source { margin-top:auto; padding-top:12px; }
+.sources-section .reporting-notes { margin-top:0; border-bottom:0; padding-block:28px; }
+.sources-section .reporting-notes + .reporting-notes { margin-top:0; }
+.case-heading { margin-bottom:40px; }
+@media(max-width:800px) {
+ .questions-grid h4 { min-height:0; }
+ .questions-grid article > .evidence-source { margin-top:0; }
+ .case-heading { margin-bottom:32px; }
+}
+
+/* The opening and both case reports share a clear left-hand reading axis. */
+.cases-section .chapter-opening { margin-bottom:28px; }
+main .cases-section .chapter-opening h2 {
+ text-align:left !important; margin:24px 0 !important; max-width:28ch;
+}
+.cases-section .chapter-opening .chapter-lead { max-width:85ch; margin-inline:0 !important; }
+.cases-section .report-title { margin:0 0 28px; padding-bottom:0; }
+.cases-section .report-deck { display:flex; align-items:flex-start; justify-content:space-between; gap:32px; }
+.cases-section .report-deck > p { flex:1; width:auto; max-width:85ch; margin:0 !important; }
+.cases-section .reading-button { flex-shrink:0; margin:0; }
+.cases-section :is(.lourdes-case,.diogo-case) { padding-block:32px 44px; }
+.cases-section .lourdes-grid { grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); column-gap:6%; }
+.cases-section .case-heading { text-align:left; margin:0 0 28px; }
+main .cases-section .case-heading h3 { text-align:left !important; margin:14px 0 0 !important; max-width:none; line-height:1.12; text-wrap:pretty; }
+.cases-section .case-heading h3 em { display:block; margin-top:4px; }
+.cases-section .case-number { margin-bottom:24px; padding-bottom:0; }
+@media(max-width:800px) {
+ .cases-section .report-deck { flex-direction:column; gap:16px; }
+ .cases-section .lourdes-grid { grid-template-columns:minmax(0,1fr); gap:28px; }
+ .cases-section .lourdes-grid > div:first-child { order:0; }
+ .cases-section .case-heading { margin-bottom:24px; }
+ .cases-section :is(.lourdes-case,.diogo-case) { padding-block:24px 36px; }
+}
