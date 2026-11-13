@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+/* Five principal colors. Lighter and darker treatments are mixed from these
+   colors and the neutral paper, rule, white and black below. */
+:root {
+  --color-ink: #20291f;
+  --color-forest: #304b3a;
+  --color-olive: #607845;
+  --color-lime: #d4ed83;
+  --color-blue: #173e50;
+
+  --neutral-paper: #f4f2ea;
+  --neutral-rule: #c6ccbd;
+  --neutral-white: #fff;
+  --neutral-black: #000;
+
+  /* Reusable screen type scale, from labels to cover display. */
+  --type-micro: 8px;
+  --type-label: 10px;
+  --type-caption: 12px;
+  --type-small: 14px;
+  --type-body: 16px;
+  --type-lead: 18px;
+  --type-feature: 22px;
+  --type-subhead: 28px;
+  --type-title: 36px;
+  --type-chapter: 44px;
+  --type-display: 58px;
+  --type-hero: 78px;
+  --type-stat: 96px;
+  --type-cover-small: 110px;
+  --type-cover-figure: 180px;
+  --type-cover-large: 225px;
+  --type-cover-wide: 370px;
+}

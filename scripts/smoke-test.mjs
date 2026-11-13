@@ -52,7 +52,7 @@ try {
     } catch (error) { lastError = error; await delay(500); }
   }
   if (!html) throw new Error(`Aplicacao indisponivel: ${lastError}\n${logs}`);
-  for (const expected of ["Quem Está Olhando?", 'lang="pt-BR"', 'id="inicio"', 'id="equipe"', "EXPLORAR EDIÇÃO"]) {
+  for (const expected of ["Quem Está Olhando?", 'lang="pt-BR"', 'id="inicio"', 'id="equipe"', "ABRIR SUMÁRIO"]) {
     if (!html.includes(expected)) throw new Error(`Conteudo esperado ausente: ${expected}`);
   }
   const resources = [...html.matchAll(/(?:src|href)="([^"#?]+\.(?:js|css)(?:\?[^" ]*)?)"/g)]
