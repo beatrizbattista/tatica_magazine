@@ -225,9 +225,13 @@ export default function Home() {
    resizeObserver.disconnect();
   };
  }, []);
- const [index,setIndex]=useState(false); const [indexMounted,setIndexMounted]=useState(false); const [signal,setSignal]=useState(true); const [offset,setOffset]=useState({x:0,y:0}); const [progress,setProgress]=useState(0); const [reading,setReading]=useState(false);
- useEffect(()=>{if(index){setIndexMounted(true);return}if(!indexMounted)return;const timeout=window.setTimeout(()=>setIndexMounted(false),320);return()=>window.clearTimeout(timeout)},[index,indexMounted]);
- useEffect(()=>{const move=(e:PointerEvent)=>setOffset({x:(e.clientX/window.innerWidth-.5)*40,y:(e.clientY/window.innerHeight-.5)*28});const scroll=()=>setProgress(window.scrollY/Math.max(1,document.documentElement.scrollHeight-window.innerHeight)*100);const key=(e:KeyboardEvent)=>{if(e.key==='Escape')setIndex(false)};window.addEventListener('pointermove',move);window.addEventListener('scroll',scroll);window.addEventListener('keydown',key);return()=>{window.removeEventListener('pointermove',move);window.removeEventListener('scroll',scroll);window.removeEventListener('keydown',key)}},[]);
+ const [index,setIndexState]=useState(false); const [indexMounted,setIndexMounted]=useState(false);
+ const setIndex = useCallback((open: boolean) => {
+  if (open) setIndexMounted(true);
+  setIndexState(open);
+ }, []); const [signal,setSignal]=useState(true); const [offset,setOffset]=useState({x:0,y:0}); const [progress,setProgress]=useState(0); const [reading,setReading]=useState(false);
+ useEffect(()=>{if(index||!indexMounted)return;const timeout=window.setTimeout(()=>setIndexMounted(false),320);return()=>window.clearTimeout(timeout)},[index,indexMounted]);
+ useEffect(()=>{const move=(e:PointerEvent)=>setOffset({x:(e.clientX/window.innerWidth-.5)*40,y:(e.clientY/window.innerHeight-.5)*28});const scroll=()=>setProgress(window.scrollY/Math.max(1,document.documentElement.scrollHeight-window.innerHeight)*100);const key=(e:KeyboardEvent)=>{if(e.key==='Escape')setIndex(false)};window.addEventListener('pointermove',move);window.addEventListener('scroll',scroll);window.addEventListener('keydown',key);return()=>{window.removeEventListener('pointermove',move);window.removeEventListener('scroll',scroll);window.removeEventListener('keydown',key)}},[setIndex]);
  return <main className={reading?'reading':''}>
  <div className="progress" style={{width:`${progress}%`}}/>
  <header ref={headerRef} className="topbar"><a href="#inicio" className={`wordmark${wordmarkVisible ? ' is-visible' : ''}`} aria-label="Tática — voltar ao início" aria-hidden={!wordmarkVisible} tabIndex={wordmarkVisible ? 0 : -1}><span className="wordmark-text" aria-hidden="true">{Array.from('TÁTICA').map((letter, i) => <span className="wordmark-letter" key={i} style={{ transitionDelay: `${i * 45}ms` }}>{letter}</span>)}</span><span className="wordmark-registration" aria-hidden="true">®</span></a><span className="top-note">UMA REVISTA PARA OLHAR ALÉM.</span><button onClick={()=>setIndex(!index)} aria-expanded={index} aria-controls="indice">{index?'FECHAR ×':'EXPLORAR EDIÇÃO ↗'}</button></header>

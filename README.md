@@ -6,7 +6,7 @@ Interface em React e TypeScript, com Vinext e Vite. O design combina papel claro
 
 ## Rodar localmente
 
-Pré-requisitos: Node.js 22.13 ou superior e pnpm 10.
+Pré-requisitos: Node.js 24.16.0 (versão usada na CI) e pnpm 11.25.0.
 
 ```bash
 git clone https://github.com/beatrizbattista/tatica_magazine.git
@@ -18,7 +18,7 @@ pnpm dev
 Abra no navegador o endereço indicado pelo terminal. Para verificar os tipos e gerar a versão de produção:
 
 ```bash
-pnpm exec tsc --noEmit
+pnpm typecheck
 pnpm build
 ```
 
@@ -44,8 +44,20 @@ O movimento dos olhos é um efeito visual local: a revista não implementa colet
 
 ## Publicação
 
-O projeto conserva a configuração da versão privada hospedada pelo Sites em `.openai/hosting.json`. Enviar código a este repositório não altera o acesso da revista nem publica automaticamente suas alterações. Não coloque tokens, senhas ou arquivos `.env` no Git.
+O projeto conserva a configuração da versão privada hospedada pelo Sites em `.openai/hosting.json`. A hospedagem privada do Sites é independente do Worker de laboratório. A pipeline deste repositório publica no Worker `tatica-magazine-lab` após a CI em pushes na `main`, quando as credenciais do Cloudflare estiverem configuradas. Não coloque tokens, senhas ou arquivos `.env` no Git.
 
 ## Validação
 
-TypeScript e build de produção passaram na versão inicial. A revisão visual no navegador ainda está pendente.
+A pipeline executa instalação pelo lockfile, TypeScript, ESLint, build, teste HTTP da versão de produção e simulação do deployment. Execute localmente:
+
+```bash
+pnpm typecheck
+pnpm lint
+pnpm build
+pnpm test:smoke
+pnpm deploy:check
+```
+
+Encerre servidores locais antes de refazer o build: no Windows eles podem bloquear a pasta `dist`.
+
+Consulte [o guia de CI/CD](docs/ci-cd.md), [o registro do uso da IA](docs/registro-ia.md) e [as evidências](docs/evidencias/README.md). A publicação real e as evidências do GitHub Actions permanecem pendentes enquanto a conta e as credenciais não forem configuradas.

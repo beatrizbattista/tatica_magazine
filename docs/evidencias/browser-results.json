@@ -1,0 +1,15 @@
+{
+  "status": "aprovado",
+  "desktop": "1440x900",
+  "mobile": "390x844",
+  "checks": [
+    "sumario abre",
+    "Escape fecha",
+    "sumario reabre",
+    "link navega e fecha",
+    "grafico linha/barras",
+    "mobile sem overflow horizontal",
+    "equipe com seis integrantes"
+  ],
+  "pageErrors": []
+}

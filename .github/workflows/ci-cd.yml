@@ -1,0 +1,93 @@
+name: CI/CD - Tatica Magazine
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    name: Validar e empacotar
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.16.0'
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+          run_install: false
+      - name: Instalar dependencias do lockfile
+        run: pnpm install --frozen-lockfile
+      - name: Verificar tipos
+        run: pnpm typecheck
+      - name: Verificar codigo
+        run: pnpm lint
+      - name: Gerar versao de producao
+        run: pnpm build
+      - name: Testar aplicacao de producao
+        run: pnpm test:smoke
+      - name: Validar pacote de deployment sem publicar
+        run: pnpm deploy:check
+      - name: Guardar pacote validado
+        uses: actions/upload-artifact@v4
+        with:
+          name: tatica-production
+          path: dist/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 7
+
+  deploy:
+    name: Publicar no Cloudflare
+    needs: ci
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: production
+    concurrency:
+      group: tatica-production
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Conferir configuracao de publicacao
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::error::Configure CLOUDFLARE_API_TOKEN e CLOUDFLARE_ACCOUNT_ID no ambiente production. Consulte docs/ci-cd.md."
+            exit 1
+          fi
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.16.0'
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+          run_install: false
+      - run: pnpm install --frozen-lockfile
+      - uses: actions/download-artifact@v4
+        with:
+          name: tatica-production
+          path: dist/
+      - name: Publicar o mesmo pacote aprovado pela CI
+        run: pnpm run deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      - name: Verificar URL publicada
+        if: vars.PUBLIC_SITE_URL != ''
+        run: node scripts/smoke-test.mjs
+        env:
+          SMOKE_BASE_URL: ${{ vars.PUBLIC_SITE_URL }}

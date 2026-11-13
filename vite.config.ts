@@ -15,6 +15,10 @@ const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
 const managedLinux = readExecutionProfile() === "managed-linux";
 
 const localBindingConfig = {
+  // Separate lab deployment; the private Sites project keeps its own identity.
+  name: "tatica-magazine-lab",
+  compatibility_date: "2026-05-15",
+  workers_dev: true,
   main: "./build/sites-worker.ts",
   compatibility_flags: ["nodejs_compat"],
   d1_databases: d1
